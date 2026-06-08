@@ -9,12 +9,14 @@ import PreferencePanel from "@/components/PreferencePanel"
 import HandoffScreen from "@/components/HandoffScreen"
 import MatchReveal from "@/components/MatchReveal"
 import ResultsPage from "@/components/ResultsPage"
+import LuckyResults from "@/components/LuckyResults"
 import activitiesRaw from "@/data/activities.json"
 import type { Activity } from "@/lib/ranking"
 
 const activities = activitiesRaw as Activity[]
 
-type Step = "person-a" | "handoff" | "person-b" | "reveal" | "results"
+type Step = "person-a" | "handoff" | "person-b" | "reveal" | "results" | "lucky-results"
+type Mode = "wizard" | "lucky" | null
 
 export default function Home() {
   const [step, setStep] = useState<Step>("person-a")
@@ -24,13 +26,13 @@ export default function Home() {
   const [catsB, setCatsB] = useState<Category[]>([])
   const [savedIds, setSavedIds] = useState<string[]>([])
   const [weather, setWeather] = useState<WeatherResult | null>(null)
+  const [modeA, setModeA] = useState<Mode>(null)
+  const [modeB, setModeB] = useState<Mode>(null)
 
-  // Single weather fetch on mount
   useEffect(() => {
     fetchDublinWeather().then(setWeather)
   }, [])
 
-  // Hydrate from URL on load
   useEffect(() => {
     const state = decodeState(window.location.search)
     if (state.nameA) setNameA(state.nameA)
@@ -57,10 +59,27 @@ export default function Home() {
   }, [])
 
   const handleReset = useCallback(() => {
-    setNameA(""); setNameB(""); setCatsA([]); setCatsB([]); setSavedIds([])
+    setNameA(""); setNameB("")
+    setCatsA([]); setCatsB([])
+    setSavedIds([])
+    setModeA(null); setModeB(null)
     setStep("person-a")
     window.history.replaceState(null, "", window.location.pathname)
   }, [])
+
+  function handlePersonADone(mode: Mode) {
+    setModeA(mode)
+    setStep("handoff")
+  }
+
+  function handlePersonBDone(mode: Mode) {
+    setModeB(mode)
+    if (mode === "lucky" || modeA === "lucky") {
+      setStep("lucky-results")
+    } else {
+      setStep("reveal")
+    }
+  }
 
   // ── Person A ──────────────────────────────────────────────
   if (step === "person-a") {
@@ -74,13 +93,9 @@ export default function Home() {
 
           <div className="space-y-2">
             <label className="text-sm font-medium text-stone-600">Your name</label>
-            <input
-              type="text"
-              value={nameA}
-              onChange={(e) => setNameA(e.target.value)}
+            <input type="text" value={nameA} onChange={(e) => setNameA(e.target.value)}
               placeholder="e.g. Sarah"
-              className="w-full border border-stone-200 rounded-xl px-4 py-3 text-stone-800 placeholder-stone-300 focus:outline-none focus:border-stone-400 bg-white text-base"
-            />
+              className="w-full border border-stone-200 rounded-xl px-4 py-3 text-stone-800 placeholder-stone-300 focus:outline-none focus:border-stone-400 bg-white text-base" />
           </div>
 
           <div className="space-y-3">
@@ -88,16 +103,44 @@ export default function Home() {
             <PreferencePanel selected={catsA} onChange={setCatsA} />
           </div>
 
-          <div className="pt-2">
+          <div className="space-y-3 pt-2">
             <button
-              onClick={() => setStep("handoff")}
+              onClick={() => handlePersonADone("wizard")}
               disabled={!nameA.trim() || catsA.length === 0}
-              className="w-full bg-stone-900 text-white font-semibold py-4 rounded-2xl text-base disabled:opacity-30 disabled:cursor-not-allowed hover:bg-stone-700 transition-colors"
-            >
+              className="w-full bg-stone-900 text-white font-semibold py-4 rounded-2xl text-base disabled:opacity-30 disabled:cursor-not-allowed hover:bg-stone-700 transition-colors">
               Done — pass the phone
             </button>
+
+            <div className="flex items-center gap-3">
+              <div className="flex-1 h-px bg-stone-200" />
+              <span className="text-xs text-stone-400">or</span>
+              <div className="flex-1 h-px bg-stone-200" />
+            </div>
+
+            <button
+              onClick={() => { if (nameA.trim()) handlePersonADone("lucky") }}
+              disabled={!nameA.trim()}
+              className="w-full relative overflow-hidden border-2 border-stone-800 text-stone-800 font-semibold py-4 rounded-2xl text-base disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:bg-stone-800 hover:text-white group"
+              style={{ animation: nameA.trim() ? "none" : undefined }}
+            >
+              <span className="flex items-center justify-center gap-2">
+                <i className="ti ti-stars text-lg leading-none" aria-hidden="true" />
+                I&apos;m feeling lucky
+              </span>
+            </button>
+            {!nameA.trim() && (
+              <p className="text-xs text-stone-400 text-center">enter your name first</p>
+            )}
           </div>
         </div>
+
+        <style>{`
+          @keyframes pulse-border {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(28,25,23,0.15); }
+            50% { box-shadow: 0 0 0 6px rgba(28,25,23,0); }
+          }
+          .lucky-btn { animation: pulse-border 2s ease-in-out infinite; }
+        `}</style>
       </main>
     )
   }
@@ -119,13 +162,9 @@ export default function Home() {
 
           <div className="space-y-2">
             <label className="text-sm font-medium text-stone-600">Your name</label>
-            <input
-              type="text"
-              value={nameB}
-              onChange={(e) => setNameB(e.target.value)}
+            <input type="text" value={nameB} onChange={(e) => setNameB(e.target.value)}
               placeholder="e.g. John"
-              className="w-full border border-stone-200 rounded-xl px-4 py-3 text-stone-800 placeholder-stone-300 focus:outline-none focus:border-stone-400 bg-white text-base"
-            />
+              className="w-full border border-stone-200 rounded-xl px-4 py-3 text-stone-800 placeholder-stone-300 focus:outline-none focus:border-stone-400 bg-white text-base" />
           </div>
 
           <div className="space-y-3">
@@ -133,28 +172,60 @@ export default function Home() {
             <PreferencePanel selected={catsB} onChange={setCatsB} />
           </div>
 
-          <div className="pt-2">
+          <div className="space-y-3 pt-2">
             <button
-              onClick={() => setStep("reveal")}
+              onClick={() => handlePersonBDone("wizard")}
               disabled={!nameB.trim() || catsB.length === 0}
-              className="w-full bg-stone-900 text-white font-semibold py-4 rounded-2xl text-base disabled:opacity-30 disabled:cursor-not-allowed hover:bg-stone-700 transition-colors"
-            >
+              className="w-full bg-stone-900 text-white font-semibold py-4 rounded-2xl text-base disabled:opacity-30 disabled:cursor-not-allowed hover:bg-stone-700 transition-colors">
               See how we match
             </button>
+
+            <div className="flex items-center gap-3">
+              <div className="flex-1 h-px bg-stone-200" />
+              <span className="text-xs text-stone-400">or</span>
+              <div className="flex-1 h-px bg-stone-200" />
+            </div>
+
+            <button
+              onClick={() => { if (nameB.trim()) handlePersonBDone("lucky") }}
+              disabled={!nameB.trim()}
+              className="w-full border-2 border-stone-800 text-stone-800 font-semibold py-4 rounded-2xl text-base disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:bg-stone-800 hover:text-white">
+              <span className="flex items-center justify-center gap-2">
+                <i className="ti ti-stars text-lg leading-none" aria-hidden="true" />
+                I&apos;m feeling lucky
+              </span>
+            </button>
+            {!nameB.trim() && (
+              <p className="text-xs text-stone-400 text-center">enter your name first</p>
+            )}
           </div>
         </div>
       </main>
     )
   }
 
+  // ── Lucky results ─────────────────────────────────────────
+  if (step === "lucky-results") {
+    const bothLucky = modeA === "lucky" && modeB === "lucky"
+    const wizardIsA = modeA === "wizard"
+    return (
+      <LuckyResults
+        activities={activities}
+        weatherHint={weatherHint}
+        bothLucky={bothLucky}
+        wizardName={bothLucky ? undefined : wizardIsA ? nameA : nameB}
+        luckyName={bothLucky ? undefined : wizardIsA ? nameB : nameA}
+        wizardCats={bothLucky ? [] : wizardIsA ? catsA : catsB}
+        onReset={handleReset}
+      />
+    )
+  }
+
   // ── Reveal ────────────────────────────────────────────────
   if (step === "reveal") {
     return (
-      <MatchReveal
-        nameA={nameA} nameB={nameB}
-        catsA={catsA} catsB={catsB}
-        onReveal={() => setStep("results")}
-      />
+      <MatchReveal nameA={nameA} nameB={nameB} catsA={catsA} catsB={catsB}
+        onReveal={() => setStep("results")} />
     )
   }
 

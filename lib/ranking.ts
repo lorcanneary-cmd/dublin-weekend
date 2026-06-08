@@ -50,20 +50,12 @@ export function scoreActivities(
     let score = 0
     let matchedBy: "both" | "a" | "b" = "a"
 
-    if (inA && inB) {
-      score = 2
-      matchedBy = "both"
-    } else if (inA) {
-      score = 1
-      matchedBy = "a"
-    } else if (inB) {
-      score = 1
-      matchedBy = "b"
-    }
+    if (inA && inB) { score = 2; matchedBy = "both" }
+    else if (inA) { score = 1; matchedBy = "a" }
+    else if (inB) { score = 1; matchedBy = "b" }
 
     if (score === 0) return { activity: act, score, reason: "", matchedBy, nameA: a.name, nameB: b.name }
 
-    // Weather signal
     if (weatherHint === "rain") {
       if (act.tags.includes("rainy") || act.tags.includes("indoor")) score += 0.5
       if (act.tags.includes("outdoor") && !act.tags.includes("rainy")) score -= 0.3
@@ -71,11 +63,7 @@ export function scoreActivities(
     if (weatherHint === "clear") {
       if (act.tags.includes("outdoor") || act.tags.includes("scenic")) score += 0.3
     }
-
-    // Rating boost for Coffee & Bakeries
-    if (act.rating) {
-      score += (act.rating - 4.5) * 0.5
-    }
+    if (act.rating) score += (act.rating - 4.5) * 0.5
 
     const reason = buildReason(act, inA, inB, a.name, b.name)
     return { activity: act, score, reason, matchedBy, nameA: a.name, nameB: b.name }
@@ -88,38 +76,58 @@ export function partitionResults(scored: ScoredActivity[]): {
   onlyB: ScoredActivity[]
 } {
   const valid = scored.filter((s) => s.score > 0)
-
-  const matched = valid
-    .filter((s) => s.matchedBy === "both")
-    .sort((a, b) => b.score - a.score)
-
-  const onlyA = valid
-    .filter((s) => s.matchedBy === "a")
-    .sort((a, b) => b.score - a.score)
-
-  const onlyB = valid
-    .filter((s) => s.matchedBy === "b")
-    .sort((a, b) => b.score - a.score)
-
+  const matched = valid.filter((s) => s.matchedBy === "both").sort((a, b) => b.score - a.score)
+  const onlyA = valid.filter((s) => s.matchedBy === "a").sort((a, b) => b.score - a.score)
+  const onlyB = valid.filter((s) => s.matchedBy === "b").sort((a, b) => b.score - a.score)
   return { matched, onlyA, onlyB }
+}
+
+export function getLuckyPicks(
+  activities: Activity[],
+  count: number,
+  weatherHint: WeatherHint = null,
+  excludeCategories: Category[] = []
+): Activity[] {
+  let pool = activities.filter(a => !excludeCategories.includes(a.primaryCategory))
+
+  // Weight by weather
+  const weighted: Activity[] = []
+  for (const act of pool) {
+    let weight = 1
+    if (weatherHint === "rain") {
+      if (act.tags.includes("rainy") || act.tags.includes("indoor")) weight = 3
+      else if (act.tags.includes("outdoor") && !act.tags.includes("rainy")) weight = 0.3
+    }
+    if (weatherHint === "clear") {
+      if (act.tags.includes("outdoor") || act.tags.includes("scenic")) weight = 2
+    }
+    const slots = Math.max(1, Math.round(weight * 10))
+    for (let i = 0; i < slots; i++) weighted.push(act)
+  }
+
+  // Fisher-Yates shuffle then pick unique
+  const seen = new Set<string>()
+  const result: Activity[] = []
+  const shuffled = [...weighted].sort(() => Math.random() - 0.5)
+  for (const act of shuffled) {
+    if (!seen.has(act.id)) {
+      seen.add(act.id)
+      result.push(act)
+      if (result.length >= count) break
+    }
+  }
+  return result
 }
 
 function buildReason(act: Activity, inA: boolean, inB: boolean, nameA: string, nameB: string): string {
   const parts: string[] = []
-
-  if (inA && inB) {
-    parts.push(`${nameA} & ${nameB} both picked ${act.primaryCategory}`)
-  } else if (inA) {
-    parts.push(`${nameA}'s pick · ${act.primaryCategory}`)
-  } else {
-    parts.push(`${nameB}'s pick · ${act.primaryCategory}`)
-  }
-
+  if (inA && inB) parts.push(`${nameA} & ${nameB} both picked ${act.primaryCategory}`)
+  else if (inA) parts.push(`${nameA}'s pick · ${act.primaryCategory}`)
+  else parts.push(`${nameB}'s pick · ${act.primaryCategory}`)
   parts.push(`${act.durationMin} min`)
   parts.push(act.cost === "free" ? "Free" : act.cost)
   if (act.rating) parts.push(`Rated ${act.rating} on Google`)
   if (act.tags.includes("hidden-gem")) parts.push("Hidden gem")
   if (act.tags.includes("romantic")) parts.push("Romantic")
-
   return parts.join(" · ")
 }
