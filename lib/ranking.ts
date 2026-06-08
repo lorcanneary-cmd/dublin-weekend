@@ -119,6 +119,34 @@ export function getLuckyPicks(
   return result
 }
 
+export function getTopPicks(
+  activities: Activity[],
+  catsA: Category[],
+  catsB: Category[],
+  weatherHint: WeatherHint = null,
+  count: number = 4
+): Activity[] {
+  const combinedCats = Array.from(new Set([...catsA, ...catsB]))
+
+  // Check if "Bars & Cocktails" is in either person's picks
+  const includesBars = catsA.includes("Bars & Cocktails") || catsB.includes("Bars & Cocktails")
+
+  // Filter pool based on combined categories
+  let pool = activities.filter(a => combinedCats.includes(a.primaryCategory))
+
+  // Exclude "Bars & Cocktails" category and alcohol tags unless explicitly included
+  if (!includesBars) {
+    pool = pool.filter(a =>
+      a.primaryCategory !== "Bars & Cocktails" &&
+      !a.tags.includes("alcohol")
+    )
+  }
+
+  // Shuffle and pick
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  return shuffled.slice(0, count)
+}
+
 function buildReason(act: Activity, inA: boolean, inB: boolean, nameA: string, nameB: string): string {
   const parts: string[] = []
   if (inA && inB) parts.push(`${nameA} & ${nameB} both picked ${act.primaryCategory}`)

@@ -1,10 +1,15 @@
 "use client"
 
-import { useState } from "react"
-import type { ScoredActivity } from "@/lib/ranking"
+import { useState, useMemo } from "react"
+import type { ScoredActivity, Category, Activity } from "@/lib/ranking"
+import { getTopPicks, scoreActivities, type WeatherHint } from "@/lib/ranking"
 import type { WeatherResult } from "@/lib/weather"
+import { weatherHintFromCode } from "@/lib/weather"
 import ActivityCard from "./ActivityCard"
 import WeatherBanner from "./WeatherBanner"
+import activitiesRaw from "@/data/activities.json"
+
+const activities = activitiesRaw as Activity[]
 
 const CAT_ICON: Record<string, string> = {
   Walks: "ti-walk",
@@ -19,6 +24,8 @@ const CAT_ICON: Record<string, string> = {
 interface Props {
   nameA: string
   nameB: string
+  catsA: Category[]
+  catsB: Category[]
   matched: ScoredActivity[]
   onlyA: ScoredActivity[]
   onlyB: ScoredActivity[]
@@ -83,12 +90,26 @@ function CategorySection({
 }
 
 export default function ResultsPage({
-  nameA, nameB, matched, onlyA, onlyB,
+  nameA, nameB, catsA, catsB, matched, onlyA, onlyB,
   savedIds, onToggleSave, onReset, weather,
 }: Props) {
   const matchedByCategory = groupByCategory(matched)
   const onlyAByCategory = groupByCategory(onlyA)
   const onlyBByCategory = groupByCategory(onlyB)
+
+  const weatherHint = weather ? weatherHintFromCode(weather.code) : null
+
+  const topPicks = useMemo(() => {
+    const picks = getTopPicks(activities, catsA, catsB, weatherHint, 4)
+    return picks.map(activity => ({
+      activity,
+      score: 2,
+      reason: `${activity.primaryCategory} · ${activity.durationMin} min · ${activity.cost === "free" ? "Free" : activity.cost}`,
+      matchedBy: "both" as const,
+      nameA,
+      nameB,
+    }))
+  }, [catsA, catsB, weatherHint, nameA, nameB])
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -108,6 +129,26 @@ export default function ResultsPage({
 
         {/* Weather */}
         <WeatherBanner weather={weather} />
+
+        {/* Top Picks */}
+        {topPicks.length > 0 && (
+          <section className="space-y-4">
+            <div className="space-y-1">
+              <h2 className="text-lg font-bold text-stone-800">your top picks</h2>
+              <p className="text-sm text-stone-400">a mix of both your categories</p>
+            </div>
+            <div className="space-y-2">
+              {topPicks.map((s) => (
+                <ActivityCard
+                  key={s.activity.id}
+                  scored={s}
+                  saved={savedIds.includes(s.activity.id)}
+                  onSave={() => onToggleSave(s.activity.id)}
+                />
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Zone 1: Matched */}
         {matched.length > 0 ? (

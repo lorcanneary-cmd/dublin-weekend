@@ -43,10 +43,10 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal }: Pr
         {/* Score */}
         <div className="text-center space-y-2">
           <h2 className="text-white text-3xl font-bold tracking-tight">
-            {matchCount === 0 ? "No overlap" : `${matchCount} match${matchCount > 1 ? "es" : ""}`}
+            {matchCount === 0 ? "zero overlap" : `${matchCount} match${matchCount > 1 ? "es" : ""}`}
           </h2>
           <p className="text-stone-500 text-sm">
-            {nameA} & {nameB} · {matchCount} of {Math.max(catsA.length, catsB.length)} categories
+            {matchCount === 0 ? "not a single category in common. might be time to reconsider some life choices." : `${nameA} & ${nameB} · ${matchCount} of ${Math.max(catsA.length, catsB.length)} categories`}
           </p>
         </div>
 
@@ -62,6 +62,7 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal }: Pr
                 </span>
               ))}
             </div>
+            <p className="text-stone-500 text-xs italic">make it happen — no excuses now</p>
           </div>
         )}
 
@@ -80,6 +81,7 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal }: Pr
             <p className="text-stone-600 text-xs italic">
               {nameB}, can you believe {nameA} picked {onlyA.map(c => MISMATCH_LINES[c] || c).join(" and ")}
             </p>
+            <p className="text-stone-600 text-xs italic">paper scissors rock for the rest</p>
           </div>
         )}
 
@@ -98,6 +100,7 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal }: Pr
             <p className="text-stone-600 text-xs italic">
               {nameA}, {nameB} wants {onlyB.map(c => MISMATCH_LINES[c] || c).join(" and ")}. make of that what you will.
             </p>
+            <p className="text-stone-600 text-xs italic">paper scissors rock for the rest</p>
           </div>
         )}
 
@@ -105,8 +108,11 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal }: Pr
           onClick={onReveal}
           className="w-full bg-white text-stone-900 font-semibold py-4 rounded-2xl text-base hover:bg-stone-100 transition-colors"
         >
-          Show us what to do
+          {matchCount === 0 ? "try again — different picks" : "show our picks"}
         </button>
+        {matchCount === 0 && (
+          <p className="text-stone-600 text-xs text-center italic">or just go separately. both fine.</p>
+        )}
       </div>
     </div>
   )

@@ -10,12 +10,13 @@ import HandoffScreen from "@/components/HandoffScreen"
 import MatchReveal from "@/components/MatchReveal"
 import ResultsPage from "@/components/ResultsPage"
 import LuckyResults from "@/components/LuckyResults"
+import Countdown from "@/components/Countdown"
 import activitiesRaw from "@/data/activities.json"
 import type { Activity } from "@/lib/ranking"
 
 const activities = activitiesRaw as Activity[]
 
-type Step = "person-a" | "handoff" | "person-b" | "reveal" | "results" | "lucky-results"
+type Step = "person-a" | "handoff" | "person-b" | "countdown" | "reveal" | "results" | "lucky-results"
 type Mode = "wizard" | "lucky" | null
 
 export default function Home() {
@@ -77,7 +78,7 @@ export default function Home() {
     if (mode === "lucky" || modeA === "lucky") {
       setStep("lucky-results")
     } else {
-      setStep("reveal")
+      setStep("countdown")
     }
   }
 
@@ -221,6 +222,11 @@ export default function Home() {
     )
   }
 
+  // ── Countdown ─────────────────────────────────────────────
+  if (step === "countdown") {
+    return <Countdown onComplete={() => setStep("reveal")} />
+  }
+
   // ── Reveal ────────────────────────────────────────────────
   if (step === "reveal") {
     return (
@@ -233,6 +239,7 @@ export default function Home() {
   return (
     <ResultsPage
       nameA={nameA} nameB={nameB}
+      catsA={catsA} catsB={catsB}
       matched={matched} onlyA={onlyA} onlyB={onlyB}
       savedIds={savedIds} onToggleSave={handleToggleSave}
       onReset={handleReset} weather={weather}
