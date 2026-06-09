@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react"
 import type { Category } from "@/lib/ranking"
-import { scoreActivities, partitionResults } from "@/lib/ranking"
+import { scoreActivities, partitionResults, detectCreamyPintsScenario } from "@/lib/ranking"
 import { decodeState } from "@/lib/url"
 import { fetchDublinWeather, weatherHintFromCode, type WeatherResult } from "@/lib/weather"
 import PreferencePanel from "@/components/PreferencePanel"
@@ -11,12 +11,13 @@ import MatchReveal from "@/components/MatchReveal"
 import ResultsPage from "@/components/ResultsPage"
 import LuckyResults from "@/components/LuckyResults"
 import Countdown from "@/components/Countdown"
+import CreamyPintsEasterEgg from "@/components/CreamyPintsEasterEgg"
 import activitiesRaw from "@/data/activities.json"
 import type { Activity } from "@/lib/ranking"
 
 const activities = activitiesRaw as Activity[]
 
-type Step = "person-a" | "handoff" | "person-b" | "countdown" | "reveal" | "results" | "lucky-results"
+type Step = "person-a" | "handoff" | "person-b" | "creamy-pints" | "countdown" | "reveal" | "results" | "lucky-results"
 type Mode = "wizard" | "lucky" | null
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
   const [weather, setWeather] = useState<WeatherResult | null>(null)
   const [modeA, setModeA] = useState<Mode>(null)
   const [modeB, setModeB] = useState<Mode>(null)
+  const [creamyScenario, setCreamyScenario] = useState<"both-only" | "one-only-a" | "one-only-b" | "none">("none")
 
   useEffect(() => {
     fetchDublinWeather().then(setWeather)
@@ -78,7 +80,13 @@ export default function Home() {
     if (mode === "lucky" || modeA === "lucky") {
       setStep("lucky-results")
     } else {
-      setStep("countdown")
+      const scenario = detectCreamyPintsScenario(catsA, catsB)
+      setCreamyScenario(scenario)
+      if (scenario === "both-only") {
+        setStep("creamy-pints")
+      } else {
+        setStep("countdown")
+      }
     }
   }
 
@@ -222,6 +230,11 @@ export default function Home() {
     )
   }
 
+  // ── Creamy Pints ──────────────────────────────────────────
+  if (step === "creamy-pints") {
+    return <CreamyPintsEasterEgg activities={activities} onReset={handleReset} />
+  }
+
   // ── Countdown ─────────────────────────────────────────────
   if (step === "countdown") {
     return <Countdown onComplete={() => setStep("reveal")} />
@@ -229,9 +242,10 @@ export default function Home() {
 
   // ── Reveal ────────────────────────────────────────────────
   if (step === "reveal") {
+    const revealScenario = creamyScenario === "both-only" ? "none" : creamyScenario === "none" ? "none" : creamyScenario
     return (
       <MatchReveal nameA={nameA} nameB={nameB} catsA={catsA} catsB={catsB}
-        onReveal={() => setStep("results")} />
+        onReveal={() => setStep("results")} creamyScenario={revealScenario} />
     )
   }
 

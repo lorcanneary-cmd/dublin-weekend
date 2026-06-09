@@ -1,4 +1,4 @@
-export type Category = "Walks" | "Adventures" | "Culture" | "Coffee & Bakeries" | "Bars & Cocktails" | "Film" | "Low-Key"
+export type Category = "Walks" | "Adventures" | "Culture" | "Coffee & Bakeries" | "Bars & Cocktails" | "Film" | "Low-Key" | "Creamy Pints" | "Nature/Day Trip"
 
 export interface Activity {
   id: string
@@ -37,13 +37,22 @@ export interface ScoredActivity {
 
 export type WeatherHint = "rain" | "clear" | null
 
+export function detectCreamyPintsScenario(catsA: Category[], catsB: Category[]): "both-only" | "one-only-a" | "one-only-b" | "none" {
+  const aIsOnly = catsA.length === 1 && catsA[0] === "Creamy Pints"
+  const bIsOnly = catsB.length === 1 && catsB[0] === "Creamy Pints"
+  if (aIsOnly && bIsOnly) return "both-only"
+  if (aIsOnly && !bIsOnly) return "one-only-a"
+  if (!aIsOnly && bIsOnly) return "one-only-b"
+  return "none"
+}
+
 export function scoreActivities(
   activities: Activity[],
   a: Prefs,
   b: Prefs,
   weatherHint: WeatherHint = null
 ): ScoredActivity[] {
-  return activities.map((act) => {
+  return activities.filter((act) => act.primaryCategory !== "Creamy Pints").map((act) => {
     const inA = a.categories.includes(act.primaryCategory)
     const inB = b.categories.includes(act.primaryCategory)
 
@@ -88,7 +97,8 @@ export function getLuckyPicks(
   weatherHint: WeatherHint = null,
   excludeCategories: Category[] = []
 ): Activity[] {
-  let pool = activities.filter(a => !excludeCategories.includes(a.primaryCategory))
+  const LUCKY_EXCLUDED_CATEGORIES: Category[] = ["Creamy Pints"]
+  let pool = activities.filter(a => !excludeCategories.includes(a.primaryCategory) && !LUCKY_EXCLUDED_CATEGORIES.includes(a.primaryCategory))
 
   // Weight by weather
   const weighted: Activity[] = []

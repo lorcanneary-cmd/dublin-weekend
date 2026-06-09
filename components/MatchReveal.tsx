@@ -1,5 +1,6 @@
 "use client"
 
+import { detectCreamyPintsScenario } from "@/lib/ranking"
 import type { Category } from "@/lib/ranking"
 
 const CAT_ICON: Record<Category, string> = {
@@ -10,6 +11,8 @@ const CAT_ICON: Record<Category, string> = {
   "Bars & Cocktails": "ti-glass-cocktail",
   Film: "ti-movie",
   "Low-Key": "ti-sofa",
+  "Creamy Pints": "ti-beer",
+  "Nature/Day Trip": "ti-trees",
 }
 
 const MISMATCH_LINES: Record<Category, string> = {
@@ -20,6 +23,8 @@ const MISMATCH_LINES: Record<Category, string> = {
   "Bars & Cocktails": "classic",
   Film: "eyes glued to a screen",
   "Low-Key": "aggressively low energy",
+  "Creamy Pints": "creamy pints",
+  "Nature/Day Trip": "nature walk",
 }
 
 interface Props {
@@ -28,9 +33,10 @@ interface Props {
   catsA: Category[]
   catsB: Category[]
   onReveal: () => void
+  creamyScenario?: "one-only-a" | "one-only-b" | "none"
 }
 
-export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal }: Props) {
+export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal, creamyScenario = "none" }: Props) {
   const matched = catsA.filter((c) => catsB.includes(c))
   const onlyA = catsA.filter((c) => !catsB.includes(c))
   const onlyB = catsB.filter((c) => !catsA.includes(c))
@@ -78,10 +84,18 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal }: Pr
                 </span>
               ))}
             </div>
-            <p className="text-stone-600 text-xs italic">
-              {nameB}, can you believe {nameA} picked {onlyA.map(c => MISMATCH_LINES[c] || c).join(" and ")}
-            </p>
-            <p className="text-stone-600 text-xs italic">paper scissors rock for the rest</p>
+            {creamyScenario === "one-only-a" ? (
+              <p className="text-stone-600 text-xs italic">
+                {nameA} would rather be having a creamy pint. just saying.
+              </p>
+            ) : (
+              <>
+                <p className="text-stone-600 text-xs italic">
+                  {nameB}, can you believe {nameA} picked {onlyA.map(c => MISMATCH_LINES[c] || c).join(" and ")}
+                </p>
+                <p className="text-stone-600 text-xs italic">paper scissors rock for the rest</p>
+              </>
+            )}
           </div>
         )}
 
@@ -97,10 +111,18 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal }: Pr
                 </span>
               ))}
             </div>
-            <p className="text-stone-600 text-xs italic">
-              {nameA}, {nameB} wants {onlyB.map(c => MISMATCH_LINES[c] || c).join(" and ")}. make of that what you will.
-            </p>
-            <p className="text-stone-600 text-xs italic">paper scissors rock for the rest</p>
+            {creamyScenario === "one-only-b" ? (
+              <p className="text-stone-600 text-xs italic">
+                {nameB} would rather be having a creamy pint. just saying.
+              </p>
+            ) : (
+              <>
+                <p className="text-stone-600 text-xs italic">
+                  {nameA}, {nameB} wants {onlyB.map(c => MISMATCH_LINES[c] || c).join(" and ")}. make of that what you will.
+                </p>
+                <p className="text-stone-600 text-xs italic">paper scissors rock for the rest</p>
+              </>
+            )}
           </div>
         )}
 
