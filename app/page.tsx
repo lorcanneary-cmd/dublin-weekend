@@ -249,6 +249,7 @@ export default function Home() {
       matched={matched} onlyA={onlyA} onlyB={onlyB}
       savedIds={savedIds} onToggleSave={handleToggleSave}
       onReset={handleReset} weather={weather}
+      catsA={catsA} catsB={catsB}
     />
   )
 }
