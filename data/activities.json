@@ -164,7 +164,6 @@
     "durationMin": 90,
     "lat": 53.3053,
     "lon": -6.1477,
-    "infoUrl": "https://www.forty-foot.com",
     "searchQuery": "Seapoint swim sauna Dublin",
     "priceHint": "~€20pp sauna"
   },
@@ -179,9 +178,7 @@
     "durationMin": 120,
     "lat": 53.3458,
     "lon": -6.2533,
-    "infoUrl": "https://kayakingireland.com",
-    "bookingUrl": "https://kayakingireland.com",
-    "requiresBooking": true,
+    "searchQuery": "City Kayaking Dublin Liffey",
     "priceHint": "~€45pp"
   },
   {
@@ -195,9 +192,7 @@
     "durationMin": 90,
     "lat": 53.3386,
     "lon": -6.2275,
-    "infoUrl": "https://www.surfandsea.ie",
-    "bookingUrl": "https://www.surfandsea.ie",
-    "requiresBooking": true,
+    "searchQuery": "paddleboarding Grand Canal Dock Dublin",
     "priceHint": "~€35pp"
   },
   {
@@ -225,8 +220,7 @@
     "durationMin": 90,
     "lat": 53.3617,
     "lon": -6.3267,
-    "infoUrl": "https://phoenixparkbikes.com",
-    "requiresBooking": false,
+    "searchQuery": "Phoenix Park Bikes Dublin tandem rental",
     "priceHint": "~€25 per tandem"
   },
   {
@@ -254,7 +248,7 @@
     "durationMin": 60,
     "lat": 53.2904,
     "lon": -6.1151,
-    "searchQuery": "Forty Foot swim Sandycove Dublin",
+    "searchQuery": "Forty Foot Sandycove Dublin swim",
     "availabilityNote": "Just turn up — early morning is best"
   },
   {
@@ -371,8 +365,7 @@
     "durationMin": 90,
     "lat": 53.3672,
     "lon": -6.2734,
-    "infoUrl": "https://glasnevinmuseum.ie",
-    "requiresBooking": false,
+    "searchQuery": "Glasnevin Cemetery Museum Tour Dublin",
     "priceHint": "~€13pp"
   },
   {
@@ -506,7 +499,7 @@
     "durationMin": 90,
     "lat": 53.1561,
     "lon": -6.0817,
-    "infoUrl": "https://www.firehousebakery.ie",
+    "searchQuery": "Firehouse Bakery Delgany Wicklow",
     "rating": 4.9,
     "availabilityNote": "Thu–Sun only — book ahead or queue"
   },
@@ -674,9 +667,7 @@
     "durationMin": 180,
     "lat": 53.3498,
     "lon": -6.2603,
-    "infoUrl": "https://www.luna.ie",
-    "bookingUrl": "https://www.luna.ie",
-    "requiresBooking": true,
+    "searchQuery": "outdoor cinema screening Dublin",
     "priceHint": "~€20pp",
     "availabilityNote": "Seasonal — check dates online"
   },
@@ -691,7 +682,7 @@
     "durationMin": 180,
     "lat": 53.3498,
     "lon": -6.2603,
-    "infoUrl": "https://letterboxd.com",
+    "searchQuery": "home movie night essentials setup",
     "availabilityNote": "Grab snacks, argue about what to watch, enjoy"
   },
   {
@@ -735,8 +726,7 @@
     "durationMin": 120,
     "lat": 53.3488,
     "lon": -6.2778,
-    "infoUrl": "https://www.tokenboardgamecafe.ie",
-    "requiresBooking": false,
+    "searchQuery": "Token arcade board games Smithfield Dublin",
     "priceHint": "~€6pp table fee + food"
   },
   {
@@ -877,7 +867,48 @@
     "durationMin": 60,
     "lat": 53.3268,
     "lon": -6.2332,
-    "infoUrl": "https://www.irishfarmersmarkets.ie",
+    "searchQuery": "Herbert Park Farmers Market Dublin Sunday",
     "availabilityNote": "Sundays only, 10am–4pm"
+  },
+  {
+    "id": "savoy-cinema",
+    "title": "Savoy Cinema",
+    "description": "One of Dublin's grand old cinemas on O'Connell Street — big screens, big sound, and an old-school cinema experience that multiplexes can't replicate.",
+    "primaryCategory": "Film",
+    "tags": ["indoor","film","rainy","classic"],
+    "mood": ["low-key"],
+    "indoorOutdoor": "indoor",
+    "weather": ["sun","cloud","rain"],
+    "cost": "€",
+    "durationMin": 150,
+    "lat": 53.350,
+    "lon": -6.261,
+    "neighborhood": "O'Connell Street",
+    "daysOpen": ["daily"],
+    "typicalStart": ["evening"],
+    "transit": ["bus","train"],
+    "searchQuery": "Savoy Cinema Dublin O'Connell Street",
+    "confidence": 2
+  },
+  {
+    "id": "wine-tasting-home",
+    "title": "At-Home Wine Tasting Kit",
+    "description": "Order a curated tasting kit — typically 4-6 bottles with tasting notes and a structure to follow. Turns a quiet evening into something that feels like a proper occasion.",
+    "primaryCategory": "Low-Key",
+    "tags": ["indoor","drinks","rainy","cosy","romantic"],
+    "mood": ["low-key","romantic"],
+    "indoorOutdoor": "indoor",
+    "weather": ["sun","cloud","rain"],
+    "cost": "€€",
+    "durationMin": 120,
+    "lat": 53.350,
+    "lon": -6.260,
+    "neighborhood": "Home",
+    "daysOpen": ["daily"],
+    "typicalStart": ["evening"],
+    "transit": [],
+    "searchQuery": "wine tasting kit Dublin delivery",
+    "priceHint": "~€35-50 for kit",
+    "confidence": 2
   }
 ]

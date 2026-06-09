@@ -41,15 +41,28 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal, crea
   const onlyA = catsA.filter((c) => !catsB.includes(c))
   const onlyB = catsB.filter((c) => !catsA.includes(c))
   const matchCount = matched.length
+  const isPerfectMatch = catsA.length > 0 && catsB.length > 0 && catsA.length === matched.length && catsB.length === matched.length
 
   return (
     <div className="min-h-screen bg-stone-900 flex flex-col items-center justify-center px-6 py-12">
-      <div className="w-full max-w-sm space-y-8">
+      {isPerfectMatch && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div style={{
+            fontSize: "120px",
+            animation: "perfectMatchPulse 0.8s ease-out forwards"
+          }}>
+            ✓
+          </div>
+        </div>
+      )}
+      <div className="w-full max-w-sm space-y-8" style={{
+        animation: isPerfectMatch ? "fadeInDelayed 0.8s ease-out 0.8s both" : "none"
+      }}>
 
         {/* Score */}
         <div className="text-center space-y-2">
           <h2 className="text-white text-3xl font-bold tracking-tight">
-            {matchCount === 0 ? "zero overlap" : `${matchCount} match${matchCount > 1 ? "es" : ""}`}
+            {matchCount === 0 ? "zero overlap" : isPerfectMatch ? "perfect match" : `${matchCount} match${matchCount > 1 ? "es" : ""}`}
           </h2>
           <p className="text-stone-500 text-sm">
             {matchCount === 0 ? "not a single category in common. might be time to reconsider some life choices." : `${nameA} & ${nameB} · ${matchCount} of ${Math.max(catsA.length, catsB.length)} categories`}
@@ -68,7 +81,7 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal, crea
                 </span>
               ))}
             </div>
-            <p className="text-stone-500 text-xs italic">make it happen — no excuses now</p>
+            <p className="text-stone-500 text-xs italic">{isPerfectMatch ? "make it happen — no excuses now" : "make it happen — no excuses now"}</p>
           </div>
         )}
 
@@ -136,6 +149,34 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal, crea
           <p className="text-stone-600 text-xs text-center italic">or just go separately. both fine.</p>
         )}
       </div>
+
+      <style>{`
+        @keyframes perfectMatchPulse {
+          0% {
+            opacity: 0;
+            transform: scale(0.5);
+            color: #10b981;
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1.2);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1);
+            color: #10b981;
+          }
+        }
+
+        @keyframes fadeInDelayed {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      `}</style>
     </div>
   )
 }

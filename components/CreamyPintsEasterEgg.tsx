@@ -9,143 +9,186 @@ interface Props {
 }
 
 export default function CreamyPintsEasterEgg({ activities, onReset }: Props) {
-  const [fillComplete, setFillComplete] = useState(false)
-  const [showHeadline, setShowHeadline] = useState(false)
-  const [showSubtext, setShowSubtext] = useState(false)
-  const [showCards, setShowCards] = useState(false)
-
+  const [phase, setPhase] = useState<1 | 2 | 3 | 4>(1)
   const pubActivities = activities.filter((a) => a.primaryCategory === "Creamy Pints")
 
   useEffect(() => {
-    const fillTimer = setTimeout(() => {
-      setFillComplete(true)
-    }, 2000)
-    return () => clearTimeout(fillTimer)
+    const timer1 = setTimeout(() => setPhase(2), 2500)
+    return () => clearTimeout(timer1)
   }, [])
 
   useEffect(() => {
-    if (!fillComplete) return
-    const headlineTimer = setTimeout(() => {
-      setShowHeadline(true)
-    }, 300)
-    return () => clearTimeout(headlineTimer)
-  }, [fillComplete])
+    if (phase < 2) return
+    const timer2 = setTimeout(() => setPhase(3), 1000)
+    return () => clearTimeout(timer2)
+  }, [phase])
 
   useEffect(() => {
-    if (!showHeadline) return
-    const subtextTimer = setTimeout(() => {
-      setShowSubtext(true)
-    }, 300)
-    return () => clearTimeout(subtextTimer)
-  }, [showHeadline])
-
-  useEffect(() => {
-    if (!showSubtext) return
-    const cardsTimer = setTimeout(() => {
-      setShowCards(true)
-    }, 300)
-    return () => clearTimeout(cardsTimer)
-  }, [showSubtext])
+    if (phase < 3) return
+    const timer3 = setTimeout(() => setPhase(4), 1200)
+    return () => clearTimeout(timer3)
+  }, [phase])
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] flex flex-col items-center justify-center px-6 py-12 space-y-8">
-      {/* Pint glass SVG */}
-      <div className="relative w-24 h-32">
-        <svg
-          viewBox="0 0 80 120"
-          className="w-full h-full"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <clipPath id="fillClip">
+    <div style={{
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "24px",
+      backgroundColor: phase < 2 ? "#ffffff" : "#0f0f0f",
+      transition: phase === 2 ? "background-color 0.5s ease-in-out" : "none"
+    }}>
+      {/* Phase 1 & 2: Pint glass */}
+      {phase < 3 && (
+        <div style={{
+          position: "relative",
+          width: "96px",
+          height: "128px",
+          opacity: phase < 2 ? 1 : 0,
+          transition: phase === 2 ? "opacity 0.5s ease-out" : "none",
+          transitionDelay: phase === 2 ? "0s" : "none"
+        }}>
+          <svg
+            viewBox="0 0 80 120"
+            style={{ width: "100%", height: "100%" }}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Glass outline */}
+            <path
+              d="M 20 30 L 15 100 Q 15 110 25 110 L 55 110 Q 65 110 65 100 L 60 30 Z"
+              fill="none"
+              stroke="#1c1c1c"
+              strokeWidth="2"
+            />
+
+            {/* Glass fill container with overflow hidden */}
+            <g style={{ overflow: "hidden" }}>
+              <defs>
+                <clipPath id="glassClip">
+                  <path d="M 20 30 L 15 100 Q 15 110 25 110 L 55 110 Q 65 110 65 100 L 60 30 Z" />
+                </clipPath>
+              </defs>
+
+              {/* Rising fill div (dark brown/black) */}
               <rect
                 x="12"
                 y="20"
                 width="56"
                 height="70"
+                fill="#1a1a1a"
+                clipPath="url(#glassClip)"
                 style={{
-                  animation: fillComplete ? "none" : "fillUp 2s ease-in-out forwards",
+                  animation: phase >= 1 ? "fillRise 2.5s ease-in-out forwards" : "none"
                 }}
               />
-            </clipPath>
-          </defs>
 
-          {/* Glass outline */}
-          <path
-            d="M 20 30 L 15 100 Q 15 110 25 110 L 55 110 Q 65 110 65 100 L 60 30 Z"
-            fill="none"
-            stroke="white"
-            strokeWidth="2"
-          />
-
-          {/* Fill */}
-          <rect
-            x="12"
-            y="20"
-            width="56"
-            height="70"
-            fill="#E8B67B"
-            clipPath="url(#fillClip)"
-          />
-
-          {/* Foam head */}
-          {fillComplete && (
-            <g
-              style={{
-                animation: "foamFade 0.8s ease-out forwards",
-              }}
-            >
-              <circle cx="40" cy="20" r="8" fill="white" opacity="0.8" />
-              <circle cx="28" cy="18" r="5" fill="white" opacity="0.7" />
-              <circle cx="52" cy="19" r="6" fill="white" opacity="0.7" />
+              {/* White foam head (top 20% of fill) */}
+              <rect
+                x="12"
+                y="20"
+                width="56"
+                height="14"
+                fill="#ffffff"
+                clipPath="url(#glassClip)"
+                style={{
+                  animation: phase >= 1 ? "foamRise 2.5s ease-in-out forwards" : "none"
+                }}
+              />
             </g>
-          )}
-        </svg>
-      </div>
+          </svg>
+        </div>
+      )}
 
-      {/* Headline */}
-      {showHeadline && (
-        <h1
-          className="text-2xl font-bold text-white text-center animate-fade-in max-w-sm"
-          style={{ animation: "fadeIn 0.6s ease-in" }}
-        >
+      {/* Phase 3: Headline */}
+      {phase >= 3 && (
+        <h1 style={{
+          fontSize: "32px",
+          fontWeight: "700",
+          color: "#ffffff",
+          textAlign: "center",
+          maxWidth: "448px",
+          marginBottom: "24px",
+          animation: "fadeIn 0.8s ease-in forwards",
+          opacity: 0
+        }}>
           the most important decision you'll make today
         </h1>
       )}
 
-      {/* Subtext */}
-      {showSubtext && (
-        <p
-          className="text-stone-400 text-sm text-center animate-fade-in"
-          style={{ animation: "fadeIn 0.6s ease-in" }}
-        >
+      {/* Phase 3: Subtext */}
+      {phase >= 3 && (
+        <p style={{
+          fontSize: "14px",
+          color: "#999999",
+          textAlign: "center",
+          marginBottom: "48px",
+          animation: "fadeIn 0.8s ease-in 0.3s forwards",
+          opacity: 0
+        }}>
           you absolute legends. both of you.
         </p>
       )}
 
-      {/* Pub cards */}
-      {showCards && (
-        <div className="w-full max-w-lg space-y-3 animate-fade-in" style={{ animation: "fadeIn 0.6s ease-in" }}>
+      {/* Phase 4: Pub cards */}
+      {phase >= 4 && (
+        <div style={{
+          width: "100%",
+          maxWidth: "512px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "12px"
+        }}>
           {pubActivities.map((act, idx) => (
             <div
               key={act.id}
-              className="bg-stone-900 border border-stone-800 rounded-2xl p-4 space-y-2"
               style={{
+                backgroundColor: "#1a1a1a",
+                border: "1px solid #333333",
+                borderRadius: "16px",
+                padding: "16px",
                 animation: `slideUp 0.5s ease-out ${idx * 0.1}s both`,
+                opacity: 0,
+                transform: "translateY(20px)"
               }}
             >
-              <h3 className="font-semibold text-white text-base">{act.title}</h3>
+              <h3 style={{
+                fontWeight: "600",
+                color: "#ffffff",
+                fontSize: "16px",
+                marginBottom: "8px"
+              }}>
+                {act.title}
+              </h3>
               {act.description && (
-                <p className="text-sm text-stone-400">{act.description}</p>
+                <p style={{
+                  fontSize: "14px",
+                  color: "#999999",
+                  marginBottom: "12px"
+                }}>
+                  {act.description}
+                </p>
               )}
               <a
                 href={`https://www.google.com/search?q=${encodeURIComponent(act.searchQuery || act.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-stone-300 hover:text-white text-xs font-medium transition-colors"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  color: "#d4d4d4",
+                  fontSize: "13px",
+                  fontWeight: "500",
+                  textDecoration: "none",
+                  transition: "color 0.2s"
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#d4d4d4")}
               >
-                <i className="ti ti-search text-xs mr-1" aria-hidden="true" />
-                Search online
+                <i className="ti ti-search" style={{ fontSize: "13px" }} aria-hidden="true" />
+                Find it
               </a>
             </div>
           ))}
@@ -153,34 +196,47 @@ export default function CreamyPintsEasterEgg({ activities, onReset }: Props) {
       )}
 
       {/* Start over button */}
-      {showCards && (
+      {phase >= 4 && (
         <button
           onClick={onReset}
-          className="text-stone-500 hover:text-stone-300 text-xs transition-colors animate-fade-in"
-          style={{ animation: "fadeIn 0.6s ease-in 0.5s both" }}
+          style={{
+            marginTop: "32px",
+            backgroundColor: "transparent",
+            border: "none",
+            color: "#808080",
+            fontSize: "13px",
+            cursor: "pointer",
+            transition: "color 0.2s",
+            animation: "fadeIn 0.8s ease-in 0.5s forwards",
+            opacity: 0
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#b3b3b3")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#808080")}
         >
           start over
         </button>
       )}
 
       <style>{`
-        @keyframes fillUp {
+        @keyframes fillRise {
           0% {
-            height: 0;
             y: 90;
+            height: 0;
           }
           100% {
-            height: 70;
             y: 20;
+            height: 70;
           }
         }
 
-        @keyframes foamFade {
+        @keyframes foamRise {
           0% {
-            opacity: 0;
+            y: 90;
+            height: 0;
           }
           100% {
-            opacity: 1;
+            y: 56;
+            height: 14;
           }
         }
 

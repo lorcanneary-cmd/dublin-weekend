@@ -77,7 +77,9 @@ export default function Home() {
 
   function handlePersonBDone(mode: Mode) {
     setModeB(mode)
-    if (mode === "lucky" || modeA === "lucky") {
+    if (modeA === "lucky" && mode === "lucky") {
+      setStep("countdown")
+    } else if (mode === "lucky" || modeA === "lucky") {
       setStep("lucky-results")
     } else {
       const scenario = detectCreamyPintsScenario(catsA, catsB)
@@ -237,7 +239,8 @@ export default function Home() {
 
   // ── Countdown ─────────────────────────────────────────────
   if (step === "countdown") {
-    return <Countdown onComplete={() => setStep("reveal")} />
+    const bothLucky = modeA === "lucky" && modeB === "lucky"
+    return <Countdown onComplete={() => bothLucky ? setStep("lucky-results") : setStep("reveal")} />
   }
 
   // ── Reveal ────────────────────────────────────────────────
