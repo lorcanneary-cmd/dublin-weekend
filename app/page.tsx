@@ -7,6 +7,7 @@ import { decodeState } from "@/lib/url"
 import { fetchDublinWeather, weatherHintFromCode, type WeatherResult } from "@/lib/weather"
 import PreferencePanel from "@/components/PreferencePanel"
 import HandoffScreen from "@/components/HandoffScreen"
+import Countdown from "@/components/Countdown"
 import MatchReveal from "@/components/MatchReveal"
 import ResultsPage from "@/components/ResultsPage"
 import LuckyResults from "@/components/LuckyResults"
@@ -17,7 +18,7 @@ import type { Activity } from "@/lib/ranking"
 
 const activities = activitiesRaw as Activity[]
 
-type Step = "person-a" | "handoff" | "person-b" | "reveal" | "results" | "lucky-results" | "creamy-pints"
+type Step = "person-a" | "handoff" | "person-b" | "countdown" | "reveal" | "results" | "lucky-results" | "creamy-pints"
 type Mode = "wizard" | "lucky" | null
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
   const [weather, setWeather] = useState<WeatherResult | null>(null)
   const [modeA, setModeA] = useState<Mode>(null)
   const [modeB, setModeB] = useState<Mode>(null)
+  const [nextStep, setNextStep] = useState<Step>("reveal")
 
   useEffect(() => {
     fetchDublinWeather().then(setWeather)
@@ -77,15 +79,16 @@ export default function Home() {
   function handlePersonBDone(mode: Mode) {
     setModeB(mode)
     if (mode === "lucky" || modeA === "lucky") {
-      setStep("lucky-results")
+      setNextStep("lucky-results")
     } else {
       const scenario = detectCreamyPintsScenario(catsA, catsB)
       if (scenario === "both-only") {
-        setStep("creamy-pints")
+        setNextStep("creamy-pints")
       } else {
-        setStep("reveal")
+        setNextStep("reveal")
       }
     }
+    setStep("countdown")
   }
 
   // ── Person A ──────────────────────────────────────────────
@@ -209,6 +212,11 @@ export default function Home() {
         </div>
       </main>
     )
+  }
+
+  // ── Countdown ────────────────────────────────────────────
+  if (step === "countdown") {
+    return <Countdown onComplete={() => setStep(nextStep)} />
   }
 
   // ── Lucky results ─────────────────────────────────────────
