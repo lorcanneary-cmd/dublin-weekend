@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react"
 import type { Category } from "@/lib/ranking"
-import { scoreActivities, partitionResults, detectCreamyPintsScenario } from "@/lib/ranking"
+import { scoreActivities, partitionResults } from "@/lib/ranking"
 import { decodeState } from "@/lib/url"
 import { fetchDublinWeather, weatherHintFromCode, type WeatherResult } from "@/lib/weather"
 import PreferencePanel from "@/components/PreferencePanel"
@@ -10,14 +10,16 @@ import HandoffScreen from "@/components/HandoffScreen"
 import MatchReveal from "@/components/MatchReveal"
 import ResultsPage from "@/components/ResultsPage"
 import LuckyResults from "@/components/LuckyResults"
-import Countdown from "@/components/Countdown"
 import CreamyPintsEasterEgg from "@/components/CreamyPintsEasterEgg"
+import { detectCreamyPintsScenario } from "@/lib/ranking"
+import CreamyPintsEasterEgg from "@/components/CreamyPintsEasterEgg"
+import { detectCreamyPintsScenario } from "@/lib/ranking"
 import activitiesRaw from "@/data/activities.json"
 import type { Activity } from "@/lib/ranking"
 
 const activities = activitiesRaw as Activity[]
 
-type Step = "person-a" | "handoff" | "person-b" | "creamy-pints" | "countdown" | "reveal" | "results" | "lucky-results"
+type Step = "person-a" | "handoff" | "person-b" | "reveal" | "results" | "lucky-results" | "creamy-pints"
 type Mode = "wizard" | "lucky" | null
 
 export default function Home() {
@@ -30,7 +32,6 @@ export default function Home() {
   const [weather, setWeather] = useState<WeatherResult | null>(null)
   const [modeA, setModeA] = useState<Mode>(null)
   const [modeB, setModeB] = useState<Mode>(null)
-  const [creamyScenario, setCreamyScenario] = useState<"both-only" | "one-only-a" | "one-only-b" | "none">("none")
 
   useEffect(() => {
     fetchDublinWeather().then(setWeather)
@@ -77,17 +78,14 @@ export default function Home() {
 
   function handlePersonBDone(mode: Mode) {
     setModeB(mode)
-    if (modeA === "lucky" && mode === "lucky") {
-      setStep("countdown")
-    } else if (mode === "lucky" || modeA === "lucky") {
+    if (mode === "lucky" || modeA === "lucky") {
       setStep("lucky-results")
     } else {
-      const scenario = detectCreamyPintsScenario(catsA, catsB)
-      setCreamyScenario(scenario)
+      const scenario = detectCreamyPintsScenario(catsA, mode === "wizard" ? catsB : catsA)
       if (scenario === "both-only") {
         setStep("creamy-pints")
       } else {
-        setStep("countdown")
+        setStep("reveal")
       }
     }
   }
@@ -232,23 +230,16 @@ export default function Home() {
     )
   }
 
-  // ── Creamy Pints ──────────────────────────────────────────
+  // ── Creamy Pints Easter Egg ───────────────────────────────
   if (step === "creamy-pints") {
     return <CreamyPintsEasterEgg activities={activities} onReset={handleReset} />
   }
 
-  // ── Countdown ─────────────────────────────────────────────
-  if (step === "countdown") {
-    const bothLucky = modeA === "lucky" && modeB === "lucky"
-    return <Countdown onComplete={() => bothLucky ? setStep("lucky-results") : setStep("reveal")} />
-  }
-
   // ── Reveal ────────────────────────────────────────────────
   if (step === "reveal") {
-    const revealScenario = creamyScenario === "both-only" ? "none" : creamyScenario === "none" ? "none" : creamyScenario
     return (
       <MatchReveal nameA={nameA} nameB={nameB} catsA={catsA} catsB={catsB}
-        onReveal={() => setStep("results")} creamyScenario={revealScenario} />
+        onReveal={() => setStep("results")} />
     )
   }
 
@@ -256,7 +247,6 @@ export default function Home() {
   return (
     <ResultsPage
       nameA={nameA} nameB={nameB}
-      catsA={catsA} catsB={catsB}
       matched={matched} onlyA={onlyA} onlyB={onlyB}
       savedIds={savedIds} onToggleSave={handleToggleSave}
       onReset={handleReset} weather={weather}
