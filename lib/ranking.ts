@@ -52,7 +52,7 @@ export function scoreActivities(
   b: Prefs,
   weatherHint: WeatherHint = null
 ): ScoredActivity[] {
-  return activities.filter((act) => act.primaryCategory !== "Creamy Pints").map((act) => {
+  return activities.map((act) => {
     const inA = a.categories.includes(act.primaryCategory)
     const inB = b.categories.includes(act.primaryCategory)
 
