@@ -230,7 +230,8 @@ export default function Home() {
 
   // ── Creamy Pints Easter Egg ───────────────────────────────
   if (step === "creamy-pints") {
-    return <CreamyPintsEasterEgg activities={activities} onReset={handleReset} />
+    const creamyPubs = activities.filter(a => a.primaryCategory === "Creamy Pints")
+    return <CreamyPintsEasterEgg activities={creamyPubs} onReset={handleReset} />
   }
 
   // ── Reveal ────────────────────────────────────────────────

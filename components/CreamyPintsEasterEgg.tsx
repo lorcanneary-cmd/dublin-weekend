@@ -12,8 +12,6 @@ function searchUrl(act: Activity) {
 }
 
 export default function CreamyPintsEasterEgg({ activities, onReset }: Props) {
-  const pubs = activities.filter(a => a.primaryCategory === "Creamy Pints")
-
   return (
     <div style={{ minHeight: '100vh', background: '#ffffff', padding: '32px 20px 60px', maxWidth: '500px', margin: '0 auto' }}>
       <h1 style={{ fontSize: '28px', fontWeight: 600, color: '#111', margin: '0 0 8px' }}>
@@ -22,7 +20,7 @@ export default function CreamyPintsEasterEgg({ activities, onReset }: Props) {
       <p style={{ fontSize: '15px', color: '#666', margin: '0 0 32px', lineHeight: 1.5 }}>
         here are the top ten places for a creamy pint in Dublin
       </p>
-      {pubs.map(act => (
+      {activities.map(act => (
         <div key={act.id} style={{ background: '#fff', border: '1px solid #e5e5e5', borderRadius: '12px', padding: '16px', marginBottom: '12px' }}>
           <p style={{ fontSize: '16px', fontWeight: 600, color: '#111', margin: '0 0 4px' }}>{act.title}</p>
           <p style={{ fontSize: '13px', color: '#666', lineHeight: 1.5, margin: '0 0 12px' }}>{act.description}</p>
