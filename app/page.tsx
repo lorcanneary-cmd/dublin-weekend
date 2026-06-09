@@ -12,8 +12,6 @@ import ResultsPage from "@/components/ResultsPage"
 import LuckyResults from "@/components/LuckyResults"
 import CreamyPintsEasterEgg from "@/components/CreamyPintsEasterEgg"
 import { detectCreamyPintsScenario } from "@/lib/ranking"
-import CreamyPintsEasterEgg from "@/components/CreamyPintsEasterEgg"
-import { detectCreamyPintsScenario } from "@/lib/ranking"
 import activitiesRaw from "@/data/activities.json"
 import type { Activity } from "@/lib/ranking"
 
@@ -81,7 +79,7 @@ export default function Home() {
     if (mode === "lucky" || modeA === "lucky") {
       setStep("lucky-results")
     } else {
-      const scenario = detectCreamyPintsScenario(catsA, mode === "wizard" ? catsB : catsA)
+      const scenario = detectCreamyPintsScenario(catsA, catsB)
       if (scenario === "both-only") {
         setStep("creamy-pints")
       } else {
