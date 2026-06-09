@@ -29,6 +29,11 @@ export default function CreamyPintsEasterEgg({ activities, onReset }: Props) {
     return () => clearTimeout(timer3)
   }, [phase])
 
+  useEffect(() => {
+    const timer = setTimeout(() => setPhase(4), 3500)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div style={{
       minHeight: "100vh",
