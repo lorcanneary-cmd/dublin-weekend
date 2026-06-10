@@ -225,7 +225,7 @@ export default function WatchPicker({ step, onDone }: Props) {
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 px-5 pb-8 pt-4 bg-gradient-to-t from-[#111] via-[#111]/95 to-transparent">
+      <div className="fixed bottom-0 left-0 right-0 px-5 pb-24 pt-4 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/95 to-transparent">
         <button
           onClick={handleDone}
           disabled={!canSubmit}
