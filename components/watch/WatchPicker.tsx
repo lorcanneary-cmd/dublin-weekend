@@ -63,18 +63,9 @@ export default function WatchPicker({ step, onDone }: Props) {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="px-5 pt-12 pb-3">
-        <div className="flex items-center justify-between mb-1">
-          <span className="text-xs text-white/40 uppercase tracking-widest font-medium">
-            What are we watching?
-          </span>
-          <span className="text-xs text-white/30">{step} of 2</span>
-        </div>
-        <div className="h-0.5 bg-white/10 rounded-full mt-2">
-          <div
-            className="h-full bg-[#c8f04a] rounded-full transition-all duration-300"
-            style={{ width: step === 1 ? '50%' : '100%' }}
-          />
-        </div>
+        <p className="text-2xl font-semibold text-white leading-tight">
+          {step === 1 ? 'Pick what you\'re into' : 'Now your turn'}
+        </p>
       </div>
 
       <div className="flex-1 overflow-y-auto px-5 pb-36">

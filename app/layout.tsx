@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import { Analytics } from '@vercel/analytics/react'
+import BottomNav from '@/components/BottomNav'
 
 export const metadata: Metadata = {
   title: "What are we doing?",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="antialiased">
         {children}
+        <BottomNav />
         <Analytics />
       </body>
     </html>

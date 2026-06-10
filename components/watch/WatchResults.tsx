@@ -64,8 +64,8 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
       try {
         const sharedParams = {
           type: selectionsA.type,
-          genres: sharedGenres.length > 0 ? sharedGenres : selectionsA.genres,
-          services: sharedServices.length > 0 ? sharedServices : selectionsA.services,
+          genres: sharedGenres.length > 0 ? sharedGenres : Array.from(new Set([...selectionsA.genres, ...selectionsB.genres])),
+          services: sharedServices.length > 0 ? sharedServices : Array.from(new Set([...selectionsA.services, ...selectionsB.services])),
           era: selectionsA.era,
           length: selectionsA.length,
           includeNonEnglish: selectionsA.includeNonEnglish || selectionsB.includeNonEnglish,
@@ -93,7 +93,7 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
       }
     }
     load();
-  }, []);
+  }, [selectionsA, selectionsB]);
 
   const markSeen = (id: number) => {
     setTitles(prev => prev.map(t => t.id === id ? { ...t, removing: true } : t));

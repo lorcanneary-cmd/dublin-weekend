@@ -57,7 +57,7 @@ export default function WatchPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#111] text-white flex flex-col">
+    <main className="min-h-screen bg-[#0e0e0e] text-white flex flex-col">
       {stage === 'picker-a' && (
         <WatchPicker
           step={1}
