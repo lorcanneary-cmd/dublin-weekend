@@ -59,36 +59,19 @@ export default function WatchPage() {
   return (
     <main className="min-h-screen bg-[#0e0e0e] text-white flex flex-col">
       {stage === 'picker-a' && (
-        <WatchPicker
-          step={1}
-          onDone={(s) => { setSelectionsA(s); setStage('handoff'); }}
-        />
+        <WatchPicker step={1} onDone={(s) => { setSelectionsA(s); setStage('handoff'); }} />
       )}
       {stage === 'handoff' && (
-        <WatchHandoff
-          personAName={selectionsA.name}
-          onReady={() => setStage('picker-b')}
-        />
+        <WatchHandoff personAName={selectionsA.name} onReady={() => setStage('picker-b')} />
       )}
       {stage === 'picker-b' && (
-        <WatchPicker
-          step={2}
-          onDone={handleBDone}
-        />
+        <WatchPicker step={2} onDone={handleBDone} />
       )}
       {stage === 'conflict' && (
-        <WatchConflict
-          nameA={selectionsA.name}
-          nameB={selectionsB.name}
-          onResolve={resolveConflict}
-        />
+        <WatchConflict nameA={selectionsA.name} nameB={selectionsB.name} onResolve={resolveConflict} />
       )}
       {stage === 'results' && (
-        <WatchResults
-          selectionsA={selectionsA}
-          selectionsB={selectionsB}
-          onReset={reset}
-        />
+        <WatchResults selectionsA={selectionsA} selectionsB={selectionsB} onReset={reset} />
       )}
     </main>
   );

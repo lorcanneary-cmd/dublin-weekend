@@ -62,30 +62,31 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
       setLoading(true);
       setError(false);
       try {
+        const services = sharedServices.length > 0
+          ? sharedServices
+          : Array.from(new Set([...selectionsA.services, ...selectionsB.services]));
+        const genres = sharedGenres.length > 0
+          ? sharedGenres
+          : Array.from(new Set([...selectionsA.genres, ...selectionsB.genres]));
+
         const sharedParams = {
           type: selectionsA.type,
-          genres: sharedGenres.length > 0 ? sharedGenres : Array.from(new Set([...selectionsA.genres, ...selectionsB.genres])),
-          services: sharedServices.length > 0 ? sharedServices : Array.from(new Set([...selectionsA.services, ...selectionsB.services])),
+          services,
+          genres,
           era: selectionsA.era,
           length: selectionsA.length,
           includeNonEnglish: selectionsA.includeNonEnglish || selectionsB.includeNonEnglish,
         };
 
-        console.log('Shared params:', sharedParams);
-        console.log('Shared services:', sharedServices, 'Solo genres:', soloGenres);
+        const sharedResults = await fetchTitles(sharedParams);
 
         let soloResults: TMDBTitle[] = [];
         if (soloGenres.length > 0 && sharedServices.length > 0) {
-          console.log('Fetching solo results with genres:', soloGenres);
           soloResults = await fetchTitles({ ...sharedParams, genres: soloGenres });
-          console.log('Solo results:', soloResults.length);
         }
 
-        console.log('Fetching shared results...');
-        const sharedResults = await fetchTitles(sharedParams);
-        console.log('Shared results:', sharedResults.length);
-        const soloIds = new Set(sharedResults.map(t => t.id));
-        const uniqueSolo = soloResults.filter(t => !soloIds.has(t.id));
+        const sharedIds = new Set(sharedResults.map(t => t.id));
+        const uniqueSolo = soloResults.filter(t => !sharedIds.has(t.id));
 
         const all: TitleWithState[] = [
           ...sharedResults.map(t => ({ ...t, seen: false, saved: false, removing: false })),
@@ -93,8 +94,8 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
         ];
 
         setTitles(all);
-      } catch (e) {
-        console.error('Failed to fetch titles:', e);
+      } catch (err) {
+        console.error('WatchResults error:', err);
         setError(true);
       } finally {
         setLoading(false);
@@ -135,11 +136,10 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
   const seenTitles   = titles.filter(t => t.seen);
   const savedTitles  = titles.filter(t => t.saved);
   const hasSeen      = seenTitles.length > 0;
-  const headingText  = hasSeen ? 'New to both of you' : 'Your matches';
 
   if (loading) {
     return (
-      <div className="flex flex-col min-h-screen items-center justify-center gap-4">
+      <div className="flex flex-col min-h-screen bg-[#0e0e0e] items-center justify-center gap-4">
         <div className="w-8 h-8 border-2 border-[#c8f04a] border-t-transparent rounded-full animate-spin" />
         <p className="text-sm text-white/30">Finding your matches...</p>
       </div>
@@ -148,38 +148,34 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
 
   if (error) {
     return (
-      <div className="flex flex-col min-h-screen items-center justify-center px-8 text-center gap-4">
+      <div className="flex flex-col min-h-screen bg-[#0e0e0e] items-center justify-center px-8 text-center gap-4">
         <i className="ti ti-wifi-off text-4xl text-white/20" aria-hidden="true" />
-        <p className="text-sm text-white/40">Couldn't load results. Check your connection and try again.</p>
-        <button onClick={onReset} className="px-6 py-3 rounded-2xl border border-white/10 text-sm text-white/40">
-          Start over
-        </button>
+        <p className="text-sm text-white/40">Could not load results. Check your connection and try again.</p>
+        <button onClick={onReset} className="px-6 py-3 rounded-2xl border border-white/10 text-sm text-white/40">Start over</button>
       </div>
     );
   }
 
   if (titles.length === 0) {
     return (
-      <div className="flex flex-col min-h-screen items-center justify-center px-8 text-center gap-4">
+      <div className="flex flex-col min-h-screen bg-[#0e0e0e] items-center justify-center px-8 text-center gap-4">
         <i className="ti ti-mood-empty text-4xl text-white/20" aria-hidden="true" />
         <div>
           <p className="text-white font-medium mb-1">No matches found</p>
           <p className="text-sm text-white/30">Try different genres, more streaming apps, or turn off the era filter.</p>
         </div>
-        <button onClick={onReset} className="px-6 py-3 rounded-2xl border border-white/10 text-sm text-white/40">
-          Start over
-        </button>
+        <button onClick={onReset} className="px-6 py-3 rounded-2xl border border-white/10 text-sm text-white/40">Start over</button>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col min-h-screen pb-24">
+    <div className="flex flex-col min-h-screen bg-[#0e0e0e] pb-24">
       <div className="px-5 pt-12 pb-3">
-        <h1 className="text-xl font-medium text-white mb-1">{headingText}</h1>
+        <h1 className="text-xl font-medium text-white mb-1">{hasSeen ? 'New to both of you' : 'Your matches'}</h1>
         <p className="text-xs text-white/30">
           {hasSeen
-            ? `${activeShared.length + activeSolo.length} title${activeShared.length + activeSolo.length !== 1 ? 's' : ''} left after your sweep`
+            ? `${activeShared.length + activeSolo.length} title${activeShared.length + activeSolo.length !== 1 ? 's' : ''} left`
             : "Swipe left on anything you've already seen"}
         </p>
       </div>
@@ -189,10 +185,7 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
           <i className="ti ti-sparkles text-[#c8f04a] text-lg mt-0.5" aria-hidden="true" />
           <p className="text-xs text-[#c8f04a]/80 leading-relaxed">
             {selectionsA.name} &amp; {selectionsB.name} both want{' '}
-            {sharedGenres
-              .map(id => GENRES.find(g => g.id === id || g.tvId === id)?.label)
-              .filter(Boolean)
-              .join(' + ') || 'something good'}.{' '}
+            {sharedGenres.map(id => GENRES.find(g => g.id === id || g.tvId === id)?.label).filter(Boolean).join(' + ') || 'something good'}.{' '}
             {titles.length} match{titles.length !== 1 ? 'es' : ''} found.
           </p>
         </div>
@@ -236,7 +229,7 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
         <button onClick={restoreSeen} className="mx-5 mt-4 px-4 py-3 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3">
           <i className="ti ti-eye-off text-white/20 text-base" aria-hidden="true" />
           <span className="text-xs text-white/30">
-            You've seen <span className="text-white/50">{seenTitles.length} title{seenTitles.length !== 1 ? 's' : ''}</span> together — not bad
+            You've seen <span className="text-white/50">{seenTitles.length} title{seenTitles.length !== 1 ? 's' : ''}</span> together
           </span>
           <i className="ti ti-refresh text-white/20 text-xs ml-auto" aria-hidden="true" />
         </button>
@@ -252,9 +245,7 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
       )}
 
       <div className="px-5 mt-8 mb-4">
-        <button onClick={onReset} className="w-full py-3 rounded-2xl border border-white/10 text-xs text-white/20">
-          Start over
-        </button>
+        <button onClick={onReset} className="w-full py-3 rounded-2xl border border-white/10 text-xs text-white/20">Start over</button>
       </div>
 
       <p className="text-center text-[10px] text-white/15 px-5 pb-6">
