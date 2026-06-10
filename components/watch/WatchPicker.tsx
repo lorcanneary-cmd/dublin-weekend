@@ -61,18 +61,16 @@ export default function WatchPicker({ step, onDone }: Props) {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-[#0e0e0e]">
       <div className="px-5 pt-12 pb-3">
         <p className="text-2xl font-semibold text-white leading-tight">
-          {step === 1 ? 'Pick what you\'re into' : 'Now your turn'}
+          {step === 1 ? "Pick what you're into" : 'Now your turn'}
         </p>
       </div>
 
       <div className="flex-1 overflow-y-auto px-5 pb-36">
         <div className="mt-6 mb-6">
-          <label className="block text-xs text-white/40 uppercase tracking-widest mb-2">
-            Your name
-          </label>
+          <label className="block text-xs text-white/40 uppercase tracking-widest mb-2">Your name</label>
           <input
             type="text"
             value={name}
@@ -83,18 +81,14 @@ export default function WatchPicker({ step, onDone }: Props) {
         </div>
 
         <div className="mb-6">
-          <label className="block text-xs text-white/40 uppercase tracking-widest mb-3">
-            Movie or series?
-          </label>
+          <label className="block text-xs text-white/40 uppercase tracking-widest mb-3">Movie or series?</label>
           <div className="grid grid-cols-2 gap-2">
             {(['movie', 'tv'] as WatchType[]).map(t => (
               <button
                 key={t}
                 onClick={() => setType(t)}
                 className={`flex flex-col items-center gap-1.5 py-3 rounded-xl border text-sm transition-all ${
-                  type === t
-                    ? 'border-[#c8f04a] bg-[#c8f04a]/10 text-[#c8f04a]'
-                    : 'border-white/10 bg-white/5 text-white/40'
+                  type === t ? 'border-[#c8f04a] bg-[#c8f04a]/10 text-[#c8f04a]' : 'border-white/10 bg-white/5 text-white/40'
                 }`}
               >
                 <i className={`ti ${t === 'movie' ? 'ti-movie' : 'ti-device-tv'} text-xl`} aria-hidden="true" />
@@ -105,40 +99,27 @@ export default function WatchPicker({ step, onDone }: Props) {
         </div>
 
         <div className="mb-6">
-          <label className="block text-xs text-white/40 uppercase tracking-widest mb-3">
-            Your streaming apps
-          </label>
+          <label className="block text-xs text-white/40 uppercase tracking-widest mb-3">Your streaming apps</label>
           <div className="grid grid-cols-3 gap-2">
             {SERVICES.map(s => (
               <button
                 key={s.id}
                 onClick={() => toggleService(s.id)}
                 className={`flex flex-col items-center gap-1.5 py-3 rounded-xl border transition-all ${
-                  services.includes(s.id)
-                    ? 'border-[#c8f04a] bg-[#c8f04a]/10'
-                    : 'border-white/10 bg-white/5'
+                  services.includes(s.id) ? 'border-[#c8f04a] bg-[#c8f04a]/10' : 'border-white/10 bg-white/5'
                 }`}
               >
-                <div
-                  className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-[10px] font-semibold"
-                  style={{ backgroundColor: s.color }}
-                >
-                  {s.icon
-                    ? <i className="ti ti-brand-apple text-sm" aria-hidden="true" />
-                    : s.label}
+                <div className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-[10px] font-semibold" style={{ backgroundColor: s.color }}>
+                  {s.icon ? <i className="ti ti-brand-apple text-sm" aria-hidden="true" /> : s.label}
                 </div>
-                <span className={`text-[10px] ${services.includes(s.id) ? 'text-[#c8f04a]' : 'text-white/40'}`}>
-                  {s.name}
-                </span>
+                <span className={`text-[10px] ${services.includes(s.id) ? 'text-[#c8f04a]' : 'text-white/40'}`}>{s.name}</span>
               </button>
             ))}
           </div>
         </div>
 
         <div className="mb-6">
-          <label className="block text-xs text-white/40 uppercase tracking-widest mb-1">
-            Genres
-          </label>
+          <label className="block text-xs text-white/40 uppercase tracking-widest mb-1">Genres</label>
           <p className="text-xs text-white/20 mb-3">Pick up to 3</p>
           <div className="flex flex-wrap gap-2">
             {GENRES.map(g => (
@@ -158,10 +139,7 @@ export default function WatchPicker({ step, onDone }: Props) {
         </div>
 
         <div className="border border-white/10 rounded-xl overflow-hidden mb-4">
-          <button
-            onClick={() => setMoreOpen(o => !o)}
-            className="w-full flex items-center justify-between px-4 py-3 text-xs text-white/30"
-          >
+          <button onClick={() => setMoreOpen(o => !o)} className="w-full flex items-center justify-between px-4 py-3 text-xs text-white/30">
             <span>More options</span>
             <i className={`ti ti-chevron-down text-base transition-transform duration-200 ${moreOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
           </button>
@@ -170,20 +148,9 @@ export default function WatchPicker({ step, onDone }: Props) {
               <div className="pt-4">
                 <p className="text-xs text-white/30 mb-2">How long do you have?</p>
                 <div className="grid grid-cols-3 gap-1.5">
-                  {([
-                    { val: 'short',  label: 'Quick one' },
-                    { val: 'medium', label: 'Proper sit-down' },
-                    { val: 'long',   label: 'Committed' },
-                  ] as const).map(o => (
-                    <button
-                      key={o.val}
-                      onClick={() => setLength(prev => prev === o.val ? null : o.val)}
-                      className={`py-2 rounded-lg border text-[10px] transition-all ${
-                        length === o.val
-                          ? 'border-[#c8f04a] bg-[#c8f04a]/10 text-[#c8f04a]'
-                          : 'border-white/10 bg-white/5 text-white/30'
-                      }`}
-                    >
+                  {([{ val: 'short', label: 'Quick one' }, { val: 'medium', label: 'Proper sit-down' }, { val: 'long', label: 'Committed' }] as const).map(o => (
+                    <button key={o.val} onClick={() => setLength(prev => prev === o.val ? null : o.val)}
+                      className={`py-2 rounded-lg border text-[10px] transition-all ${length === o.val ? 'border-[#c8f04a] bg-[#c8f04a]/10 text-[#c8f04a]' : 'border-white/10 bg-white/5 text-white/30'}`}>
                       {o.label}
                     </button>
                   ))}
@@ -192,20 +159,9 @@ export default function WatchPicker({ step, onDone }: Props) {
               <div>
                 <p className="text-xs text-white/30 mb-2">Era</p>
                 <div className="grid grid-cols-3 gap-1.5">
-                  {([
-                    { val: 'fresh',   label: 'Fresh' },
-                    { val: 'any',     label: 'Any' },
-                    { val: 'classic', label: 'Classic' },
-                  ] as const).map(o => (
-                    <button
-                      key={o.val}
-                      onClick={() => setEra(o.val)}
-                      className={`py-2 rounded-lg border text-[10px] transition-all ${
-                        era === o.val
-                          ? 'border-[#c8f04a] bg-[#c8f04a]/10 text-[#c8f04a]'
-                          : 'border-white/10 bg-white/5 text-white/30'
-                      }`}
-                    >
+                  {([{ val: 'fresh', label: 'Fresh' }, { val: 'any', label: 'Any' }, { val: 'classic', label: 'Classic' }] as const).map(o => (
+                    <button key={o.val} onClick={() => setEra(o.val)}
+                      className={`py-2 rounded-lg border text-[10px] transition-all ${era === o.val ? 'border-[#c8f04a] bg-[#c8f04a]/10 text-[#c8f04a]' : 'border-white/10 bg-white/5 text-white/30'}`}>
                       {o.label}
                     </button>
                   ))}
@@ -213,10 +169,7 @@ export default function WatchPicker({ step, onDone }: Props) {
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-xs text-white/30">Include non-English titles</span>
-                <button
-                  onClick={() => setIncludeNonEnglish(v => !v)}
-                  className={`w-10 h-5 rounded-full transition-colors relative ${includeNonEnglish ? 'bg-[#c8f04a]' : 'bg-white/10'}`}
-                >
+                <button onClick={() => setIncludeNonEnglish(v => !v)} className={`w-10 h-5 rounded-full transition-colors relative ${includeNonEnglish ? 'bg-[#c8f04a]' : 'bg-white/10'}`}>
                   <span className={`absolute top-0.5 w-4 h-4 rounded-full bg-white transition-all ${includeNonEnglish ? 'left-5' : 'left-0.5'}`} />
                 </button>
               </div>
@@ -230,20 +183,14 @@ export default function WatchPicker({ step, onDone }: Props) {
           onClick={handleDone}
           disabled={!canSubmit}
           className={`w-full py-4 rounded-2xl text-sm font-medium transition-all ${
-            canSubmit
-              ? 'bg-[#c8f04a] text-[#0e0e0e] active:scale-[0.98]'
-              : 'bg-white/5 text-white/20 cursor-not-allowed'
+            canSubmit ? 'bg-[#c8f04a] text-[#0e0e0e] active:scale-[0.98]' : 'bg-white/5 text-white/20 cursor-not-allowed'
           }`}
         >
           {step === 1 ? 'Done — pass to Person 2' : 'See our picks'}
         </button>
         {!canSubmit && (
           <p className="text-center text-xs text-white/20 mt-2">
-            {!name.trim()
-              ? 'Enter your name to continue'
-              : !services.length
-              ? 'Pick at least one streaming app'
-              : 'Pick at least one genre'}
+            {!name.trim() ? 'Enter your name to continue' : !services.length ? 'Pick at least one streaming app' : 'Pick at least one genre'}
           </p>
         )}
       </div>

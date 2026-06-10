@@ -71,12 +71,19 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
           includeNonEnglish: selectionsA.includeNonEnglish || selectionsB.includeNonEnglish,
         };
 
+        console.log('Shared params:', sharedParams);
+        console.log('Shared services:', sharedServices, 'Solo genres:', soloGenres);
+
         let soloResults: TMDBTitle[] = [];
         if (soloGenres.length > 0 && sharedServices.length > 0) {
+          console.log('Fetching solo results with genres:', soloGenres);
           soloResults = await fetchTitles({ ...sharedParams, genres: soloGenres });
+          console.log('Solo results:', soloResults.length);
         }
 
+        console.log('Fetching shared results...');
         const sharedResults = await fetchTitles(sharedParams);
+        console.log('Shared results:', sharedResults.length);
         const soloIds = new Set(sharedResults.map(t => t.id));
         const uniqueSolo = soloResults.filter(t => !soloIds.has(t.id));
 
@@ -86,7 +93,8 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
         ];
 
         setTitles(all);
-      } catch {
+      } catch (e) {
+        console.error('Failed to fetch titles:', e);
         setError(true);
       } finally {
         setLoading(false);
