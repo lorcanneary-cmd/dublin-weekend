@@ -1,4 +1,4 @@
-export type Category = "Walks" | "Adventures" | "Culture" | "Coffee & Bakeries" | "Bars & Cocktails" | "Film" | "Low-Key" | "Creamy Pints" | "Nature/Day Trip"
+export type Category = "Walks" | "Adventures" | "Culture" | "Coffee & Bakeries" | "Bars & Cocktails" | "Film" | "Low-Key" | "Creamy Pints" | "Nature/Day Trip" | "Family Fun" | "Wellness"
 
 export interface Activity {
   id: string

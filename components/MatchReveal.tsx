@@ -3,6 +3,12 @@
 import { detectCreamyPintsScenario } from "@/lib/ranking"
 import type { Category } from "@/lib/ranking"
 
+const PERFECT_MATCH_LINES = ["make it happen — no excuses now", "you're basically the same person", "rare. don't waste it", "zero debate required", "this one was meant to be"]
+
+const PARTIAL_MATCH_LINES = ["not bad — work with what you've got", "close enough — meet in the middle", "a solid foundation", "one overlap is all you need", "common ground found"]
+
+const NO_MATCH_LINES = ["compromise is a skill", "someone's going to have to give", "opposites attract, apparently", "this is what negotiation is for", "at least you're honest"]
+
 const CAT_ICON: Record<Category, string> = {
   Walks: "ti-walk",
   Adventures: "ti-wave-sine",
@@ -13,6 +19,8 @@ const CAT_ICON: Record<Category, string> = {
   "Low-Key": "ti-sofa",
   "Creamy Pints": "ti-beer",
   "Nature/Day Trip": "ti-trees",
+  "Family Fun": "ti-butterfly",
+  Wellness: "ti-heart-rate-monitor",
 }
 
 const MISMATCH_LINES: Record<Category, string> = {
@@ -25,6 +33,8 @@ const MISMATCH_LINES: Record<Category, string> = {
   "Low-Key": "aggressively low energy",
   "Creamy Pints": "creamy pints",
   "Nature/Day Trip": "nature walk",
+  "Family Fun": "trying to be wholesome",
+  Wellness: "health kick era",
 }
 
 interface Props {
@@ -42,6 +52,13 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal, crea
   const onlyB = catsB.filter((c) => !catsA.includes(c))
   const matchCount = matched.length
   const isPerfectMatch = catsA.length > 0 && catsB.length > 0 && catsA.length === matched.length && catsB.length === matched.length
+  const tagline = isPerfectMatch ? PERFECT_MATCH_LINES[Math.floor(Math.random() * PERFECT_MATCH_LINES.length)] : matched.length > 0 ? PARTIAL_MATCH_LINES[Math.floor(Math.random() * PARTIAL_MATCH_LINES.length)] : NO_MATCH_LINES[Math.floor(Math.random() * NO_MATCH_LINES.length)]
+
+  const getHeading = () => {
+    if (isPerfectMatch) return `${nameA} & ${nameB} want the same thing.`
+    if (matched.length > 0) return `${nameA} & ${nameB} have something in common.`
+    return `${nameA} & ${nameB} are on completely different pages.`
+  }
 
   return (
     <div className="min-h-screen bg-stone-900 flex flex-col items-center justify-center px-6 py-12">
@@ -59,85 +76,72 @@ export default function MatchReveal({ nameA, nameB, catsA, catsB, onReveal, crea
         animation: isPerfectMatch ? "fadeInDelayed 0.8s ease-out 0.8s both" : "none"
       }}>
 
-        {/* Score */}
-        <div className="text-center space-y-2">
-          <h2 className="text-white text-3xl font-bold tracking-tight">
-            {matchCount === 0 ? "zero overlap" : isPerfectMatch ? "perfect match" : `${matchCount} match${matchCount > 1 ? "es" : ""}`}
-          </h2>
-          <p className="text-stone-500 text-sm">
-            {matchCount === 0 ? "not a single category in common. might be time to reconsider some life choices." : `${nameA} & ${nameB} · ${matchCount} of ${Math.max(catsA.length, catsB.length)} categories`}
+        {/* Heading */}
+        <div className="text-center space-y-4">
+          <h1 className="text-white text-4xl font-bold tracking-tight leading-tight">
+            {getHeading()}
+          </h1>
+          <p className="text-stone-400 text-sm italic">
+            {tagline}
           </p>
         </div>
 
-        {/* Matched */}
+        {/* Divider */}
+        <div className="border-t border-stone-700"></div>
+
+        {/* Matched Categories */}
         {matched.length > 0 && (
           <div className="space-y-3">
             <p className="text-stone-500 text-xs uppercase tracking-widest font-medium">You both want</p>
-            <div className="flex flex-wrap gap-2">
+            <div className="space-y-2">
               {matched.map((cat) => (
-                <span key={cat} className="flex items-center gap-2 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-sm font-medium px-3.5 py-2 rounded-full">
-                  <i className={`ti ${CAT_ICON[cat]} text-base leading-none`} aria-hidden="true" />
-                  {cat}
-                </span>
+                <div key={cat} className="flex items-center gap-3">
+                  <i className={`ti ${CAT_ICON[cat]} text-emerald-400 text-lg`} aria-hidden="true" />
+                  <span className="text-emerald-400 text-sm font-medium">{cat}</span>
+                </div>
               ))}
             </div>
-            <p className="text-stone-500 text-xs italic">{isPerfectMatch ? "make it happen — no excuses now" : "make it happen — no excuses now"}</p>
           </div>
         )}
 
         {/* Only A */}
         {onlyA.length > 0 && (
-          <div className="space-y-3">
-            <p className="text-stone-500 text-xs uppercase tracking-widest font-medium">Only {nameA} picked</p>
-            <div className="flex flex-wrap gap-2">
-              {onlyA.map((cat) => (
-                <span key={cat} className="flex items-center gap-2 bg-stone-800 text-stone-400 border border-stone-700 text-sm font-medium px-3.5 py-2 rounded-full">
-                  <i className={`ti ${CAT_ICON[cat]} text-base leading-none`} aria-hidden="true" />
-                  {cat}
-                </span>
-              ))}
+          <>
+            {matched.length > 0 && <div className="border-t border-stone-700"></div>}
+            <div className="space-y-3">
+              <p className="text-stone-500 text-xs uppercase tracking-widest font-medium">Only {nameA} wants</p>
+              <div className="space-y-2">
+                {onlyA.map((cat) => (
+                  <div key={cat} className="flex items-center gap-3">
+                    <i className={`ti ${CAT_ICON[cat]} text-stone-500 text-lg`} aria-hidden="true" />
+                    <span className="text-stone-500 text-sm">{cat}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            {creamyScenario === "one-only-a" ? (
-              <p className="text-stone-600 text-xs italic">
-                {nameA} would rather be having a creamy pint. just saying.
-              </p>
-            ) : (
-              <>
-                <p className="text-stone-600 text-xs italic">
-                  {nameB}, can you believe {nameA} picked {onlyA.map(c => MISMATCH_LINES[c] || c).join(" and ")}
-                </p>
-                <p className="text-stone-600 text-xs italic">paper scissors rock for the rest</p>
-              </>
-            )}
-          </div>
+          </>
         )}
 
         {/* Only B */}
         {onlyB.length > 0 && (
-          <div className="space-y-3">
-            <p className="text-stone-500 text-xs uppercase tracking-widest font-medium">Only {nameB} picked</p>
-            <div className="flex flex-wrap gap-2">
-              {onlyB.map((cat) => (
-                <span key={cat} className="flex items-center gap-2 bg-stone-800 text-stone-400 border border-stone-700 text-sm font-medium px-3.5 py-2 rounded-full">
-                  <i className={`ti ${CAT_ICON[cat]} text-base leading-none`} aria-hidden="true" />
-                  {cat}
-                </span>
-              ))}
+          <>
+            {(matched.length > 0 || onlyA.length > 0) && <div className="border-t border-stone-700"></div>}
+            <div className="space-y-3">
+              <p className="text-stone-500 text-xs uppercase tracking-widest font-medium">Only {nameB} wants</p>
+              <div className="space-y-2">
+                {onlyB.map((cat) => (
+                  <div key={cat} className="flex items-center gap-3">
+                    <i className={`ti ${CAT_ICON[cat]} text-stone-500 text-lg`} aria-hidden="true" />
+                    <span className="text-stone-500 text-sm">{cat}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            {creamyScenario === "one-only-b" ? (
-              <p className="text-stone-600 text-xs italic">
-                {nameB} would rather be having a creamy pint. just saying.
-              </p>
-            ) : (
-              <>
-                <p className="text-stone-600 text-xs italic">
-                  {nameA}, {nameB} wants {onlyB.map(c => MISMATCH_LINES[c] || c).join(" and ")}. make of that what you will.
-                </p>
-                <p className="text-stone-600 text-xs italic">paper scissors rock for the rest</p>
-              </>
-            )}
-          </div>
+          </>
         )}
+
+        {/* Divider before button */}
+        <div className="border-t border-stone-700"></div>
 
         <button
           onClick={onReveal}

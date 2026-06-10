@@ -17,6 +17,8 @@ const CAT_MAP: Record<string, Category> = {
   L: "Low-Key",
   N: "Nature/Day Trip",
   P: "Creamy Pints",
+  F: "Family Fun",
+  E: "Wellness",
 }
 
 const CAT_REVERSE: Record<Category, string> = {
@@ -29,6 +31,8 @@ const CAT_REVERSE: Record<Category, string> = {
   "Low-Key": "L",
   "Nature/Day Trip": "N",
   "Creamy Pints": "P",
+  "Family Fun": "F",
+  Wellness: "E",
 }
 
 function encodeCats(cats: Category[]): string {

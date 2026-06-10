@@ -2,7 +2,7 @@
 
 import type { Category } from "@/lib/ranking"
 
-const CATEGORIES: Category[] = ["Walks", "Adventures", "Nature/Day Trip", "Culture", "Coffee & Bakeries", "Bars & Cocktails", "Film", "Low-Key", "Creamy Pints"]
+const CATEGORIES: Category[] = ["Walks", "Adventures", "Nature/Day Trip", "Culture", "Coffee & Bakeries", "Bars & Cocktails", "Film", "Low-Key", "Creamy Pints", "Family Fun", "Wellness"]
 
 const CAT_ICON: Record<Category, string> = {
   Walks: "ti-walk",
@@ -14,6 +14,8 @@ const CAT_ICON: Record<Category, string> = {
   "Low-Key": "ti-sofa",
   "Nature/Day Trip": "ti-trees",
   "Creamy Pints": "ti-beer",
+  "Family Fun": "ti-butterfly",
+  Wellness: "ti-heart-rate-monitor",
 }
 
 interface Props {
