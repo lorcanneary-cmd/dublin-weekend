@@ -4,18 +4,37 @@
     "title": "Howth Cliff Path",
     "description": "One of Dublin's most iconic walks with dramatic sea views, wildflowers, and the smell of salt air the whole way. Ends near the harbour where you can grab fish and chips. About 6km loop.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "scenic", "coastal", "moderate"],
-    "mood": ["energizing", "low-key"],
+    "tags": [
+      "outdoor",
+      "scenic",
+      "coastal",
+      "moderate"
+    ],
+    "mood": [
+      "energizing",
+      "low-key"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 120,
     "lat": 53.391,
     "lon": -6.063,
     "neighborhood": "Howth",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "infoUrl": "https://www.visitdublin.com/howth-cliff-walk",
     "availabilityNote": "Just turn up — exposed to wind, arrive early on weekends",
     "confidence": 3
@@ -25,18 +44,36 @@
     "title": "Bray to Greystones Cliff Walk",
     "description": "A stunning coastal path along the Wicklow cliffs with sea on one side and green hills on the other. DART back from Greystones makes it a perfect one-way trip. Genuinely beautiful.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "scenic", "coastal", "moderate"],
-    "mood": ["energizing"],
+    "tags": [
+      "outdoor",
+      "scenic",
+      "coastal",
+      "moderate"
+    ],
+    "mood": [
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 150,
     "lat": 53.202,
     "lon": -6.103,
     "neighborhood": "Bray/Greystones",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "infoUrl": "https://visitwicklow.ie/item/bray-greystones-cliff-walk",
     "availabilityNote": "Just turn up — DART to Bray to start",
     "confidence": 3
@@ -46,18 +83,37 @@
     "title": "Ticknock Forest Loop",
     "description": "Pine forest trails in the Dublin Mountains with sweeping views over the city and bay on a clear day. Quiet, green, and only 20 mins from the city. Great for clearing your head.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "forest", "views", "moderate"],
-    "mood": ["energizing"],
+    "tags": [
+      "outdoor",
+      "forest",
+      "views",
+      "moderate"
+    ],
+    "mood": [
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.262,
     "lon": -6.246,
     "neighborhood": "Ticknock",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning", "afternoon", "evening"],
-    "transit": ["car", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "car",
+      "bus"
+    ],
     "infoUrl": "https://www.coillte.ie/site/ticknock-forest",
     "availabilityNote": "Just turn up — car park fills on sunny weekends",
     "confidence": 3
@@ -67,18 +123,36 @@
     "title": "Poolbeg Lighthouse Walk",
     "description": "Walk the iconic red-and-white South Bull Wall out into Dublin Bay to the lighthouse. Completely flat, endlessly dramatic, with the city skyline behind you and open sea ahead.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "coastal", "flat", "scenic"],
-    "mood": ["low-key", "energizing"],
+    "tags": [
+      "outdoor",
+      "coastal",
+      "flat",
+      "scenic"
+    ],
+    "mood": [
+      "low-key",
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.338,
     "lon": -6.164,
     "neighborhood": "Sandymount",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://www.visitdublin.com/poolbeg-lighthouse",
     "availabilityNote": "Just turn up — very exposed, bring layers",
     "confidence": 3
@@ -88,18 +162,35 @@
     "title": "Phoenix Park Deer Watch",
     "description": "One of Europe's largest city parks is home to a herd of wild fallow deer. Wander the grasslands and you'll almost certainly spot them. Bring a coffee and take your time.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "wildlife", "flat", "family"],
-    "mood": ["low-key"],
+    "tags": [
+      "outdoor",
+      "wildlife",
+      "flat",
+      "family"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 60,
     "lat": 53.356,
     "lon": -6.329,
     "neighborhood": "Phoenix Park",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning"],
-    "transit": ["bus", "bike"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning"
+    ],
+    "transit": [
+      "bus",
+      "bike"
+    ],
     "infoUrl": "https://phoenixpark.ie",
     "availabilityNote": "Just turn up — deer are near the Fifteen Acres",
     "confidence": 3
@@ -109,18 +200,36 @@
     "title": "Sandymount Strand Stroll",
     "description": "A wide sandy beach walkway south of the city with views across the bay to Howth. Low tide reveals huge flat sands. Quiet, windswept, and surprisingly meditative.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "coastal", "flat", "easy", "accessible"],
-    "mood": ["low-key"],
+    "tags": [
+      "outdoor",
+      "coastal",
+      "flat",
+      "easy",
+      "accessible"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 60,
     "lat": 53.333,
     "lon": -6.212,
     "neighborhood": "Sandymount",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://www.visitdublin.com/see-do/details/sandymount-strand",
     "availabilityNote": "Best at low tide",
     "confidence": 3
@@ -130,18 +239,37 @@
     "title": "National Botanic Gardens",
     "description": "19,000 plant species across 50 acres in Glasnevin including spectacular Victorian glasshouses you can walk through even in the rain. Peaceful, free, and genuinely underrated.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "gardens", "free", "peaceful", "rainy"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "outdoor",
+      "gardens",
+      "free",
+      "peaceful",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "mixed",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.371,
     "lon": -6.269,
     "neighborhood": "Glasnevin",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://botanicgardens.ie",
     "availabilityNote": "Free entry — glasshouses open daily",
     "confidence": 3
@@ -151,18 +279,37 @@
     "title": "Dun Laoghaire Pier Walk",
     "description": "Walk the long granite piers out into Dublin Bay — East Pier is the classic, with views back to the mountains and out to sea. Then coffee in the town after. Reliable, lovely.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "coastal", "easy", "casual", "scenic"],
-    "mood": ["low-key"],
+    "tags": [
+      "outdoor",
+      "coastal",
+      "easy",
+      "casual",
+      "scenic"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 60,
     "lat": 53.295,
     "lon": -6.136,
     "neighborhood": "Dun Laoghaire",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "searchQuery": "Dun Laoghaire pier walk",
     "availabilityNote": "Just turn up — DART to Dun Laoghaire",
     "confidence": 3
@@ -172,18 +319,37 @@
     "title": "Killiney Hill & Vico Bathing Place",
     "description": "Hike up Killiney Hill for panoramic views that rival the Bay of Naples, then descend to the Vico Road bathing place for a wild swim off the rocks. Properly special.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "scenic", "hill", "coastal"],
-    "mood": ["energizing", "romantic"],
+    "tags": [
+      "outdoor",
+      "scenic",
+      "hill",
+      "coastal"
+    ],
+    "mood": [
+      "energizing",
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.264,
-    "lon": -6.110,
+    "lon": -6.11,
     "neighborhood": "Killiney",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "infoUrl": "https://www.dlrcoco.ie/en/heritage/killiney-hill-park",
     "availabilityNote": "Steep in places — great views at the top",
     "confidence": 3
@@ -193,18 +359,35 @@
     "title": "St Anne's Park, Raheny",
     "description": "A vast and beautiful park in Raheny with rose gardens, woodland trails, and wide open spaces. Far less visited than Phoenix Park but every bit as lovely on a good day.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "park", "garden", "peaceful"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "outdoor",
+      "park",
+      "garden",
+      "peaceful"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 75,
-    "lat": 53.370,
+    "lat": 53.37,
     "lon": -6.176,
     "neighborhood": "Raheny",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://www.dublincity.ie/residential/parks/visit-park/st-annes-park",
     "availabilityNote": "Rose Garden best in summer — market some Sundays",
     "confidence": 3
@@ -214,18 +397,36 @@
     "title": "Bull Island Nature Walk",
     "description": "A UNESCO biosphere reserve just 6km from the city centre — sand dunes, a long beach, and incredible birdwatching. Wild and exposed in the best possible way.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "coastal", "wildlife", "scenic"],
-    "mood": ["energizing", "low-key"],
+    "tags": [
+      "outdoor",
+      "coastal",
+      "wildlife",
+      "scenic"
+    ],
+    "mood": [
+      "energizing",
+      "low-key"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.365,
     "lon": -6.148,
     "neighborhood": "Dollymount",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "Bull Island Dublin nature walk",
     "availabilityNote": "Just turn up — take the wooden bridge from Clontarf",
     "confidence": 2
@@ -235,18 +436,35 @@
     "title": "Djouce Boardwalk & Lough Tay",
     "description": "One of Wicklow's most rewarding half-day walks — a boardwalk trail with panoramic views over the Guinness Lake (Lough Tay) and surrounding mountains. Spectacular on a clear day.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "scenic", "hill", "mountains"],
-    "mood": ["energizing"],
+    "tags": [
+      "outdoor",
+      "scenic",
+      "hill",
+      "mountains"
+    ],
+    "mood": [
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 150,
-    "lat": 53.110,
+    "lat": 53.11,
     "lon": -6.258,
     "neighborhood": "Wicklow",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["car"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "car"
+    ],
     "infoUrl": "https://www.coillte.ie/site/djouce-woods",
     "availabilityNote": "Car needed — changeable mountain weather",
     "confidence": 3
@@ -256,18 +474,35 @@
     "title": "Malahide Castle Demesne",
     "description": "Manicured grounds surrounding a medieval castle north of the city. Wide paths, a walled garden, and a café on site. Peaceful and easy to reach by DART.",
     "primaryCategory": "Walks",
-    "tags": ["outdoor", "park", "heritage", "garden"],
-    "mood": ["low-key"],
+    "tags": [
+      "outdoor",
+      "park",
+      "heritage",
+      "garden"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.442,
     "lon": -6.154,
     "neighborhood": "Malahide",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "infoUrl": "https://www.malahidecastleandgardens.ie",
     "availabilityNote": "Grounds free — castle entry ticketed",
     "confidence": 2
@@ -277,18 +512,36 @@
     "title": "Seapoint Swim + Sauna",
     "description": "Take the plunge in the Irish Sea at Seapoint then warm up in a wood-fired sauna right on the water. Cold, exhilarating, and genuinely addictive once you start.",
     "primaryCategory": "Adventures",
-    "tags": ["outdoor", "water", "wellness", "cold", "swim"],
-    "mood": ["energizing"],
+    "tags": [
+      "outdoor",
+      "water",
+      "wellness",
+      "cold",
+      "swim"
+    ],
+    "mood": [
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.305,
     "lon": -6.148,
     "neighborhood": "Seapoint",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "searchQuery": "Seapoint swim sauna Dublin",
     "priceHint": "~€20pp sauna",
     "availabilityNote": "Sauna booking recommended — swim is free",
@@ -299,18 +552,37 @@
     "title": "Forty Foot Swim, Sandycove",
     "description": "One of Ireland's most famous sea swimming spots — a rocky inlet at Sandycove where Dubliners have been swimming year-round for centuries. Brace yourself and jump in.",
     "primaryCategory": "Adventures",
-    "tags": ["outdoor", "water", "cold", "iconic", "coastal", "swim"],
-    "mood": ["energizing"],
+    "tags": [
+      "outdoor",
+      "water",
+      "cold",
+      "iconic",
+      "coastal",
+      "swim"
+    ],
+    "mood": [
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 60,
     "lat": 53.287,
     "lon": -6.108,
     "neighborhood": "Sandycove",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "infoUrl": "https://www.dlrcoco.ie/en/heritage/forty-foot",
     "availabilityNote": "Just turn up — cold-water swim, take care",
     "confidence": 3
@@ -320,18 +592,37 @@
     "title": "City Kayaking on the Liffey",
     "description": "Guided kayak tour through Dublin's docklands and along the Liffey — a totally different perspective on the city. No experience needed, equipment provided, guides are great craic.",
     "primaryCategory": "Adventures",
-    "tags": ["outdoor", "water", "active", "guided"],
-    "mood": ["energizing"],
+    "tags": [
+      "outdoor",
+      "water",
+      "active",
+      "guided"
+    ],
+    "mood": [
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "€€",
     "durationMin": 90,
     "lat": 53.347,
     "lon": -6.246,
     "neighborhood": "Quays",
-    "daysOpen": ["sat", "sun"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus", "train"],
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "train"
+    ],
     "infoUrl": "https://citykayaking.com",
     "bookingUrl": "https://citykayaking.com/book-now",
     "requiresBooking": true,
@@ -344,18 +635,36 @@
     "title": "SUP at Grand Canal Dock",
     "description": "Stand-up paddleboarding on the calm waters of Grand Canal Dock, right in the heart of the city. Easier than it looks, harder than it looks, and absolutely worth it for the laughs.",
     "primaryCategory": "Adventures",
-    "tags": ["outdoor", "water", "active", "fun"],
-    "mood": ["energizing"],
+    "tags": [
+      "outdoor",
+      "water",
+      "active",
+      "fun"
+    ],
+    "mood": [
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "€€",
     "durationMin": 90,
     "lat": 53.341,
     "lon": -6.236,
     "neighborhood": "Grand Canal Dock",
-    "daysOpen": ["sat", "sun"],
-    "typicalStart": ["afternoon"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "infoUrl": "https://surfdock.com",
     "bookingUrl": "https://surfdock.com/booking",
     "requiresBooking": true,
@@ -368,18 +677,37 @@
     "title": "Tandem Cycle in Phoenix Park",
     "description": "Hire a tandem bike and wobble your way around one of Europe's biggest city parks. Ridiculous fun, great for photos, and surprisingly hard work. The deer don't care how much you're laughing.",
     "primaryCategory": "Adventures",
-    "tags": ["outdoor", "cycling", "fun", "romantic"],
-    "mood": ["energizing", "romantic"],
+    "tags": [
+      "outdoor",
+      "cycling",
+      "fun",
+      "romantic"
+    ],
+    "mood": [
+      "energizing",
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.355,
     "lon": -6.316,
     "neighborhood": "Phoenix Park",
-    "daysOpen": ["sat", "sun"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus", "bike"],
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "bike"
+    ],
     "infoUrl": "https://www.phoenixparkbikes.com",
     "bookingUrl": "https://www.phoenixparkbikes.com/bookings",
     "requiresBooking": false,
@@ -392,18 +720,35 @@
     "title": "Great South Wall Walk",
     "description": "Dublin's most dramatic and least-known walk — a 4km granite wall jutting into Dublin Bay, built in the 1730s. Completely exposed to the elements and extraordinary on a clear day.",
     "primaryCategory": "Adventures",
-    "tags": ["outdoor", "coastal", "hidden-gem", "windy", "scenic"],
-    "mood": ["energizing"],
+    "tags": [
+      "outdoor",
+      "coastal",
+      "hidden-gem",
+      "windy",
+      "scenic"
+    ],
+    "mood": [
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.318,
-    "lon": -6.170,
+    "lon": -6.17,
     "neighborhood": "Poolbeg",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "Great South Wall Dublin walk",
     "availabilityNote": "Just turn up — park at Pigeon House Road",
     "confidence": 3
@@ -413,18 +758,38 @@
     "title": "Vico Road Sea Dip",
     "description": "A beautiful cliff-side bathing spot on the Vico Road between Dalkey and Killiney. Small platform, spectacular views, and a swim that feels genuinely earned.",
     "primaryCategory": "Adventures",
-    "tags": ["outdoor", "water", "swim", "scenic", "coastal"],
-    "mood": ["energizing", "romantic"],
+    "tags": [
+      "outdoor",
+      "water",
+      "swim",
+      "scenic",
+      "coastal"
+    ],
+    "mood": [
+      "energizing",
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 60,
     "lat": 53.269,
     "lon": -6.107,
     "neighborhood": "Killiney/Dalkey",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning", "evening"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "evening"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "infoUrl": "https://www.dlrcoco.ie/en/heritage/vico-road",
     "availabilityNote": "Steep access — small platform, mind tides",
     "confidence": 2
@@ -434,18 +799,36 @@
     "title": "Zipit Forest Adventures",
     "description": "Tree-top obstacle courses and zip lines in Tibradden Forest in the Dublin Mountains. Brilliant fun, genuinely challenging, and surrounded by great scenery.",
     "primaryCategory": "Adventures",
-    "tags": ["outdoor", "active", "aerial", "family"],
-    "mood": ["energizing"],
+    "tags": [
+      "outdoor",
+      "active",
+      "aerial",
+      "family"
+    ],
+    "mood": [
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "€€€",
     "durationMin": 120,
     "lat": 53.259,
     "lon": -6.273,
     "neighborhood": "Tibradden",
-    "daysOpen": ["sat", "sun"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["car"],
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "car"
+    ],
     "infoUrl": "https://zipit.ie/locations/dublin",
     "bookingUrl": "https://zipit.ie/locations/dublin",
     "requiresBooking": true,
@@ -458,18 +841,40 @@
     "title": "IMMA — Irish Museum of Modern Art",
     "description": "World-class contemporary art in a stunning 17th-century Royal Hospital building. The permanent collection is free, temporary exhibitions are genuinely surprising, and the courtyard is beautiful.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "art", "rainy", "free"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "art",
+      "rainy",
+      "free"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.343,
     "lon": -6.314,
     "neighborhood": "Kilmainham",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://imma.ie/visit",
     "availabilityNote": "Collections free — some shows ticketed, late opening Thu",
     "confidence": 3
@@ -479,18 +884,42 @@
     "title": "Chester Beatty Library",
     "description": "Repeatedly voted Europe's best museum — and it's free. An extraordinary collection of manuscripts, books, and art from across Asia, the Middle East, and Europe. Plan to lose two hours.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "art", "rainy", "free", "world-class"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "art",
+      "rainy",
+      "free",
+      "world-class"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.343,
     "lon": -6.267,
     "neighborhood": "Dublin Castle",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://chesterbeatty.ie/visit",
     "availabilityNote": "Free — quiet oasis, lovely café",
     "confidence": 3
@@ -500,18 +929,37 @@
     "title": "National Gallery of Ireland",
     "description": "A genuinely great national collection including Caravaggio, Vermeer, and the largest collection of Irish art in the world — all free. The Millennium Wing alone is worth the visit.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "art", "rainy", "free"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "art",
+      "rainy",
+      "free"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "free",
     "durationMin": 90,
-    "lat": 53.340,
+    "lat": 53.34,
     "lon": -6.252,
     "neighborhood": "Merrion Square",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://www.nationalgallery.ie/visit",
     "availabilityNote": "Free entry to collection",
     "confidence": 3
@@ -521,18 +969,35 @@
     "title": "Kilmainham Gaol Tour",
     "description": "The most important building in modern Irish history — where the leaders of the 1916 Rising were executed. Guided tours are powerful and genuinely moving. Book ahead, it sells out constantly.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "history", "rainy", "guided"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "history",
+      "rainy",
+      "guided"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.342,
     "lon": -6.309,
     "neighborhood": "Kilmainham",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://kilmainhamgaolmuseum.ie",
     "bookingUrl": "https://kilmainhamgaolmuseum.ie/tickets/",
     "requiresBooking": true,
@@ -545,18 +1010,36 @@
     "title": "EPIC The Irish Emigration Museum",
     "description": "An interactive museum telling the story of the Irish diaspora — over 10 million people who left these shores and shaped the world. Unexpectedly emotional and brilliantly designed.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "history", "interactive", "rainy"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "history",
+      "interactive",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 120,
     "lat": 53.348,
     "lon": -6.245,
     "neighborhood": "Docklands",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "infoUrl": "https://epicchq.com",
     "bookingUrl": "https://epicchq.com/tickets",
     "requiresBooking": false,
@@ -569,18 +1052,40 @@
     "title": "National Museum — Archaeology",
     "description": "Home to the Ardagh Chalice, the Tara Brooch, and the Bog Bodies — some of the finest Celtic and Viking artefacts in the world. Free, world-class, and reliably impressive.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "history", "free", "rainy"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "history",
+      "free",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "free",
     "durationMin": 90,
-    "lat": 53.340,
+    "lat": 53.34,
     "lon": -6.255,
     "neighborhood": "Kildare Street",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://www.museum.ie/archaeology",
     "availabilityNote": "Free — check opening days",
     "confidence": 3
@@ -590,18 +1095,42 @@
     "title": "Hugh Lane Gallery",
     "description": "A free modern art gallery on Parnell Square with an extraordinary collection including Francis Bacon's reconstructed studio. Quiet, beautiful, and seriously underrated.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "art", "gallery", "rainy", "free"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "art",
+      "gallery",
+      "rainy",
+      "free"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.355,
     "lon": -6.262,
     "neighborhood": "Parnell Square",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://hughlane.ie/visit",
     "availabilityNote": "Free entry — Francis Bacon studio is the highlight",
     "confidence": 3
@@ -611,18 +1140,40 @@
     "title": "Science Gallery Dublin",
     "description": "Free exhibitions at the intersection of science and art — always thought-provoking, often interactive, and regularly unlike anything else showing in the city. Based at Trinity College.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "interactive", "free", "rainy"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "interactive",
+      "free",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.343,
     "lon": -6.249,
     "neighborhood": "Trinity College",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://dublin.sciencegallery.com",
     "availabilityNote": "Check exhibition dates before going",
     "confidence": 3
@@ -632,18 +1183,36 @@
     "title": "The Little Museum of Dublin",
     "description": "A charming, witty museum on St Stephen's Green telling the story of Dublin in the 20th century through donated objects. Guided tours only and they are genuinely brilliant.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "history", "guided", "rainy"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "history",
+      "guided",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 75,
     "lat": 53.339,
     "lon": -6.259,
     "neighborhood": "St Stephen's Green",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["tram", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "tram",
+      "bus"
+    ],
     "infoUrl": "https://www.littlemuseum.ie",
     "bookingUrl": "https://www.littlemuseum.ie",
     "requiresBooking": true,
@@ -656,18 +1225,40 @@
     "title": "Marsh's Library",
     "description": "Ireland's oldest public library, built in 1707, with original oak bookcases and reading cages where scholars were locked in with rare books. Atmospheric and utterly unique.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "library", "heritage", "rainy"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "library",
+      "heritage",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 60,
     "lat": 53.339,
     "lon": -6.271,
     "neighborhood": "St Patrick's",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://marshlibrary.ie/visit",
     "availabilityNote": "Quiet, atmospheric — a hidden gem",
     "confidence": 3
@@ -677,18 +1268,33 @@
     "title": "Glasnevin Cemetery Museum Tour",
     "description": "This is where Daniel O'Connell, Michael Collins, and Eamon de Valera are buried. Guided tours bring the whole sweep of Irish history to life in a remarkable way.",
     "primaryCategory": "Culture",
-    "tags": ["outdoor", "history", "guided"],
-    "mood": ["low-key"],
+    "tags": [
+      "outdoor",
+      "history",
+      "guided"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "mixed",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.367,
     "lon": -6.273,
     "neighborhood": "Glasnevin",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://glasnevinmuseum.ie",
     "requiresBooking": false,
     "priceHint": "~€13pp",
@@ -699,18 +1305,36 @@
     "title": "Dublin Castle State Apartments & Gardens",
     "description": "The historic seat of British power in Ireland for 700 years. The State Apartments are surprisingly grand, the gardens are free, and the medieval undercroft is fascinating.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "history", "tour", "garden"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "history",
+      "tour",
+      "garden"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "mixed",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 120,
     "lat": 53.343,
     "lon": -6.267,
     "neighborhood": "Dame Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://heritageireland.ie/places-to-visit/dublin-castle",
     "bookingUrl": "https://heritageireland.ie/places-to-visit/dublin-castle",
     "requiresBooking": false,
@@ -723,18 +1347,37 @@
     "title": "Casino Marino",
     "description": "One of the finest neoclassical buildings in Europe, hiding 16 rooms behind what looks like a single-roomed temple. A genuine architectural marvel — and almost nobody visits.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "history", "architecture", "tour"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "history",
+      "architecture",
+      "tour"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 75,
     "lat": 53.372,
     "lon": -6.229,
     "neighborhood": "Marino",
-    "daysOpen": ["sat", "sun"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus", "train"],
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "train"
+    ],
     "infoUrl": "https://heritageireland.ie/places-to-visit/casino-marino",
     "requiresBooking": false,
     "priceHint": "OPW site — seasonal opening",
@@ -746,18 +1389,35 @@
     "title": "Dublinia",
     "description": "An interactive museum bringing Viking and medieval Dublin to life. Hands-on, well done, and genuinely interesting even without kids. Central location beside Christ Church.",
     "primaryCategory": "Culture",
-    "tags": ["indoor", "history", "museum", "interactive"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "history",
+      "museum",
+      "interactive"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 90,
     "lat": 53.343,
     "lon": -6.271,
     "neighborhood": "Christchurch",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://www.dublinia.ie",
     "bookingUrl": "https://www.dublinia.ie/plan-your-visit/tickets/",
     "requiresBooking": false,
@@ -770,18 +1430,43 @@
     "title": "Bread 41",
     "description": "Widely considered Dublin's best sourdough bakery. The pastries are extraordinary, the coffee is excellent, and the queue moves fast. A perfect morning stop.",
     "primaryCategory": "Coffee & Bakeries",
-    "tags": ["indoor", "coffee", "food", "morning", "rainy"],
-    "mood": ["low-key", "cozy"],
+    "tags": [
+      "indoor",
+      "coffee",
+      "food",
+      "morning",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "cozy"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 45,
     "lat": 53.337,
     "lon": -6.249,
     "neighborhood": "Pearse Street",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["morning"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "infoUrl": "https://bread41.ie",
     "rating": 4.7,
     "availabilityNote": "Morning only — get there before 11am",
@@ -792,18 +1477,38 @@
     "title": "Sceal Bakery",
     "description": "A tiny, beloved bakery in the Liberties doing extraordinary laminated pastries and seasonal bakes. Queue out the door most weekends for good reason — worth every minute.",
     "primaryCategory": "Coffee & Bakeries",
-    "tags": ["indoor", "coffee", "food", "morning", "rainy"],
-    "mood": ["low-key", "cozy"],
+    "tags": [
+      "indoor",
+      "coffee",
+      "food",
+      "morning",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "cozy"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 45,
     "lat": 53.347,
-    "lon": -6.280,
+    "lon": -6.28,
     "neighborhood": "Dublin 8",
-    "daysOpen": ["sat", "sun"],
-    "typicalStart": ["morning"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "Sceal Bakery Dublin",
     "rating": 4.8,
     "availabilityNote": "Weekend mornings — sell out fast",
@@ -814,18 +1519,44 @@
     "title": "Clement and Pekoe",
     "description": "One of Dublin's finest tea and coffee shops on South William Street — calm, unhurried, and stocked with exceptional loose-leaf teas and single-origin coffees. Perfect for a long slow morning.",
     "primaryCategory": "Coffee & Bakeries",
-    "tags": ["indoor", "coffee", "tea", "calm", "rainy"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "coffee",
+      "tea",
+      "calm",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 60,
-    "lat": 53.340,
+    "lat": 53.34,
     "lon": -6.261,
     "neighborhood": "South William Street",
-    "daysOpen": ["mon", "tue", "wed", "thu", "fri", "sat"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "infoUrl": "https://www.clementandpekoe.com",
     "rating": 4.6,
     "availabilityNote": "Mon–Sat",
@@ -836,18 +1567,40 @@
     "title": "Two Boys Brew",
     "description": "A brilliant neighbourhood coffee shop in Phibsborough with exceptional espresso and some of the best pastries in the city. Relaxed, warm, and always busy for good reason.",
     "primaryCategory": "Coffee & Bakeries",
-    "tags": ["indoor", "coffee", "neighbourhood", "rainy"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "coffee",
+      "neighbourhood",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 60,
     "lat": 53.363,
     "lon": -6.273,
     "neighborhood": "Phibsborough",
-    "daysOpen": ["wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "Two Boys Brew coffee Dublin Phibsborough",
     "rating": 4.8,
     "availabilityNote": "Wed–Sun",
@@ -858,18 +1611,41 @@
     "title": "Network Cafe",
     "description": "A serious specialty coffee shop on Aungier Street with a rotating guest roaster programme. No frills, great coffee, knowledgeable staff. The kind of place you go to actually taste the coffee.",
     "primaryCategory": "Coffee & Bakeries",
-    "tags": ["indoor", "coffee", "specialty", "rainy"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "coffee",
+      "specialty",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 45,
     "lat": 53.336,
     "lon": -6.264,
     "neighborhood": "Aungier Street",
-    "daysOpen": ["mon", "tue", "wed", "thu", "fri", "sat"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "Network Cafe coffee Dublin Aungier Street",
     "rating": 4.7,
     "availabilityNote": "Mon–Sat",
@@ -880,18 +1656,39 @@
     "title": "Firehouse Bakery, Delgany",
     "description": "Worth the drive to Wicklow — one of Ireland's best bakeries in a beautiful village setting. Outstanding sourdough, pastries, and coffee. A proper occasion, not just a coffee stop.",
     "primaryCategory": "Coffee & Bakeries",
-    "tags": ["outdoor", "food", "coffee", "day-trip"],
-    "mood": ["low-key"],
+    "tags": [
+      "outdoor",
+      "food",
+      "coffee",
+      "day-trip"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.156,
     "lon": -6.082,
     "neighborhood": "Delgany, Wicklow",
-    "daysOpen": ["thu", "fri", "sat", "sun"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["car"],
+    "daysOpen": [
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "car"
+    ],
     "infoUrl": "https://www.firehousebakery.ie",
     "rating": 4.9,
     "availabilityNote": "Thu–Sun only — book ahead or queue",
@@ -902,18 +1699,36 @@
     "title": "Kokoro Donuts",
     "description": "Dublin's best donuts, full stop. Creative flavours, perfectly executed, and gone by early afternoon most days. Find a bench nearby and eat them immediately.",
     "primaryCategory": "Coffee & Bakeries",
-    "tags": ["indoor", "food", "treat", "rainy"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "food",
+      "treat",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 30,
     "lat": 53.341,
     "lon": -6.261,
     "neighborhood": "South City Centre",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "searchQuery": "Kokoro Donuts Dublin",
     "rating": 4.8,
     "availabilityNote": "Sell out fast — go before noon",
@@ -924,18 +1739,42 @@
     "title": "Sheridan's Cheesemongers",
     "description": "The best cheese shop in Ireland on South Anne Street. An extraordinary selection of Irish and European cheeses, brilliant staff, and the perfect place to build a picnic.",
     "primaryCategory": "Coffee & Bakeries",
-    "tags": ["indoor", "food", "tasting", "rainy"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "food",
+      "tasting",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 45,
     "lat": 53.342,
     "lon": -6.259,
     "neighborhood": "Anne Street South",
-    "daysOpen": ["mon", "tue", "wed", "thu", "fri", "sat"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "infoUrl": "https://sheridanscheesemongers.com/pages/our-shops",
     "rating": 4.7,
     "availabilityNote": "Great picnic supplies — pair with a nearby park",
@@ -946,18 +1785,42 @@
     "title": "Bar Pez",
     "description": "One of Dublin's best cocktail bars — small, beautifully designed, with a serious but unpretentious drinks list. The kind of place you go for one and leave two hours later very happy.",
     "primaryCategory": "Bars & Cocktails",
-    "tags": ["indoor", "drinks", "cocktails", "social", "rainy"],
-    "mood": ["romantic", "low-key"],
+    "tags": [
+      "indoor",
+      "drinks",
+      "cocktails",
+      "social",
+      "rainy"
+    ],
+    "mood": [
+      "romantic",
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 120,
     "lat": 53.342,
     "lon": -6.275,
     "neighborhood": "Portobello",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://barpez.ie",
     "bookingUrl": "https://barpez.ie",
     "requiresBooking": false,
@@ -970,18 +1833,42 @@
     "title": "The Peruke and Parlour",
     "description": "A wonderfully theatrical cocktail bar on Dawson Street with an extraordinary back bar and inventive drinks list. Baroque decor, serious bartenders, memorable cocktails.",
     "primaryCategory": "Bars & Cocktails",
-    "tags": ["indoor", "drinks", "cocktails", "atmospheric", "rainy"],
-    "mood": ["romantic"],
+    "tags": [
+      "indoor",
+      "drinks",
+      "cocktails",
+      "atmospheric",
+      "rainy"
+    ],
+    "mood": [
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 120,
-    "lat": 53.340,
+    "lat": 53.34,
     "lon": -6.259,
     "neighborhood": "Dawson Street",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["evening"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "infoUrl": "https://www.perukeandparlour.com",
     "requiresBooking": false,
     "priceHint": "~€13 per cocktail",
@@ -992,18 +1879,42 @@
     "title": "The Old Spot Wine Bar",
     "description": "A warm, well-stocked wine bar on Bath Avenue with an excellent list by the glass and knowledgeable, unpretentious staff. Great food too. A neighbourhood gem.",
     "primaryCategory": "Bars & Cocktails",
-    "tags": ["indoor", "drinks", "wine", "food", "rainy"],
-    "mood": ["romantic", "low-key"],
+    "tags": [
+      "indoor",
+      "drinks",
+      "wine",
+      "food",
+      "rainy"
+    ],
+    "mood": [
+      "romantic",
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 120,
     "lat": 53.331,
     "lon": -6.232,
     "neighborhood": "Ballsbridge",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://theoldspot.ie",
     "requiresBooking": false,
     "priceHint": "~€10 glass of wine",
@@ -1014,18 +1925,36 @@
     "title": "Against the Grain",
     "description": "Dublin's best craft beer bar with an ever-rotating tap list of Irish and international beers. Relaxed, knowledgeable staff, and a great selection of bottles too.",
     "primaryCategory": "Bars & Cocktails",
-    "tags": ["indoor", "drinks", "craft-beer", "social", "rainy"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "drinks",
+      "craft-beer",
+      "social",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 120,
     "lat": 53.335,
     "lon": -6.264,
     "neighborhood": "Wexford Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "Against the Grain craft beer Dublin Wexford Street",
     "priceHint": "~€7 craft pint",
     "confidence": 3
@@ -1035,18 +1964,38 @@
     "title": "Capel Street Natural Wine Bars",
     "description": "Capel Street has quietly become Dublin's best street for natural wine — several bars within steps of each other. Wander and find a seat.",
     "primaryCategory": "Bars & Cocktails",
-    "tags": ["indoor", "drinks", "wine", "neighbourhood", "rainy"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "drinks",
+      "wine",
+      "neighbourhood",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 120,
     "lat": 53.349,
     "lon": -6.267,
     "neighborhood": "Capel Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["evening"],
-    "transit": ["bus", "train"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "train"
+    ],
     "searchQuery": "natural wine bars Capel Street Dublin",
     "priceHint": "~€10 glass of wine",
     "confidence": 2
@@ -1056,18 +2005,41 @@
     "title": "Note Restaurant & Wine",
     "description": "A stylish, wine-forward restaurant on Fenian Street with an outstanding list by the glass and small plates to match. One of Dublin's best evenings out.",
     "primaryCategory": "Bars & Cocktails",
-    "tags": ["indoor", "drinks", "wine", "food", "rainy"],
-    "mood": ["romantic"],
+    "tags": [
+      "indoor",
+      "drinks",
+      "wine",
+      "food",
+      "rainy"
+    ],
+    "mood": [
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€€",
     "durationMin": 120,
     "lat": 53.336,
     "lon": -6.254,
     "neighborhood": "Fenian Street",
-    "daysOpen": ["tue", "wed", "thu", "fri", "sat"],
-    "typicalStart": ["evening"],
-    "transit": ["bus", "train"],
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "typicalStart": [
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "train"
+    ],
     "infoUrl": "https://notedublin.com",
     "bookingUrl": "https://notedublin.com",
     "requiresBooking": true,
@@ -1080,18 +2052,37 @@
     "title": "IFI Matinee",
     "description": "The Irish Film Institute on Eustace Street is one of Europe's great repertory cinemas — showing new releases, classics, and things you won't see anywhere else. The bar and bookshop are excellent too.",
     "primaryCategory": "Film",
-    "tags": ["indoor", "film", "rainy", "cultural"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "film",
+      "rainy",
+      "cultural"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 150,
     "lat": 53.344,
     "lon": -6.265,
     "neighborhood": "Temple Bar",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://ifi.ie",
     "bookingUrl": "https://ifi.ie/programme/",
     "requiresBooking": false,
@@ -1104,18 +2095,38 @@
     "title": "Lighthouse Cinema",
     "description": "A beloved independent cinema on Market Street with a carefully curated programme — art house, documentaries, and the best new releases. Comfortable seats, good popcorn, lovely vibe.",
     "primaryCategory": "Film",
-    "tags": ["indoor", "film", "rainy", "neighbourhood"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "film",
+      "rainy",
+      "neighbourhood"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 150,
     "lat": 53.349,
     "lon": -6.278,
     "neighborhood": "Smithfield",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "infoUrl": "https://lighthousecinema.ie",
     "bookingUrl": "https://lighthousecinema.ie",
     "requiresBooking": false,
@@ -1127,18 +2138,36 @@
     "title": "Stella Cinema Rathmines",
     "description": "A beautifully restored Art Deco cinema in Rathmines with plush seats, cocktails, and a premium experience. The kind of place that makes going to the cinema feel like an event again.",
     "primaryCategory": "Film",
-    "tags": ["indoor", "film", "rainy", "retro"],
-    "mood": ["romantic", "low-key"],
+    "tags": [
+      "indoor",
+      "film",
+      "rainy",
+      "retro"
+    ],
+    "mood": [
+      "romantic",
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 150,
-    "lat": 53.320,
+    "lat": 53.32,
     "lon": -6.264,
     "neighborhood": "Rathmines",
-    "daysOpen": ["daily"],
-    "typicalStart": ["evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://stellacinemas.ie/rathmines",
     "bookingUrl": "https://stellacinemas.ie/rathmines",
     "requiresBooking": false,
@@ -1151,18 +2180,33 @@
     "title": "Outdoor Cinema Screening",
     "description": "Seasonal outdoor cinema screenings pop up across Dublin in summer — parks, rooftops, unexpected spaces. Bring a blanket, get there early, and hope the weather holds.",
     "primaryCategory": "Film",
-    "tags": ["outdoor", "film", "seasonal", "evening"],
-    "mood": ["romantic"],
+    "tags": [
+      "outdoor",
+      "film",
+      "seasonal",
+      "evening"
+    ],
+    "mood": [
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun"],
+    "weather": [
+      "sun"
+    ],
     "cost": "€€",
     "durationMin": 180,
-    "lat": 53.350,
-    "lon": -6.260,
+    "lat": 53.35,
+    "lon": -6.26,
     "neighborhood": "Various",
-    "daysOpen": ["seasonal"],
-    "typicalStart": ["evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "seasonal"
+    ],
+    "typicalStart": [
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://www.luna.ie",
     "bookingUrl": "https://www.luna.ie",
     "requiresBooking": true,
@@ -1175,17 +2219,34 @@
     "title": "Home Movie Night",
     "description": "Sometimes the best answer is to stay in. Pick a film you've both been meaning to watch, get something good to eat, and commit to a proper cinema experience on the couch. No queues.",
     "primaryCategory": "Film",
-    "tags": ["indoor", "film", "rainy", "low-key", "cosy"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "film",
+      "rainy",
+      "low-key",
+      "cosy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 180,
-    "lat": 53.350,
-    "lon": -6.260,
+    "lat": 53.35,
+    "lon": -6.26,
     "neighborhood": "Home",
-    "daysOpen": ["daily"],
-    "typicalStart": ["evening"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "evening"
+    ],
     "transit": [],
     "infoUrl": "https://letterboxd.com",
     "availabilityNote": "Grab snacks, argue about what to watch, enjoy",
@@ -1196,18 +2257,38 @@
     "title": "Hodges Figgis Bookshop",
     "description": "Dublin's oldest and best bookshop on Dawson Street — four floors of books, a great Irish literature section, and zero pressure to buy anything. Spend an hour or three.",
     "primaryCategory": "Low-Key",
-    "tags": ["indoor", "books", "rainy", "quiet", "cosy"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "books",
+      "rainy",
+      "quiet",
+      "cosy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.341,
     "lon": -6.259,
     "neighborhood": "Dawson Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["tram", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "tram",
+      "bus"
+    ],
     "infoUrl": "https://www.hodgesfiggis.ie",
     "availabilityNote": "Mon–Sun — free to browse",
     "confidence": 3
@@ -1217,18 +2298,38 @@
     "title": "Books Upstairs + Café",
     "description": "A lovely independent bookshop on D'Olier Street with a café upstairs, excellent staff recommendations, and a strong Irish writing section. A proper bookshop experience.",
     "primaryCategory": "Low-Key",
-    "tags": ["indoor", "books", "cosy", "cafe", "rainy"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "books",
+      "cosy",
+      "cafe",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 60,
     "lat": 53.347,
     "lon": -6.257,
     "neighborhood": "D'Olier Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "infoUrl": "https://booksupstairs.ie",
     "availabilityNote": "Café upstairs — indie picks",
     "confidence": 2
@@ -1238,18 +2339,41 @@
     "title": "Token Arcade & Board Games",
     "description": "A dedicated games venue in Smithfield with retro arcade machines, pinball, board games, and good food. Order drinks, pick something you've never heard of, and settle in.",
     "primaryCategory": "Low-Key",
-    "tags": ["indoor", "games", "rainy", "social", "fun"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "games",
+      "rainy",
+      "social",
+      "fun"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 120,
     "lat": 53.348,
     "lon": -6.278,
     "neighborhood": "Smithfield",
-    "daysOpen": ["wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["evening"],
-    "transit": ["tram", "bus"],
+    "daysOpen": [
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "evening"
+    ],
+    "transit": [
+      "tram",
+      "bus"
+    ],
     "infoUrl": "https://tokendublin.ie",
     "requiresBooking": false,
     "priceHint": "~€6pp table fee + food",
@@ -1261,18 +2385,43 @@
     "title": "Board Game Café, Blackrock",
     "description": "A relaxed board game café in Blackrock with hundreds of games, knowledgeable staff who'll teach you any of them, and good tea and snacks. Easy afternoon sorted.",
     "primaryCategory": "Low-Key",
-    "tags": ["indoor", "games", "rainy", "social", "cafe"],
-    "mood": ["low-key", "cozy"],
+    "tags": [
+      "indoor",
+      "games",
+      "rainy",
+      "social",
+      "cafe"
+    ],
+    "mood": [
+      "low-key",
+      "cozy"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 120,
     "lat": 53.301,
     "lon": -6.176,
     "neighborhood": "Blackrock",
-    "daysOpen": ["wed", "thu", "fri", "sat", "sun"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["train", "bus"],
+    "daysOpen": [
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
     "infoUrl": "https://www.board.ie",
     "availabilityNote": "Reserve at peak times",
     "confidence": 2
@@ -1282,18 +2431,37 @@
     "title": "Iveagh Gardens",
     "description": "Hidden behind Earlsfort Terrace, most Dubliners have never been. Fountains, a rustic grotto, yew mazes, and wide lawns — usually quiet. One of the best spots in the city on a good day.",
     "primaryCategory": "Low-Key",
-    "tags": ["outdoor", "garden", "peaceful", "romantic", "hidden-gem"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "outdoor",
+      "garden",
+      "peaceful",
+      "romantic",
+      "hidden-gem"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 60,
     "lat": 53.334,
     "lon": -6.263,
     "neighborhood": "Harcourt Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["tram", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "tram",
+      "bus"
+    ],
     "infoUrl": "https://heritageireland.ie/places-to-visit/iveagh-gardens",
     "availabilityNote": "Dublin's best kept secret",
     "confidence": 3
@@ -1303,18 +2471,35 @@
     "title": "Merrion Square Park",
     "description": "A beautiful Georgian park in the heart of Dublin with sculpture, wide paths, and the famous Oscar Wilde statue. On Sundays local artists display work along the railings.",
     "primaryCategory": "Low-Key",
-    "tags": ["outdoor", "park", "sculpture", "art"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "outdoor",
+      "park",
+      "sculpture",
+      "art"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 60,
     "lat": 53.339,
     "lon": -6.248,
     "neighborhood": "Merrion Square",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://www.dublincity.ie/residential/parks/visit-park/merrion-square-park",
     "availabilityNote": "Art market on Sundays along the railings",
     "confidence": 2
@@ -1324,18 +2509,38 @@
     "title": "George's Street Arcade",
     "description": "Dublin's Victorian covered market with vintage stalls, record shops, bookstalls, tarot readers, and a great food hall. A proper Dublin institution worth an unhurried browse.",
     "primaryCategory": "Low-Key",
-    "tags": ["indoor", "market", "vintage", "rainy", "browse"],
-    "mood": ["low-key", "cozy"],
+    "tags": [
+      "indoor",
+      "market",
+      "vintage",
+      "rainy",
+      "browse"
+    ],
+    "mood": [
+      "low-key",
+      "cozy"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "free",
     "durationMin": 60,
     "lat": 53.343,
     "lon": -6.263,
     "neighborhood": "South City",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "infoUrl": "https://georgesstreetarcade.ie",
     "availabilityNote": "Eclectic stalls — dry on rainy days",
     "confidence": 2
@@ -1345,18 +2550,37 @@
     "title": "Botanic Gardens Glasshouses",
     "description": "The Victorian glasshouses at the National Botanic Gardens are warm, plant-filled, and open even in the rain. A perfect slow hour with no agenda required.",
     "primaryCategory": "Low-Key",
-    "tags": ["indoor", "garden", "cosy", "rainy", "free"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "indoor",
+      "garden",
+      "cosy",
+      "rainy",
+      "free"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "free",
     "durationMin": 60,
     "lat": 53.371,
     "lon": -6.269,
     "neighborhood": "Glasnevin",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "infoUrl": "https://botanicgardens.ie/visit",
     "availabilityNote": "Warm and peaceful — great in rain",
     "confidence": 3
@@ -1366,18 +2590,36 @@
     "title": "St Stephen's Green",
     "description": "Grab a coffee, find a bench, and do absolutely nothing for an hour. Watch the ducks, read a book, let the city happen around you. Sometimes that's enough.",
     "primaryCategory": "Low-Key",
-    "tags": ["outdoor", "park", "peaceful", "free"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "outdoor",
+      "park",
+      "peaceful",
+      "free"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 60,
     "lat": 53.339,
-    "lon": -6.260,
+    "lon": -6.26,
     "neighborhood": "Grafton",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["tram", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "tram",
+      "bus"
+    ],
     "infoUrl": "https://heritageireland.ie/places-to-visit/st-stephens-green",
     "availabilityNote": "Busy on sunny days — benches and ducks",
     "confidence": 3
@@ -1387,18 +2629,34 @@
     "title": "Picnic in Phoenix Park",
     "description": "Grab supplies from a good deli, find a spot near the Papal Cross or by the lake, and sit in one of Europe's great city parks. Simple, cheap, and hard to beat on a good day.",
     "primaryCategory": "Low-Key",
-    "tags": ["outdoor", "food", "romantic", "relaxed"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "outdoor",
+      "food",
+      "romantic",
+      "relaxed"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun"],
+    "weather": [
+      "sun"
+    ],
     "cost": "€",
     "durationMin": 120,
     "lat": 53.356,
     "lon": -6.329,
     "neighborhood": "Phoenix Park",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "picnic Phoenix Park Dublin",
     "availabilityNote": "Sun only — grab supplies from a deli first",
     "confidence": 3
@@ -1408,18 +2666,39 @@
     "title": "South William Street Brunch",
     "description": "The stretch from South William Street down to Drury Street is Dublin's best for weekend brunch — Listons, Paulie's Pizza, General Merchants and more all within a few minutes.",
     "primaryCategory": "Low-Key",
-    "tags": ["food", "social", "brunch", "neighbourhood", "casual"],
-    "mood": ["low-key"],
+    "tags": [
+      "food",
+      "social",
+      "brunch",
+      "neighbourhood",
+      "casual"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€€",
     "durationMin": 120,
     "lat": 53.341,
     "lon": -6.261,
     "neighborhood": "South William Street",
-    "daysOpen": ["sat", "sun"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "searchQuery": "South William Street brunch Dublin",
     "availabilityNote": "Weekend mornings — expect queues at the good spots",
     "confidence": 3
@@ -1429,18 +2708,37 @@
     "title": "Powerscourt Gardens",
     "description": "One of the great gardens of Ireland — formal terraces, a Japanese garden, a pets' cemetery, and views to Sugar Loaf mountain. About 30 minutes from Dublin. Worth every minute of the drive.",
     "primaryCategory": "Nature/Day Trip",
-    "tags": ["outdoor", "gardens", "scenic", "day-trip"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "outdoor",
+      "gardens",
+      "scenic",
+      "day-trip"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "€€",
     "durationMin": 150,
     "lat": 53.184,
     "lon": -6.186,
     "neighborhood": "Enniskerry, Wicklow",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["car", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "car",
+      "bus"
+    ],
     "infoUrl": "https://powerscourt.com/gardens",
     "bookingUrl": "https://powerscourt.com/gardens/tickets",
     "requiresBooking": false,
@@ -1453,18 +2751,36 @@
     "title": "Powerscourt Waterfall",
     "description": "Ireland's highest waterfall in a beautiful forest setting with picnic areas. A short drive from the gardens or a lovely standalone trip from Dublin. Spectacular after heavy rain.",
     "primaryCategory": "Nature/Day Trip",
-    "tags": ["outdoor", "waterfall", "scenic", "day-trip"],
-    "mood": ["low-key", "energizing"],
+    "tags": [
+      "outdoor",
+      "waterfall",
+      "scenic",
+      "day-trip"
+    ],
+    "mood": [
+      "low-key",
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "€",
     "durationMin": 120,
-    "lat": 53.160,
-    "lon": -6.210,
+    "lat": 53.16,
+    "lon": -6.21,
     "neighborhood": "Wicklow",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["car"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "car"
+    ],
     "infoUrl": "https://powerscourt.com/waterfall",
     "requiresBooking": false,
     "priceHint": "Small entry fee",
@@ -1476,18 +2792,37 @@
     "title": "Glendalough Monastic Site & Lakes",
     "description": "Ancient monastic ruins beside two glacial lakes in the heart of the Wicklow Mountains. One of Ireland's most visited sites and deservedly so — genuinely stunning in any weather.",
     "primaryCategory": "Nature/Day Trip",
-    "tags": ["outdoor", "lakes", "heritage", "scenic", "day-trip"],
-    "mood": ["low-key", "energizing"],
+    "tags": [
+      "outdoor",
+      "lakes",
+      "heritage",
+      "scenic",
+      "day-trip"
+    ],
+    "mood": [
+      "low-key",
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 180,
     "lat": 53.012,
     "lon": -6.327,
     "neighborhood": "Wicklow Mountains",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning"],
-    "transit": ["car", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning"
+    ],
+    "transit": [
+      "car",
+      "bus"
+    ],
     "infoUrl": "https://www.heritageireland.ie/places-to-visit/glendalough-monastic-site",
     "availabilityNote": "Arrive early — parking fills on weekends",
     "confidence": 3
@@ -1497,18 +2832,35 @@
     "title": "Wicklow Mountains National Park",
     "description": "Drive 45 minutes south to wild moorland, glacial valleys, and total silence. The Sally Gap, Luggala, and the Military Road are all extraordinary. Bring layers regardless of the forecast.",
     "primaryCategory": "Nature/Day Trip",
-    "tags": ["outdoor", "mountains", "scenic", "day-trip"],
-    "mood": ["energizing", "low-key"],
+    "tags": [
+      "outdoor",
+      "mountains",
+      "scenic",
+      "day-trip"
+    ],
+    "mood": [
+      "energizing",
+      "low-key"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 240,
     "lat": 53.062,
     "lon": -6.327,
     "neighborhood": "Wicklow Mountains",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning"],
-    "transit": ["car"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning"
+    ],
+    "transit": [
+      "car"
+    ],
     "infoUrl": "https://www.wicklowmountainsnationalpark.ie",
     "availabilityNote": "Car needed — changeable weather, plan layers",
     "confidence": 3
@@ -1518,18 +2870,36 @@
     "title": "Hell Fire Club, Montpelier Hill",
     "description": "A short but steep climb in the Dublin Mountains to a ruined 18th-century hunting lodge with a mythic reputation and sweeping city views from the top. One of Dublin's best-kept secrets.",
     "primaryCategory": "Nature/Day Trip",
-    "tags": ["outdoor", "hill", "scenic", "day-trip"],
-    "mood": ["energizing"],
+    "tags": [
+      "outdoor",
+      "hill",
+      "scenic",
+      "day-trip"
+    ],
+    "mood": [
+      "energizing"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "free",
     "durationMin": 90,
     "lat": 53.262,
-    "lon": -6.320,
+    "lon": -6.32,
     "neighborhood": "Dublin Mountains",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["car", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "car",
+      "bus"
+    ],
     "infoUrl": "https://www.coillte.ie/site/hell-fire-club",
     "availabilityNote": "Short steep climb — city panorama at the top",
     "confidence": 2
@@ -1539,18 +2909,38 @@
     "title": "Killruddery House & Gardens",
     "description": "A 17th-century estate in Bray with formal gardens, a working farm, and one of Ireland's best garden cafés. Seasonal markets make it worth the trip any time of year.",
     "primaryCategory": "Nature/Day Trip",
-    "tags": ["outdoor", "gardens", "heritage", "day-trip"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "outdoor",
+      "gardens",
+      "heritage",
+      "day-trip"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "outdoor",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "€€",
     "durationMin": 150,
     "lat": 53.179,
-    "lon": -6.090,
+    "lon": -6.09,
     "neighborhood": "Bray, Wicklow",
-    "daysOpen": ["sat", "sun"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["train", "car"],
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "train",
+      "car"
+    ],
     "infoUrl": "https://www.killruddery.com",
     "requiresBooking": false,
     "priceHint": "Check seasonal pricing",
@@ -1562,18 +2952,37 @@
     "title": "Trim Castle Day Trip",
     "description": "The largest Anglo-Norman castle in Ireland, on the banks of the Boyne in County Meath. About an hour from Dublin — a genuine day trip with a riverside walk, ruins, and great history.",
     "primaryCategory": "Nature/Day Trip",
-    "tags": ["outdoor", "castle", "heritage", "day-trip"],
-    "mood": ["low-key", "romantic"],
+    "tags": [
+      "outdoor",
+      "castle",
+      "heritage",
+      "day-trip"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
     "indoorOutdoor": "mixed",
-    "weather": ["sun", "cloud"],
+    "weather": [
+      "sun",
+      "cloud"
+    ],
     "cost": "€",
     "durationMin": 180,
     "lat": 53.555,
     "lon": -6.791,
     "neighborhood": "Trim, Meath",
-    "daysOpen": ["daily"],
-    "typicalStart": ["morning", "afternoon"],
-    "transit": ["car", "bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "car",
+      "bus"
+    ],
     "infoUrl": "https://heritageireland.ie/places-to-visit/trim-castle",
     "requiresBooking": false,
     "priceHint": "OPW entry fee",
@@ -1585,18 +2994,38 @@
     "title": "Mulligan's of Poolbeg Street",
     "description": "Arguably the finest Guinness in Dublin since 1782. Dark, unchanged, and utterly serious about its pint. No frills, no music, no tourists who know what they're doing. Just perfection.",
     "primaryCategory": "Creamy Pints",
-    "tags": ["indoor", "pub", "guinness", "historic", "iconic"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "pub",
+      "guinness",
+      "historic",
+      "iconic"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.346,
     "lon": -6.254,
     "neighborhood": "Poolbeg Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus", "train"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "train"
+    ],
     "searchQuery": "Mulligan's pub Poolbeg Street Dublin Guinness",
     "availabilityNote": "Walk-ins only",
     "confidence": 3
@@ -1606,18 +3035,38 @@
     "title": "Kehoe's, South Anne Street",
     "description": "One of Dublin's best-preserved Victorian pubs. Snugs, original fittings, and a Guinness that rewards patience. Gets busy but never loses its soul.",
     "primaryCategory": "Creamy Pints",
-    "tags": ["indoor", "pub", "guinness", "historic", "victorian"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "pub",
+      "guinness",
+      "historic",
+      "victorian"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.341,
     "lon": -6.258,
     "neighborhood": "South Anne Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "searchQuery": "Kehoe's pub South Anne Street Dublin Guinness",
     "availabilityNote": "Walk-ins only",
     "confidence": 3
@@ -1627,18 +3076,36 @@
     "title": "Doheny & Nesbitt",
     "description": "A Baggot Street institution beloved by politicians, journalists, and anyone who knows a good pint. The snug at the back is one of Dublin's great spots.",
     "primaryCategory": "Creamy Pints",
-    "tags": ["indoor", "pub", "guinness", "historic"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "pub",
+      "guinness",
+      "historic"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.334,
-    "lon": -6.250,
+    "lon": -6.25,
     "neighborhood": "Baggot Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "Doheny and Nesbitt pub Baggot Street Dublin Guinness",
     "availabilityNote": "Walk-ins only",
     "confidence": 3
@@ -1648,18 +3115,37 @@
     "title": "The Stag's Head",
     "description": "A jaw-dropping Victorian interior on Dame Court — stained glass, marble, mounted stag. The Guinness matches the surroundings. A Dublin essential that never disappoints.",
     "primaryCategory": "Creamy Pints",
-    "tags": ["indoor", "pub", "guinness", "historic", "victorian"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "pub",
+      "guinness",
+      "historic",
+      "victorian"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.344,
     "lon": -6.265,
     "neighborhood": "Dame Court",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "Stag's Head pub Dame Court Dublin Guinness",
     "availabilityNote": "Walk-ins only",
     "confidence": 3
@@ -1669,18 +3155,36 @@
     "title": "Toner's, Baggot Street",
     "description": "Unchanged since the 1800s, with wooden drawers behind the bar that once held grocery orders. The Guinness is excellent. Yeats drank here. That's all you need to know.",
     "primaryCategory": "Creamy Pints",
-    "tags": ["indoor", "pub", "guinness", "historic"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "pub",
+      "guinness",
+      "historic"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.333,
-    "lon": -6.250,
+    "lon": -6.25,
     "neighborhood": "Baggot Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "Toner's pub Baggot Street Dublin Guinness",
     "availabilityNote": "Walk-ins only",
     "confidence": 3
@@ -1690,18 +3194,38 @@
     "title": "The Long Hall",
     "description": "South Great George's Street landmark with an extraordinary Victorian interior — chandeliers, clocks, carved mahogany. The pint is worth the trip alone. One of Ireland's great pub interiors.",
     "primaryCategory": "Creamy Pints",
-    "tags": ["indoor", "pub", "guinness", "historic", "victorian"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "pub",
+      "guinness",
+      "historic",
+      "victorian"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.343,
     "lon": -6.263,
     "neighborhood": "South Great George's Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "searchQuery": "The Long Hall pub Dublin Guinness",
     "availabilityNote": "Walk-ins only",
     "confidence": 3
@@ -1711,18 +3235,37 @@
     "title": "Grogan's Castle Lounge",
     "description": "A South William Street bohemian institution. Writers, artists, and people who take their Guinness very seriously. Unhurried, unpretentious, and exactly right.",
     "primaryCategory": "Creamy Pints",
-    "tags": ["indoor", "pub", "guinness", "bohemian"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "pub",
+      "guinness",
+      "bohemian"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.342,
     "lon": -6.262,
     "neighborhood": "South William Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "searchQuery": "Grogan's Castle Lounge South William Street Dublin Guinness",
     "availabilityNote": "Walk-ins only",
     "confidence": 3
@@ -1732,18 +3275,37 @@
     "title": "The Palace Bar, Fleet Street",
     "description": "One of Dublin's oldest pubs, with a beautiful curved bar and a serious Guinness reputation. Literary history on every wall. A Fleet Street institution since 1823.",
     "primaryCategory": "Creamy Pints",
-    "tags": ["indoor", "pub", "guinness", "historic", "literary"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "pub",
+      "guinness",
+      "historic",
+      "literary"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.345,
     "lon": -6.258,
     "neighborhood": "Fleet Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
     "searchQuery": "Palace Bar Fleet Street Dublin Guinness",
     "availabilityNote": "Walk-ins only",
     "confidence": 3
@@ -1753,18 +3315,38 @@
     "title": "McDaid's, Harry Street",
     "description": "Brendan Behan's local. A tall narrow Victorian pub off Grafton Street with a devoted following and a Guinness that never disappoints. Steps from the shopping crowds, miles from them in spirit.",
     "primaryCategory": "Creamy Pints",
-    "tags": ["indoor", "pub", "guinness", "literary", "historic"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "pub",
+      "guinness",
+      "literary",
+      "historic"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
     "lat": 53.341,
     "lon": -6.261,
     "neighborhood": "Harry Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "searchQuery": "McDaid's pub Harry Street Dublin Guinness",
     "availabilityNote": "Walk-ins only",
     "confidence": 3
@@ -1774,20 +3356,2210 @@
     "title": "Neary's, Chatham Street",
     "description": "A beautifully kept Victorian pub steps from Grafton Street. Polished brass, a warm welcome, and one of the most consistently good pints in the city. Somehow always feels right.",
     "primaryCategory": "Creamy Pints",
-    "tags": ["indoor", "pub", "guinness", "victorian"],
-    "mood": ["low-key"],
+    "tags": [
+      "indoor",
+      "pub",
+      "guinness",
+      "victorian"
+    ],
+    "mood": [
+      "low-key"
+    ],
     "indoorOutdoor": "indoor",
-    "weather": ["sun", "cloud", "rain"],
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
     "cost": "€",
     "durationMin": 90,
-    "lat": 53.340,
-    "lon": -6.260,
+    "lat": 53.34,
+    "lon": -6.26,
     "neighborhood": "Chatham Street",
-    "daysOpen": ["daily"],
-    "typicalStart": ["afternoon", "evening"],
-    "transit": ["bus", "tram"],
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
     "searchQuery": "Neary's pub Chatham Street Dublin Guinness",
     "availabilityNote": "Walk-ins only",
+    "confidence": 3
+  },
+  {
+    "id": "newbridge-house-farm",
+    "title": "Newbridge House and Farm",
+    "description": "A working Georgian farm 30 minutes north of the city with piglets, goats and Connemara ponies on the Farmyard Discovery Trail. The mansion itself is the only intact Georgian house in Ireland with mostly original furniture.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "outdoor",
+      "animals",
+      "farm",
+      "heritage",
+      "family"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "mixed",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "€€",
+    "durationMin": 150,
+    "lat": 53.4942,
+    "lon": -6.1506,
+    "neighborhood": "Donabate",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "train",
+      "car"
+    ],
+    "infoUrl": "https://www.newbridgehouseandfarm.com",
+    "requiresBooking": false,
+    "priceHint": "~€10pp",
+    "availabilityNote": "Check seasonal opening hours",
+    "confidence": 2
+  },
+  {
+    "id": "airfield-estate",
+    "title": "Airfield Estate",
+    "description": "An urban farm in Dundrum where you can collect eggs, feed calves, milk Jersey cows and meet resident donkeys. Native woodland trails and seasonal gardens throughout the year, with a great café on site.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "outdoor",
+      "animals",
+      "farm",
+      "nature",
+      "family"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "outdoor",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "€€",
+    "durationMin": 120,
+    "lat": 53.2942,
+    "lon": -6.237,
+    "neighborhood": "Dundrum",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "tram",
+      "bus"
+    ],
+    "infoUrl": "https://www.airfield.ie",
+    "bookingUrl": "https://www.airfield.ie/visit/",
+    "requiresBooking": false,
+    "priceHint": "~€12pp",
+    "availabilityNote": "Open daily — café on site",
+    "confidence": 2
+  },
+  {
+    "id": "national-wax-museum",
+    "title": "The National Wax Museum Plus",
+    "description": "Moving dinosaurs at the entrance, a fantasy Kids Zone, VR Jurassic Jungle and wax hand-casting in the city centre. A solid rainy-day pick that earns its reputation with younger visitors.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "indoor",
+      "interactive",
+      "family",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 90,
+    "lat": 53.3445,
+    "lon": -6.2637,
+    "neighborhood": "Foster Place",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.waxmuseumplus.ie",
+    "bookingUrl": "https://www.waxmuseumplus.ie/tickets/",
+    "requiresBooking": false,
+    "priceHint": "~€15pp",
+    "availabilityNote": "Open daily 10am–7pm",
+    "confidence": 2
+  },
+  {
+    "id": "jump-zone",
+    "title": "Jump Zone",
+    "description": "Ireland's largest indoor trampoline park in Santry with obstacle courses, trampolines and a climbing frame for under-eights. A high-energy rainy-day option that properly tires everyone out.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "indoor",
+      "active",
+      "family",
+      "rainy"
+    ],
+    "mood": [
+      "energizing"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 60,
+    "lat": 53.3883,
+    "lon": -6.2494,
+    "neighborhood": "Santry",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.jumpzone.ie",
+    "bookingUrl": "https://www.jumpzone.ie/book/",
+    "requiresBooking": true,
+    "priceHint": "~€14pp",
+    "availabilityNote": "Pre-booking recommended",
+    "confidence": 2
+  },
+  {
+    "id": "the-ark",
+    "title": "The Ark",
+    "description": "A dedicated cultural centre for children aged 2–12 in Temple Bar. Drop-in workshops, performances and shows covering theatre, dance, music and visual arts. Check the programme before visiting.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "indoor",
+      "arts",
+      "family",
+      "workshop",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 90,
+    "lat": 53.3449,
+    "lon": -6.2652,
+    "neighborhood": "Temple Bar",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://ark.ie",
+    "bookingUrl": "https://ark.ie/events",
+    "requiresBooking": true,
+    "priceHint": "Workshops ~€11.50pp",
+    "availabilityNote": "Check programme and book ahead",
+    "confidence": 2
+  },
+  {
+    "id": "explorium",
+    "title": "Explorium",
+    "description": "Science and sports museum in Sandyford with 100+ interactive exhibits — Ireland's largest Tesla coil, a simulated earthquake, climbing walls and a multi-sensory sports simulator. Genuinely impressive.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "indoor",
+      "science",
+      "interactive",
+      "family",
+      "rainy"
+    ],
+    "mood": [
+      "energizing"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 150,
+    "lat": 53.2771,
+    "lon": -6.2185,
+    "neighborhood": "Sandyford",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "tram"
+    ],
+    "infoUrl": "https://www.explorium.ie",
+    "bookingUrl": "https://www.explorium.ie/tickets/",
+    "requiresBooking": false,
+    "priceHint": "~€16pp",
+    "availabilityNote": "Open daily",
+    "confidence": 2
+  },
+  {
+    "id": "world-of-illusion",
+    "title": "World of Illusion",
+    "description": "Three floors of mind-bending optical illusions and interactive art in Temple Bar. Walk through walls of light, enter a vortex tunnel and explore infinity mirrors. Short but memorable.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "indoor",
+      "interactive",
+      "family",
+      "art",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 60,
+    "lat": 53.3451,
+    "lon": -6.2638,
+    "neighborhood": "Temple Bar",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://worldofillusiondublin.com",
+    "bookingUrl": "https://worldofillusiondublin.com/tickets/",
+    "requiresBooking": false,
+    "priceHint": "~€15pp",
+    "availabilityNote": "Open daily",
+    "confidence": 2
+  },
+  {
+    "id": "dublin-bay-cruises",
+    "title": "Dublin Bay Cruises",
+    "description": "See the city from the sea. Spot coastal landmarks along the Dublin coast, Ireland's Eye and Howth Head, and watch for seals near Dalkey Island as you cruise Dublin Bay. A different perspective entirely.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "outdoor",
+      "water",
+      "sightseeing",
+      "family",
+      "coastal"
+    ],
+    "mood": [
+      "low-key",
+      "energizing"
+    ],
+    "indoorOutdoor": "outdoor",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "€€",
+    "durationMin": 90,
+    "lat": 53.2986,
+    "lon": -6.1358,
+    "neighborhood": "Dún Laoghaire",
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "train"
+    ],
+    "infoUrl": "https://www.dublinbaycruises.com",
+    "bookingUrl": "https://www.dublinbaycruises.com/book/",
+    "requiresBooking": false,
+    "priceHint": "~€20pp",
+    "availabilityNote": "Seasonal — check timetable",
+    "confidence": 2
+  },
+  {
+    "id": "malahide-castle-gardens",
+    "title": "Malahide Castle & Butterfly House",
+    "description": "Beyond the grounds walk — the Fairy Trail, Butterfly House and zip line make Malahide genuinely great for a full family day out. Tour the medieval castle, then let the kids loose in the adventure playground.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "outdoor",
+      "heritage",
+      "family",
+      "nature",
+      "castle"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "mixed",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "€€",
+    "durationMin": 180,
+    "lat": 53.4512,
+    "lon": -6.1543,
+    "neighborhood": "Malahide",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "train"
+    ],
+    "infoUrl": "https://www.malahidecastleandgardens.ie",
+    "bookingUrl": "https://www.malahidecastleandgardens.ie/plan-your-visit/",
+    "requiresBooking": false,
+    "priceHint": "~€14pp castle tour",
+    "availabilityNote": "Grounds free — castle and butterfly house ticketed",
+    "confidence": 2
+  },
+  {
+    "id": "aquazone-nac",
+    "title": "Aquazone Water Park",
+    "description": "An indoor water park at the National Aquatic Centre with the FlowRider surf simulator, lazy river, Pirate Ship and three serious water slides including the Black Hole. Big fun regardless of the weather.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "indoor",
+      "water",
+      "active",
+      "family",
+      "rainy"
+    ],
+    "mood": [
+      "energizing"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 120,
+    "lat": 53.3926,
+    "lon": -6.3502,
+    "neighborhood": "Blanchardstown",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.nac.ie/aquazone",
+    "requiresBooking": false,
+    "priceHint": "~€15pp",
+    "availabilityNote": "Check session times before going",
+    "confidence": 2
+  },
+  {
+    "id": "viking-splash",
+    "title": "Viking Splash Tours",
+    "description": "Dublin sightseeing on a bright yellow amphibious vehicle — part land tour, part boat ride into the Grand Canal Basin. Don your Viking helmet and roar at pedestrians. Genuinely good fun.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "outdoor",
+      "sightseeing",
+      "water",
+      "family",
+      "tour"
+    ],
+    "mood": [
+      "energizing",
+      "low-key"
+    ],
+    "indoorOutdoor": "outdoor",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "€€",
+    "durationMin": 75,
+    "lat": 53.3388,
+    "lon": -6.2701,
+    "neighborhood": "Bull Alley Street",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.vikingsplash.com",
+    "bookingUrl": "https://www.vikingsplash.com/book/",
+    "requiresBooking": true,
+    "priceHint": "~€25pp",
+    "availabilityNote": "Seasonal — book ahead",
+    "confidence": 2
+  },
+  {
+    "id": "imaginosity",
+    "title": "Imaginosity Children's Museum",
+    "description": "Three floors of hands-on play in Sandyford for kids up to age 9. Role-play as a doctor, banker or mechanic, with a dedicated baby and toddler zone on the top floor. Excellent value.",
+    "primaryCategory": "Family Fun",
+    "tags": [
+      "indoor",
+      "interactive",
+      "family",
+      "toddler",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 120,
+    "lat": 53.2771,
+    "lon": -6.218,
+    "neighborhood": "Sandyford",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "tram"
+    ],
+    "infoUrl": "https://www.imaginosity.ie",
+    "requiresBooking": false,
+    "priceHint": "~€8pp",
+    "availabilityNote": "Suits ages up to 9",
+    "confidence": 2
+  },
+  {
+    "id": "merrion-spa",
+    "title": "The Spa at The Merrion",
+    "description": "A subterranean sanctuary beneath one of Dublin's finest Georgian hotels — original 60-foot pool, soft lighting, and Irish fabrics throughout. ESPA facials, hot stone massage, and a thoroughly modern finish.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "indoor",
+      "spa",
+      "massage",
+      "luxury",
+      "romantic"
+    ],
+    "mood": [
+      "romantic",
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€€",
+    "durationMin": 90,
+    "lat": 53.3393,
+    "lon": -6.2527,
+    "neighborhood": "Merrion Street",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.merrionhotel.com/the-spa/",
+    "bookingUrl": "https://www.merrionhotel.com/the-spa/",
+    "requiresBooking": true,
+    "priceHint": "Treatments from ~€80pp",
+    "availabilityNote": "Booking essential",
+    "confidence": 2
+  },
+  {
+    "id": "shelbourne-spa",
+    "title": "The Spa at The Shelbourne",
+    "description": "A full-service luxury spa inside one of Dublin's most iconic hotels, steps from St Stephen's Green. Wide range of treatments from facials to full-body massage in an elegant setting.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "indoor",
+      "spa",
+      "massage",
+      "luxury",
+      "romantic"
+    ],
+    "mood": [
+      "romantic",
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€€",
+    "durationMin": 90,
+    "lat": 53.3394,
+    "lon": -6.2557,
+    "neighborhood": "St Stephen's Green",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "https://www.theshelbourne.com/wellness/the-spa",
+    "bookingUrl": "https://www.theshelbourne.com/wellness/the-spa",
+    "requiresBooking": true,
+    "priceHint": "Treatments from ~€75pp",
+    "availabilityNote": "Booking essential",
+    "confidence": 2
+  },
+  {
+    "id": "buff-day-spa",
+    "title": "The Buff Day Spa",
+    "description": "A surprisingly spacious spa hidden behind a small door near the Gaiety Theatre — treatment rooms, sauna, relaxation area and a tranquillity room. Great for a mid-afternoon reset off Grafton Street.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "indoor",
+      "spa",
+      "facial",
+      "massage",
+      "city-centre"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 60,
+    "lat": 53.34,
+    "lon": -6.2618,
+    "neighborhood": "Grafton Street",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "https://www.thebuffdayspa.com",
+    "bookingUrl": "https://www.thebuffdayspa.com",
+    "requiresBooking": true,
+    "priceHint": "Treatments from ~€50pp",
+    "availabilityNote": "Booking recommended",
+    "confidence": 2
+  },
+  {
+    "id": "sansana-spa-royal-marine",
+    "title": "Sansana Spa at the Royal Marine",
+    "description": "A full hotel spa in Dún Laoghaire with sea views and a wide treatment menu. Pair it with a pier walk and lunch in the town for a complete coastal day out.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "indoor",
+      "spa",
+      "massage",
+      "coastal",
+      "romantic"
+    ],
+    "mood": [
+      "romantic",
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€€",
+    "durationMin": 90,
+    "lat": 53.2949,
+    "lon": -6.1358,
+    "neighborhood": "Dún Laoghaire",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "train"
+    ],
+    "infoUrl": "https://www.royalmarine.ie/spa.html",
+    "bookingUrl": "https://www.royalmarine.ie/spa.html",
+    "requiresBooking": true,
+    "priceHint": "Treatments from ~€70pp",
+    "availabilityNote": "Booking essential",
+    "confidence": 2
+  },
+  {
+    "id": "castleknock-spa",
+    "title": "The Spa at Castleknock Hotel",
+    "description": "A hotel spa on the edge of Phoenix Park with a thermal suite, treatment rooms and a full menu of body and skin treatments. Quieter than city-centre options and worth the short trip.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "indoor",
+      "spa",
+      "thermal",
+      "luxury"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€€",
+    "durationMin": 120,
+    "lat": 53.3742,
+    "lon": -6.3576,
+    "neighborhood": "Castleknock",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "car"
+    ],
+    "infoUrl": "https://www.castleknockhotel.com/thespa-at-castleknock-hotel.htm",
+    "bookingUrl": "https://www.castleknockhotel.com/thespa-at-castleknock-hotel.htm",
+    "requiresBooking": true,
+    "priceHint": "Treatments from ~€70pp",
+    "availabilityNote": "Booking essential",
+    "confidence": 2
+  },
+  {
+    "id": "haku-beauty",
+    "title": "Haku Beauty",
+    "description": "A well-regarded beauty and skin treatment studio in the city centre. Clean, calm, and focused — no spa fluff, just excellent facials, waxing and beauty treatments.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "indoor",
+      "spa",
+      "facial",
+      "beauty"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 60,
+    "lat": 53.34,
+    "lon": -6.26,
+    "neighborhood": "City Centre",
+    "daysOpen": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "https://www.haku.ie",
+    "bookingUrl": "https://www.haku.ie",
+    "requiresBooking": true,
+    "priceHint": "Treatments from ~€60pp",
+    "availabilityNote": "Booking recommended",
+    "confidence": 2
+  },
+  {
+    "id": "healing-forest-kilternan",
+    "title": "The Healing Forest",
+    "description": "Ireland's only forest dedicated to therapeutic practice — 33 acres in Kilternan used for guided forest bathing, meditation walks, and sensory reconnection with nature. Genuinely restorative.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "outdoor",
+      "nature",
+      "meditation",
+      "forest",
+      "mindfulness"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "outdoor",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "€€",
+    "durationMin": 120,
+    "lat": 53.2386,
+    "lon": -6.2091,
+    "neighborhood": "Kilternan",
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "car"
+    ],
+    "infoUrl": "https://www.thehealingforest.ie",
+    "bookingUrl": "https://www.thehealingforest.ie",
+    "requiresBooking": true,
+    "priceHint": "Guided walks from ~€25pp",
+    "availabilityNote": "Guided sessions — book ahead",
+    "confidence": 2
+  },
+  {
+    "id": "the-space-between",
+    "title": "The Space Between",
+    "description": "A calm studio on Fenian Street offering hot yoga, vinyasa, hatha, Pilates, Wim Hof breathwork and meditation. A sanctuary in the middle of the city — there's even a dog-friendly tearoom.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "indoor",
+      "yoga",
+      "pilates",
+      "meditation",
+      "breathwork"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 60,
+    "lat": 53.336,
+    "lon": -6.246,
+    "neighborhood": "Fenian Street",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "train"
+    ],
+    "infoUrl": "https://www.thespacebetween.ie",
+    "bookingUrl": "https://www.thespacebetween.ie",
+    "requiresBooking": true,
+    "priceHint": "Classes from ~€18pp",
+    "availabilityNote": "Book classes online",
+    "confidence": 2
+  },
+  {
+    "id": "sea-sauna-portrane",
+    "title": "The Sea Sauna, Portrane",
+    "description": "A traditional Finnish wood-burning sauna right beside Tower Bay Beach in Portrane, with panoramic views of the Irish Sea. Warm up after a bracing dip — box or barrel sauna, up to ten at a time.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "outdoor",
+      "sauna",
+      "sea-swim",
+      "coastal",
+      "scenic"
+    ],
+    "mood": [
+      "energizing",
+      "low-key"
+    ],
+    "indoorOutdoor": "mixed",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "€€",
+    "durationMin": 60,
+    "lat": 53.4972,
+    "lon": -6.1094,
+    "neighborhood": "Portrane",
+    "daysOpen": [
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "car"
+    ],
+    "infoUrl": "https://www.theseasauna.ie",
+    "bookingUrl": "https://www.theseasauna.ie",
+    "requiresBooking": true,
+    "priceHint": "~€25pp per session",
+    "availabilityNote": "Shared sessions 30–45 mins — book ahead",
+    "confidence": 2
+  },
+  {
+    "id": "dublin-buddhist-centre",
+    "title": "Dublin Buddhist Centre",
+    "description": "One of the city's best-kept oases of calm on James Joyce Street — free guided meditations using mindfulness and breathing techniques, open to complete beginners and experienced meditators alike.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "indoor",
+      "meditation",
+      "mindfulness",
+      "free"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "free",
+    "durationMin": 60,
+    "lat": 53.3512,
+    "lon": -6.2592,
+    "neighborhood": "James Joyce Street",
+    "daysOpen": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://dublinbuddhistcentre.org",
+    "requiresBooking": false,
+    "availabilityNote": "Morning and lunchtime sessions — donations welcome",
+    "confidence": 2
+  },
+  {
+    "id": "parkrun-dublin",
+    "title": "Parkrun Dublin",
+    "description": "A free, timed 5km run, jog or walk every Saturday morning at beautiful spots across the city — Marlay Park, Malahide Castle, Fairview Park and more. Over 300 people each week. Just register once online.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "outdoor",
+      "running",
+      "free",
+      "fitness",
+      "social"
+    ],
+    "mood": [
+      "energizing"
+    ],
+    "indoorOutdoor": "outdoor",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "free",
+    "durationMin": 45,
+    "lat": 53.2945,
+    "lon": -6.2855,
+    "neighborhood": "Multiple locations",
+    "daysOpen": [
+      "sat"
+    ],
+    "typicalStart": [
+      "morning"
+    ],
+    "transit": [
+      "bus",
+      "car"
+    ],
+    "infoUrl": "https://www.parkrun.ie",
+    "bookingUrl": "https://www.parkrun.ie/register/",
+    "requiresBooking": false,
+    "availabilityNote": "Every Saturday morning — register once free online",
+    "confidence": 3
+  },
+  {
+    "id": "parkhiit",
+    "title": "ParkHIIT",
+    "description": "Free 30-minute outdoor HIIT sessions every Saturday morning in parks across Dublin — Phoenix Park, Donnybrook, Poppintree and more. Complimentary coffee and porridge after some sessions. Hard work, worth it.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "outdoor",
+      "fitness",
+      "hiit",
+      "free",
+      "active"
+    ],
+    "mood": [
+      "energizing"
+    ],
+    "indoorOutdoor": "outdoor",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "free",
+    "durationMin": 30,
+    "lat": 53.3617,
+    "lon": -6.3209,
+    "neighborhood": "Multiple locations",
+    "daysOpen": [
+      "sat"
+    ],
+    "typicalStart": [
+      "morning"
+    ],
+    "transit": [
+      "bus",
+      "car"
+    ],
+    "infoUrl": "https://www.eventbrite.ie/d/ireland--dublin/park-fit/",
+    "requiresBooking": false,
+    "availabilityNote": "Every Saturday 10am — multiple Dublin parks",
+    "confidence": 2
+  },
+  {
+    "id": "barrys-bootcamp",
+    "title": "Barry's Bootcamp",
+    "description": "The world-famous gym's first Irish branch on Dawson Street. Ride X Lift spin class or full HIIT in the Red Room — pay as you go or buy a class bundle. Bring a towel. You'll need it.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "indoor",
+      "fitness",
+      "hiit",
+      "active"
+    ],
+    "mood": [
+      "energizing"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 50,
+    "lat": 53.3404,
+    "lon": -6.2589,
+    "neighborhood": "Dawson Street",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "https://www.barrys.com",
+    "bookingUrl": "https://www.barrys.com/location/dublin/",
+    "requiresBooking": true,
+    "priceHint": "Classes from ~€25pp",
+    "availabilityNote": "Book online — Dawson Street",
+    "confidence": 2
+  },
+  {
+    "id": "salt-cave-paradise",
+    "title": "Salt Cave Paradise",
+    "description": "Flotation pools, halotherapy dry salt cave rooms, infrared therapy suites and a rooftop jacuzzi in Balbriggan. Ideal for stress, muscle soreness or just a thorough reset.",
+    "primaryCategory": "Wellness",
+    "tags": [
+      "indoor",
+      "spa",
+      "floatation",
+      "halotherapy",
+      "relaxation"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 60,
+    "lat": 53.612,
+    "lon": -6.182,
+    "neighborhood": "Balbriggan",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "train",
+      "car"
+    ],
+    "infoUrl": "https://www.saltcaveparadise.ie",
+    "bookingUrl": "https://www.saltcaveparadise.ie",
+    "requiresBooking": true,
+    "priceHint": "Sessions from ~€40pp",
+    "availabilityNote": "Balbriggan — about 35 mins from city centre",
+    "confidence": 2
+  },
+  {
+    "id": "kaph",
+    "title": "Kaph",
+    "description": "Wickedly strong espresso on Drury Street, just around the corner from South William Street. Compact, no-nonsense, and consistently excellent. A quick stop that always delivers.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "specialty",
+      "city-centre",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 30,
+    "lat": 53.341,
+    "lon": -6.2628,
+    "neighborhood": "Drury Street",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "https://kaph.ie",
+    "requiresBooking": false,
+    "priceHint": "~€4–5 per drink",
+    "availabilityNote": "Good for a quick stop",
+    "confidence": 2
+  },
+  {
+    "id": "coffeeangel",
+    "title": "Coffeeangel",
+    "description": "Belfast-roasted beans, great specialty brews and friendly baristas across several city locations. The Anne Street South café is prime for people-watching — right across from the Dublin Barista School.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "specialty",
+      "city-centre",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 30,
+    "lat": 53.3407,
+    "lon": -6.2588,
+    "neighborhood": "Anne Street South",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "https://coffeeangel.com",
+    "requiresBooking": false,
+    "priceHint": "~€4–5 per drink",
+    "availabilityNote": "Multiple city locations",
+    "confidence": 2
+  },
+  {
+    "id": "cocobrew",
+    "title": "Cocobrew",
+    "description": "Temple Bar coffee shop with a superfood edge — their namesake brew blends MCT oil and cacao butter, alongside cold-pressed juices and own-roasted specialty coffee. Interesting and genuinely good.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "specialty",
+      "temple-bar",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 30,
+    "lat": 53.3455,
+    "lon": -6.2641,
+    "neighborhood": "Temple Bar",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.cocobrew.ie",
+    "requiresBooking": false,
+    "priceHint": "~€5–7 per drink",
+    "availabilityNote": "Own-roasted coffee on site",
+    "confidence": 2
+  },
+  {
+    "id": "cloud-picker-cafe",
+    "title": "Cloud Picker Café",
+    "description": "The shopfront of Dublin's own micro-roastery on Pearse Street — a huge wall of specialty beans, equipment and gear alongside excellent brews. The kind of place where the coffee is taken seriously.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "specialty",
+      "roastery",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 45,
+    "lat": 53.339,
+    "lon": -6.2468,
+    "neighborhood": "Pearse Street",
+    "daysOpen": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
+    "infoUrl": "https://cloudpickercoffee.ie",
+    "requiresBooking": false,
+    "priceHint": "~€4–6 per drink",
+    "availabilityNote": "Also stocks retail beans and brewing gear",
+    "confidence": 2
+  },
+  {
+    "id": "two-pups-coffee",
+    "title": "Two Pups Coffee",
+    "description": "Friends gathered on street tables in the Liberties for a cold brew, usually with a dog or two at their feet. A relaxed neighbourhood spot with a strong weekend brunch following.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "brunch",
+      "dog-friendly",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "mixed",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 60,
+    "lat": 53.339,
+    "lon": -6.279,
+    "neighborhood": "The Liberties",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.twopupscoffee.com",
+    "requiresBooking": false,
+    "priceHint": "~€5–12 coffee and brunch",
+    "availabilityNote": "Dog-friendly — street tables in good weather",
+    "confidence": 2
+  },
+  {
+    "id": "the-fumbally",
+    "title": "The Fumbally",
+    "description": "A community institution in the Liberties with long communal tables, excellent focaccia and creative salads. People come for a cappuccino and stay for two hours. One of Dublin's most loved cafés.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "brunch",
+      "community",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 60,
+    "lat": 53.3382,
+    "lon": -6.2747,
+    "neighborhood": "The Liberties",
+    "daysOpen": [
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://thefumbally.ie",
+    "requiresBooking": false,
+    "priceHint": "~€5–14 coffee and food",
+    "availabilityNote": "Wed–Sun",
+    "confidence": 2
+  },
+  {
+    "id": "container-coffee",
+    "title": "Container Coffee",
+    "description": "A bright blue shipping container in front of the distinctive St Patrick's Tower on Thomas Street. One of the more characterful coffee stops in the city — grab one before hitting the distilleries.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "outdoor",
+      "coffee",
+      "takeaway",
+      "hidden-gem"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "outdoor",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "€",
+    "durationMin": 20,
+    "lat": 53.3432,
+    "lon": -6.2832,
+    "neighborhood": "Thomas Street",
+    "daysOpen": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.containercoffee.com",
+    "requiresBooking": false,
+    "priceHint": "~€3–5 per drink",
+    "availabilityNote": "Outdoor only — best in good weather",
+    "confidence": 2
+  },
+  {
+    "id": "hens-teeth-cafe",
+    "title": "Hen's Teeth",
+    "description": "An arty event space in the Liberties that also sells vinyl and artwork, with coffee and pastries from Naked Bakes during the week. Part café, part gallery — unlike anywhere else in the city.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "arts",
+      "vinyl",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 60,
+    "lat": 53.3386,
+    "lon": -6.276,
+    "neighborhood": "The Liberties",
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.hensteethdublin.com/food-drink",
+    "requiresBooking": false,
+    "priceHint": "~€4–8 coffee and pastries",
+    "availabilityNote": "Also hosts pop-ups at weekends",
+    "confidence": 2
+  },
+  {
+    "id": "vice-coffee",
+    "title": "Vice Coffee",
+    "description": "A specialty coffee bar on Middle Abbey Street working with roasters from Ireland and around the world. They also do three kinds of Irish Coffee and coffee-based cocktails — useful to know.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "specialty",
+      "northside",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 45,
+    "lat": 53.3483,
+    "lon": -6.261,
+    "neighborhood": "Middle Abbey Street",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "train"
+    ],
+    "infoUrl": "https://www.vicecoffeeinc.com",
+    "requiresBooking": false,
+    "priceHint": "~€4–8 per drink",
+    "availabilityNote": "Also serves coffee cocktails",
+    "confidence": 2
+  },
+  {
+    "id": "brother-hubbard",
+    "title": "Brother Hubbard",
+    "description": "The Capel Street branch is the biggest — own-roasted beans, outdoor tables and a Middle-Eastern influenced brunch menu that stands out from everything else in the city. Always busy for good reason.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "brunch",
+      "middle-eastern",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "mixed",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 60,
+    "lat": 53.3487,
+    "lon": -6.268,
+    "neighborhood": "Capel Street",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.brotherhubbard.ie",
+    "requiresBooking": false,
+    "priceHint": "~€5–14 coffee and brunch",
+    "availabilityNote": "Outdoor tables in good weather",
+    "confidence": 2
+  },
+  {
+    "id": "copper-and-straw",
+    "title": "Copper + Straw",
+    "description": "Specialty coffee on Aston Quay with a particularly good summer menu — Vietnamese iced coffee, strawberry coconut matcha and classic cold brew. A second location on Arran Quay too.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "specialty",
+      "iced-coffee",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 30,
+    "lat": 53.3468,
+    "lon": -6.2583,
+    "neighborhood": "Aston Quay",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://copperandstraw.ie",
+    "requiresBooking": false,
+    "priceHint": "~€4–6 per drink",
+    "availabilityNote": "Also on Arran Quay",
+    "confidence": 2
+  },
+  {
+    "id": "3fe-cafe",
+    "title": "3fe Grand Canal Street",
+    "description": "The café home of one of Ireland's finest coffee brands — try their latest blends before you find them everywhere else. The outdoor seats on Grand Canal Street are hard to beat on a good afternoon.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "specialty",
+      "docklands",
+      "roastery"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "mixed",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 45,
+    "lat": 53.3354,
+    "lon": -6.2398,
+    "neighborhood": "Grand Canal Street",
+    "daysOpen": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "train",
+      "bus"
+    ],
+    "infoUrl": "https://3fe.com",
+    "requiresBooking": false,
+    "priceHint": "~€4–6 per drink",
+    "availabilityNote": "Great outdoor seats — check for weekend hours",
+    "confidence": 2
+  },
+  {
+    "id": "joli-stoneybatter",
+    "title": "Joli",
+    "description": "Coffee shop by day, wine bar by night on Manor Street in Stoneybatter. Roasted Brown coffee, packed toasties and acai bowls in the daytime — natural wine and small plates come evening.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "wine-bar",
+      "neighbourhood",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 45,
+    "lat": 53.3491,
+    "lon": -6.2844,
+    "neighborhood": "Stoneybatter",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon",
+      "evening"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.jolistoneybatter.com",
+    "requiresBooking": false,
+    "priceHint": "~€4–8 coffee and food",
+    "availabilityNote": "Coffee by day, wine bar by night",
+    "confidence": 2
+  },
+  {
+    "id": "proper-order",
+    "title": "Proper Order Coffee",
+    "description": "Great latte art, wide range of blends and a cult cardamom bun (the Cardi B) from sister bakery No Messin' — often sold out by lunchtime. A Stoneybatter essential.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "pastries",
+      "neighbourhood",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 30,
+    "lat": 53.3488,
+    "lon": -6.2831,
+    "neighborhood": "Stoneybatter",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.properordercoffeeco.com",
+    "requiresBooking": false,
+    "priceHint": "~€3–6 coffee and pastry",
+    "availabilityNote": "Cult cardamom bun sells out — go before noon",
+    "confidence": 2
+  },
+  {
+    "id": "third-space-smithfield",
+    "title": "Third Space",
+    "description": "A friendly neighbourhood café in Smithfield with a strong community feel and Imbibe Coffee beans. Handy before a film at the Lighthouse Cinema next door. The kind of place you go back to.",
+    "primaryCategory": "Coffee & Bakeries",
+    "tags": [
+      "indoor",
+      "coffee",
+      "community",
+      "neighbourhood",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 45,
+    "lat": 53.3469,
+    "lon": -6.2797,
+    "neighborhood": "Smithfield",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "http://thirdspace.ie",
+    "requiresBooking": false,
+    "priceHint": "~€3–6 per drink",
+    "availabilityNote": "Handy for Lighthouse Cinema next door",
+    "confidence": 2
+  },
+  {
+    "id": "book-of-kells",
+    "title": "Book of Kells & Trinity Long Room",
+    "description": "One of the world's most famous illuminated manuscripts, housed in the architecturally stunning Long Room at Trinity College. The library itself is as jaw-dropping as the book — 200,000 ancient texts lining a barrel-vaulted chamber that inspired Star Wars and Harry Potter.",
+    "primaryCategory": "Culture",
+    "tags": [
+      "indoor",
+      "history",
+      "heritage",
+      "literary",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€€",
+    "durationMin": 75,
+    "lat": 53.3444,
+    "lon": -6.2544,
+    "neighborhood": "Trinity College",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "https://www.tcd.ie/visitors/book-of-kells/",
+    "bookingUrl": "https://www.tcd.ie/visitors/book-of-kells/",
+    "requiresBooking": true,
+    "priceHint": "~€16pp",
+    "availabilityNote": "Book online — sells out, especially weekends",
+    "confidence": 3
+  },
+  {
+    "id": "moli",
+    "title": "MoLI — Museum of Literature Ireland",
+    "description": "A beautiful museum dedicated to Irish writing in a Georgian building on St Stephen's Green. Extraordinary first editions, handwritten manuscripts, and a sensory recreation of Leopold Bloom's bedroom. One of Dublin's most underrated cultural experiences.",
+    "primaryCategory": "Culture",
+    "tags": [
+      "indoor",
+      "literary",
+      "history",
+      "art",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 75,
+    "lat": 53.3382,
+    "lon": -6.2606,
+    "neighborhood": "St Stephen's Green",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "https://moli.ie",
+    "bookingUrl": "https://moli.ie/plan-your-visit/",
+    "requiresBooking": false,
+    "priceHint": "~€10pp",
+    "availabilityNote": "Lovely café on site",
+    "confidence": 3
+  },
+  {
+    "id": "photo-museum-ireland",
+    "title": "Photo Museum Ireland",
+    "description": "The best photography exhibition space in Ireland, tucked into Temple Bar. Rotating shows from Irish and international photographers alongside the finest collection of photography books in the country. Free, thoughtful, and consistently surprising.",
+    "primaryCategory": "Culture",
+    "tags": [
+      "indoor",
+      "photography",
+      "art",
+      "free",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "free",
+    "durationMin": 60,
+    "lat": 53.3454,
+    "lon": -6.2648,
+    "neighborhood": "Temple Bar",
+    "daysOpen": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.photomuseumireland.ie",
+    "requiresBooking": false,
+    "availabilityNote": "Free entry — check current exhibition before going",
+    "confidence": 2
+  },
+  {
+    "id": "winding-stair-bookshop",
+    "title": "Winding Stair Bookshop",
+    "description": "A beloved independent bookshop on the banks of the Liffey near the Ha'penny Bridge, with shelves crammed with carefully chosen Irish and international titles. Upstairs is an award-winning restaurant with views over the river — easy to turn a browse into an afternoon.",
+    "primaryCategory": "Low-Key",
+    "tags": [
+      "indoor",
+      "books",
+      "literary",
+      "neighbourhood",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 60,
+    "lat": 53.3467,
+    "lon": -6.2674,
+    "neighborhood": "Ormond Quay",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.windingstair.com",
+    "requiresBooking": false,
+    "availabilityNote": "Restaurant upstairs worth booking separately",
+    "confidence": 3
+  },
+  {
+    "id": "gutter-bookshop",
+    "title": "Gutter Bookshop",
+    "description": "A proper Dublin institution in Temple Bar, named after the Oscar Wilde quote. Independently owned, passionately curated, and always good for a recommendation. One of those bookshops you walk into for ten minutes and leave an hour later.",
+    "primaryCategory": "Low-Key",
+    "tags": [
+      "indoor",
+      "books",
+      "literary",
+      "temple-bar",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 45,
+    "lat": 53.3453,
+    "lon": -6.2641,
+    "neighborhood": "Temple Bar",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://gutterbookshop.com",
+    "requiresBooking": false,
+    "availabilityNote": "Just turn up",
+    "confidence": 3
+  },
+  {
+    "id": "books-upstairs",
+    "title": "Books Upstairs",
+    "description": "One of Dublin's oldest independent bookshops, now on D'Olier Street. Strong on Irish writing, politics, and literature — with a fine café upstairs for when you need to sit down and start reading immediately.",
+    "primaryCategory": "Low-Key",
+    "tags": [
+      "indoor",
+      "books",
+      "literary",
+      "city-centre",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 45,
+    "lat": 53.3455,
+    "lon": -6.2576,
+    "neighborhood": "D'Olier Street",
+    "daysOpen": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "https://booksupstairs.ie",
+    "requiresBooking": false,
+    "availabilityNote": "Café upstairs — great for settling in with a new purchase",
+    "confidence": 2
+  },
+  {
+    "id": "chapters-bookshop",
+    "title": "Chapters Bookshop",
+    "description": "Dublin's best second-hand bookshop on Parnell Street — a genuine city institution. Huge range of pre-loved and new titles, and one of the few places left where a happy accident of browsing can completely change what you read next.",
+    "primaryCategory": "Low-Key",
+    "tags": [
+      "indoor",
+      "books",
+      "second-hand",
+      "browsing",
+      "rainy"
+    ],
+    "mood": [
+      "low-key"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 60,
+    "lat": 53.3516,
+    "lon": -6.263,
+    "neighborhood": "Parnell Street",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://chaptersbookstore.com",
+    "requiresBooking": false,
+    "availabilityNote": "Also buys second-hand books",
+    "confidence": 2
+  },
+  {
+    "id": "hodges-figgis",
+    "title": "Hodges Figgis",
+    "description": "Dublin's grandest bookshop on Dawson Street — four floors of books in a beautiful old building, with an excellent Irish section and the kind of browsable depth that's rare these days. Mentioned in Ulysses, which feels appropriate.",
+    "primaryCategory": "Low-Key",
+    "tags": [
+      "indoor",
+      "books",
+      "literary",
+      "city-centre",
+      "rainy"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
+    "indoorOutdoor": "indoor",
+    "weather": [
+      "sun",
+      "cloud",
+      "rain"
+    ],
+    "cost": "€",
+    "durationMin": 45,
+    "lat": 53.3403,
+    "lon": -6.2588,
+    "neighborhood": "Dawson Street",
+    "daysOpen": [
+      "daily"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus",
+      "tram"
+    ],
+    "infoUrl": "https://www.waterstones.com/bookshops/hodges-figgis",
+    "requiresBooking": false,
+    "availabilityNote": "Four floors — allow more time than you think",
+    "confidence": 3
+  },
+  {
+    "id": "temple-bar-book-market",
+    "title": "Temple Bar Book Market",
+    "description": "An open-air second-hand book market in Barnardo Square every Saturday from 10:30am. Browsing a table of old paperbacks in the cobblestoned heart of the city is one of Dublin's simple pleasures — and you'll nearly always find something worth buying.",
+    "primaryCategory": "Low-Key",
+    "tags": [
+      "outdoor",
+      "books",
+      "market",
+      "second-hand",
+      "saturday"
+    ],
+    "mood": [
+      "low-key",
+      "romantic"
+    ],
+    "indoorOutdoor": "outdoor",
+    "weather": [
+      "sun",
+      "cloud"
+    ],
+    "cost": "€",
+    "durationMin": 60,
+    "lat": 53.3452,
+    "lon": -6.2648,
+    "neighborhood": "Temple Bar",
+    "daysOpen": [
+      "sat"
+    ],
+    "typicalStart": [
+      "morning",
+      "afternoon"
+    ],
+    "transit": [
+      "bus"
+    ],
+    "infoUrl": "https://www.lovetemplebar.com/templebarmarkets",
+    "requiresBooking": false,
+    "availabilityNote": "Saturdays only, 10:30am–5pm — weather dependent",
     "confidence": 3
   }
 ]

@@ -85,9 +85,35 @@ export function partitionResults(scored: ScoredActivity[]): {
   onlyB: ScoredActivity[]
 } {
   const valid = scored.filter((s) => s.score > 0)
-  const matched = valid.filter((s) => s.matchedBy === "both").sort((a, b) => b.score - a.score)
-  const onlyA = valid.filter((s) => s.matchedBy === "a").sort((a, b) => b.score - a.score)
-  const onlyB = valid.filter((s) => s.matchedBy === "b").sort((a, b) => b.score - a.score)
+
+  const processZone = (items: ScoredActivity[]): ScoredActivity[] => {
+    const high = items.filter(s => s.score >= 2)
+    const mid = items.filter(s => s.score >= 1 && s.score < 2)
+    const low = items.filter(s => s.score < 1)
+
+    const shuffledHigh = high.sort(() => Math.random() - 0.5)
+    const shuffledMid = mid.sort(() => Math.random() - 0.5)
+    const shuffledLow = low.sort(() => Math.random() - 0.5)
+
+    const tiered = [...shuffledHigh, ...shuffledMid, ...shuffledLow]
+
+    const categoryCount = new Map<string, number>()
+    const result: ScoredActivity[] = []
+
+    for (const item of tiered) {
+      const cat = item.activity.primaryCategory
+      const count = categoryCount.get(cat) || 0
+      if (count < 3) {
+        categoryCount.set(cat, count + 1)
+        result.push(item)
+      }
+    }
+    return result
+  }
+
+  const matched = processZone(valid.filter((s) => s.matchedBy === "both"))
+  const onlyA = processZone(valid.filter((s) => s.matchedBy === "a"))
+  const onlyB = processZone(valid.filter((s) => s.matchedBy === "b"))
   return { matched, onlyA, onlyB }
 }
 
