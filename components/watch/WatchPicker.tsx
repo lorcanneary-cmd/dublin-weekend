@@ -88,7 +88,7 @@ export default function WatchPicker({ step, onDone }: Props) {
                 key={t}
                 onClick={() => setType(t)}
                 className={`flex flex-col items-center gap-1.5 py-3 rounded-xl border text-sm transition-all ${
-                  type === t ? 'border-[#c8f04a] bg-[#c8f04a]/10 text-[#c8f04a]' : 'border-white/10 bg-white/5 text-white/40'
+                  type === t ? 'border-[#f5f0e8] bg-[#f5f0e8]/10 text-[#f5f0e8]' : 'border-white/15 bg-white/5 text-white/60'
                 }`}
               >
                 <i className={`ti ${t === 'movie' ? 'ti-movie' : 'ti-device-tv'} text-xl`} aria-hidden="true" />
@@ -106,7 +106,7 @@ export default function WatchPicker({ step, onDone }: Props) {
                 key={s.id}
                 onClick={() => toggleService(s.id)}
                 className={`flex flex-col items-center gap-1.5 py-3 rounded-xl border transition-all ${
-                  services.includes(s.id) ? 'border-[#c8f04a] bg-[#c8f04a]/10' : 'border-white/10 bg-white/5'
+                  services.includes(s.id) ? 'border-[#f5f0e8] bg-[#f5f0e8]/10' : 'border-white/15 bg-white/5'
                 }`}
               >
                 <div className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-[10px] font-semibold" style={{ backgroundColor: s.color }}>
@@ -146,29 +146,29 @@ export default function WatchPicker({ step, onDone }: Props) {
           {moreOpen && (
             <div className="px-4 pb-4 space-y-4 border-t border-white/10">
               <div className="pt-4">
-                <p className="text-xs text-white/30 mb-2">How long do you have?</p>
+                <p className="text-xs text-white/60 mb-2">How long do you have?</p>
                 <div className="grid grid-cols-3 gap-1.5">
                   {([{ val: 'short', label: 'Quick one' }, { val: 'medium', label: 'Proper sit-down' }, { val: 'long', label: 'Committed' }] as const).map(o => (
                     <button key={o.val} onClick={() => setLength(prev => prev === o.val ? null : o.val)}
-                      className={`py-2 rounded-lg border text-[10px] transition-all ${length === o.val ? 'border-[#c8f04a] bg-[#c8f04a]/10 text-[#c8f04a]' : 'border-white/10 bg-white/5 text-white/30'}`}>
+                      className={`py-2 rounded-lg border text-[10px] transition-all ${length === o.val ? 'border-[#f5f0e8] bg-[#f5f0e8] text-[#0e0e0e] font-medium' : 'border-white/15 bg-white/5 text-white/60'}`}>
                       {o.label}
                     </button>
                   ))}
                 </div>
               </div>
               <div>
-                <p className="text-xs text-white/30 mb-2">Era</p>
+                <p className="text-xs text-white/60 mb-2">Era</p>
                 <div className="grid grid-cols-3 gap-1.5">
                   {([{ val: 'fresh', label: 'Fresh' }, { val: 'any', label: 'Any' }, { val: 'classic', label: 'Classic' }] as const).map(o => (
                     <button key={o.val} onClick={() => setEra(o.val)}
-                      className={`py-2 rounded-lg border text-[10px] transition-all ${era === o.val ? 'border-[#c8f04a] bg-[#c8f04a]/10 text-[#c8f04a]' : 'border-white/10 bg-white/5 text-white/30'}`}>
+                      className={`py-2 rounded-lg border text-[10px] transition-all ${era === o.val ? 'border-[#f5f0e8] bg-[#f5f0e8] text-[#0e0e0e] font-medium' : 'border-white/15 bg-white/5 text-white/60'}`}>
                       {o.label}
                     </button>
                   ))}
                 </div>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-white/30">Include non-English titles</span>
+                <span className="text-xs text-white/60">Include non-English titles</span>
                 <button onClick={() => setIncludeNonEnglish(v => !v)} className={`w-10 h-5 rounded-full transition-colors relative ${includeNonEnglish ? 'bg-[#c8f04a]' : 'bg-white/10'}`}>
                   <span className={`absolute top-0.5 w-4 h-4 rounded-full bg-white transition-all ${includeNonEnglish ? 'left-5' : 'left-0.5'}`} />
                 </button>
@@ -178,7 +178,7 @@ export default function WatchPicker({ step, onDone }: Props) {
         </div>
       </div>
 
-      <div className="px-5 pb-8 pt-4">
+      <div className="px-5 pb-24 pt-4">
         <button
           onClick={handleDone}
           disabled={!canSubmit}

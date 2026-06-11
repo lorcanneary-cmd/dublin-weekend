@@ -138,7 +138,7 @@ export default function LuckyResults({
       `}</style>
 
       <div className="min-h-screen bg-stone-900 flex flex-col">
-        <div className="max-w-lg mx-auto w-full px-5 py-10 flex flex-col items-center">
+        <div className="max-w-lg mx-auto w-full px-5 py-10 pb-28 flex flex-col items-center">
 
           {/* Icon burst */}
           <div className="relative w-20 h-20 mb-7 shrink-0">

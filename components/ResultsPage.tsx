@@ -125,7 +125,7 @@ export default function ResultsPage({
         </div>
       </div>
 
-      <div className="max-w-lg mx-auto px-4 py-6 space-y-10 pb-16">
+      <div className="max-w-lg mx-auto px-4 py-6 space-y-10 pb-28">
 
         {/* Weather */}
         <WeatherBanner weather={weather} />
