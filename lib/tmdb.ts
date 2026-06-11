@@ -51,7 +51,7 @@ export async function fetchTitles(params: DiscoverParams): Promise<TMDBTitle[]> 
   const queryObj: Record<string, string> = {
     watch_region: 'IE',
     with_watch_providers: params.services.join('|'),
-    with_genres: params.genres.join(','),
+    with_genres: params.genres.join('|'),
     'vote_average.gte': '6.5',
     'vote_count.gte': '150',
     include_adult: 'false',
@@ -76,35 +76,20 @@ export async function fetchTitles(params: DiscoverParams): Promise<TMDBTitle[]> 
     (r: any) => r.poster_path && r.vote_count >= 150
   );
 
-  const withProviders: TMDBTitle[] = await Promise.all(
-    results.slice(0, 20).map(async (r: any) => {
-      const provRes = await fetch(
-        `${TMDB_BASE}/${endpoint.replace('discover/', '')}/${r.id}/watch/providers`,
-        { headers }
-      );
-      let provider_ids: number[] = [];
-      if (provRes.ok) {
-        const pData = await provRes.json();
-        const ie = pData.results?.IE;
-        const flatrate = ie?.flatrate || [];
-        provider_ids = flatrate.map((p: any) => p.provider_id);
-      }
-      return {
-        id: r.id,
-        title: r.title || r.name,
-        poster_path: r.poster_path,
-        vote_average: r.vote_average,
-        vote_count: r.vote_count,
-        genre_ids: r.genre_ids,
-        release_date: r.release_date,
-        first_air_date: r.first_air_date,
-        media_type: params.type,
-        provider_ids,
-      };
-    })
-  );
+  const withProviders: TMDBTitle[] = results.slice(0, 20).map((r: any) => ({
+    id: r.id,
+    title: r.title || r.name,
+    poster_path: r.poster_path,
+    vote_average: r.vote_average,
+    vote_count: r.vote_count,
+    genre_ids: r.genre_ids,
+    release_date: r.release_date,
+    first_air_date: r.first_air_date,
+    media_type: params.type,
+    provider_ids: params.services,
+  }));
 
-  return withProviders.filter(t => t.provider_ids.length > 0);
+  return withProviders;
 }
 
 export function posterUrl(path: string) {
