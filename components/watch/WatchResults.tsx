@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import { WatchSelections } from '@/app/watch/page';
 import { fetchTitles, posterUrl, TMDBTitle } from '@/lib/tmdb';
 import { SERVICES, GENRES } from '@/components/watch/WatchPicker';
+import Countdown from '@/components/Countdown';
 
 type Props = {
   selectionsA: WatchSelections;
@@ -15,8 +16,11 @@ type TitleWithState = TMDBTitle & {
   seen: boolean;
   saved: boolean;
   removing: boolean;
+  savingAnim: boolean;
   isSolo?: boolean;
 };
+
+type ViewState = 'results' | 'shortlist' | 'congrats';
 
 const SERVICE_COLORS: Record<number, string> = {
   8:   '#e50914',
@@ -26,6 +30,22 @@ const SERVICE_COLORS: Record<number, string> = {
   531: '#0064ff',
   39:  '#00a550',
 };
+
+const REVEAL_MESSAGES = [
+  'Great minds think alike.',
+  'Popcorn consensus reached.',
+  'Two people, one remote. This is rare.',
+  'You actually agreed on something. Write this down.',
+  'Rare event: both of you want the same thing.',
+  'The algorithm didn\'t do this — you did.',
+];
+
+const CONGRATS_MESSAGES = [
+  'Get the popcorn on. Tonight\'s sorted.',
+  'Decision made. No take-backs.',
+  'Lights down, phones away. Enjoy it.',
+  'That\'s the one. Now actually watch it.',
+];
 
 function getServiceName(id: number) {
   return SERVICES.find(s => s.id === id)?.name ?? '';
@@ -44,11 +64,20 @@ function getGenreLabels(ids: number[]) {
     .join(' · ');
 }
 
+function randomFrom<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
 export default function WatchResults({ selectionsA, selectionsB, onReset }: Props) {
   const [titles, setTitles] = useState<TitleWithState[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showCountdown, setShowCountdown] = useState(true);
   const [error, setError] = useState(false);
+  const [view, setView] = useState<ViewState>('results');
+  const [chosenTitle, setChosenTitle] = useState<TitleWithState | null>(null);
   const touchStartX = useRef<Record<number, number>>({});
+  const revealMessage = useRef(randomFrom(REVEAL_MESSAGES));
+  const congratsMessage = useRef(randomFrom(CONGRATS_MESSAGES));
 
   const sharedServices = selectionsA.services.filter(id => selectionsB.services.includes(id));
   const sharedGenres = selectionsA.genres.filter(id => selectionsB.genres.includes(id));
@@ -89,8 +118,8 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
         const uniqueSolo = soloResults.filter(t => !sharedIds.has(t.id));
 
         const all: TitleWithState[] = [
-          ...sharedResults.map(t => ({ ...t, seen: false, saved: false, removing: false })),
-          ...uniqueSolo.map(t => ({ ...t, seen: false, saved: false, removing: false, isSolo: true })),
+          ...sharedResults.map(t => ({ ...t, seen: false, saved: false, removing: false, savingAnim: false })),
+          ...uniqueSolo.map(t => ({ ...t, seen: false, saved: false, removing: false, savingAnim: false, isSolo: true })),
         ];
 
         setTitles(all);
@@ -112,7 +141,14 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
   };
 
   const markSaved = (id: number) => {
-    setTitles(prev => prev.map(t => t.id === id ? { ...t, saved: !t.saved } : t));
+    setTitles(prev => prev.map(t => {
+      if (t.id !== id) return t;
+      if (t.saved) return { ...t, saved: false };
+      return { ...t, saved: true, savingAnim: true };
+    }));
+    setTimeout(() => {
+      setTitles(prev => prev.map(t => t.id === id ? { ...t, savingAnim: false } : t));
+    }, 400);
   };
 
   const restoreSeen = () => {
@@ -127,8 +163,14 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
     const startX = touchStartX.current[id];
     if (startX === undefined) return;
     const diff = startX - e.changedTouches[0].clientX;
-    if (diff > 60) markSeen(id);
+    if (diff > 60) markSeen(id);       // swipe left → seen
+    if (diff < -60) markSaved(id);     // swipe right → save
     delete touchStartX.current[id];
+  };
+
+  const handlePickFromShortlist = (title: TitleWithState) => {
+    setChosenTitle(title);
+    setView('congrats');
   };
 
   const activeShared = titles.filter(t => !t.seen && !t.isSolo);
@@ -137,11 +179,21 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
   const savedTitles  = titles.filter(t => t.saved);
   const hasSeen      = seenTitles.length > 0;
 
+  // Countdown shows while data is loading
+  if (showCountdown) {
+    return (
+      <Countdown onComplete={() => {
+        setShowCountdown(false);
+        // If still loading after countdown, we show a minimal wait state
+      }} />
+    );
+  }
+
   if (loading) {
     return (
-      <div className="flex flex-col min-h-screen bg-[#0e0e0e] items-center justify-center gap-4">
-        <div className="w-8 h-8 border-2 border-[#c8f04a] border-t-transparent rounded-full animate-spin" />
-        <p className="text-sm text-white/30">Finding your matches...</p>
+      <div className="flex flex-col min-h-screen bg-[#0f0f0f] items-center justify-center gap-4">
+        <div className="w-8 h-8 border-2 border-white/20 border-t-white/60 rounded-full animate-spin" />
+        <p className="text-sm text-white/30">Almost there...</p>
       </div>
     );
   }
@@ -156,6 +208,78 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
     );
   }
 
+  // Congrats screen
+  if (view === 'congrats' && chosenTitle) {
+    return (
+      <div className="flex flex-col min-h-screen bg-[#0e0e0e] items-center justify-center px-8 text-center gap-8">
+        <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+          <i className="ti ti-confetti text-2xl text-white/60" aria-hidden="true" />
+        </div>
+        <div className="space-y-3">
+          <h2 className="text-2xl font-semibold text-white leading-tight">{chosenTitle.title}</h2>
+          <p className="text-sm text-white/40 italic">{congratsMessage.current}</p>
+        </div>
+        <button onClick={onReset} className="px-6 py-3 rounded-2xl border border-white/10 text-sm text-white/30">Start over</button>
+      </div>
+    );
+  }
+
+  // Shortlist screen
+  if (view === 'shortlist') {
+    return (
+      <div className="flex flex-col min-h-screen bg-[#0e0e0e] pb-24">
+        <div className="px-5 pt-12 pb-3 flex items-center gap-3">
+          <button onClick={() => setView('results')} className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
+            <i className="ti ti-arrow-left text-sm text-white/40" aria-hidden="true" />
+          </button>
+          <div>
+            <h1 className="text-xl font-medium text-white">Shortlist</h1>
+            <p className="text-xs text-white/30">{savedTitles.length} title{savedTitles.length !== 1 ? 's' : ''} — pick one</p>
+          </div>
+        </div>
+
+        {savedTitles.length === 0 ? (
+          <div className="flex-1 flex flex-col items-center justify-center gap-3 px-8 text-center">
+            <i className="ti ti-heart text-4xl text-white/10" aria-hidden="true" />
+            <p className="text-sm text-white/30">Swipe right on anything you want to keep</p>
+          </div>
+        ) : (
+          <div className="px-5 space-y-2 mt-2">
+            {savedTitles.map(t => (
+              <button
+                key={t.id}
+                onClick={() => handlePickFromShortlist(t)}
+                className="w-full flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 active:scale-[0.98] transition-transform text-left"
+              >
+                <div className="w-11 h-16 rounded-lg bg-white/5 border border-white/10 flex-shrink-0 overflow-hidden">
+                  {t.poster_path ? (
+                    <img src={posterUrl(t.poster_path)} alt={t.title} className="w-full h-full object-cover" loading="lazy" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <i className="ti ti-movie text-white/20" aria-hidden="true" />
+                    </div>
+                  )}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium text-white truncate">{t.title}</p>
+                  <p className="text-xs text-white/30 mt-0.5">{getGenreLabels(t.genre_ids)}{getYear(t) ? ` · ${getYear(t)}` : ''}</p>
+                </div>
+                <i className="ti ti-chevron-right text-white/20 flex-shrink-0" aria-hidden="true" />
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div className="px-5 mt-6">
+          <button onClick={() => setView('results')} className="w-full py-3 rounded-2xl border border-white/10 text-xs text-white/30">
+            Back to results
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // No titles found
   if (titles.length === 0) {
     return (
       <div className="flex flex-col min-h-screen bg-[#0e0e0e] items-center justify-center px-8 text-center gap-4">
@@ -169,34 +293,42 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
     );
   }
 
+  // Main results screen
   return (
-    <div className="flex flex-col min-h-screen bg-[#0e0e0e] pb-24">
+    <div className="flex flex-col min-h-screen bg-[#0e0e0e] pb-36">
       <div className="px-5 pt-12 pb-3">
         <h1 className="text-xl font-medium text-white mb-1">{hasSeen ? 'New to both of you' : 'Your matches'}</h1>
         <p className="text-xs text-white/30">
           {hasSeen
             ? `${activeShared.length + activeSolo.length} title${activeShared.length + activeSolo.length !== 1 ? 's' : ''} left`
-            : "Swipe left on anything you've already seen"}
+            : revealMessage.current}
         </p>
       </div>
 
-      {!hasSeen && (
-        <div className="mx-5 mb-4 px-4 py-3 rounded-xl bg-[#c8f04a]/10 border border-[#c8f04a]/20 flex items-start gap-3">
-          <i className="ti ti-sparkles text-[#c8f04a] text-lg mt-0.5" aria-hidden="true" />
-          <p className="text-xs text-[#c8f04a]/80 leading-relaxed">
-            {selectionsA.name} &amp; {selectionsB.name} both want{' '}
-            {sharedGenres.map(id => GENRES.find(g => g.id === id || g.tvId === id)?.label).filter(Boolean).join(' + ') || 'something good'}.{' '}
-            {titles.length} match{titles.length !== 1 ? 'es' : ''} found.
-          </p>
+      {!hasSeen && sharedGenres.length > 0 && (
+        <div className="mx-5 mb-4">
+          <p className="text-[10px] text-white/25 uppercase tracking-widest mb-2 font-medium">You both want</p>
+          <div className="flex flex-wrap gap-2">
+            {sharedGenres.map(id => {
+              const label = GENRES.find(g => g.id === id || g.tvId === id)?.label;
+              return label ? (
+                <div key={id} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/8 border border-white/15">
+                  <i className="ti ti-check text-white/50 text-xs" aria-hidden="true" />
+                  <span className="text-xs text-white/70 font-medium">{label}</span>
+                </div>
+              ) : null;
+            })}
+          </div>
         </div>
       )}
 
       {!hasSeen && (
-        <div className="flex items-center gap-2 px-5 mb-3">
-          <i className="ti ti-arrow-left text-white/20 text-xs" aria-hidden="true" />
-          <span className="text-[10px] text-white/20">swipe to mark seen</span>
-          <i className="ti ti-heart text-white/20 text-xs ml-auto" aria-hidden="true" />
-          <span className="text-[10px] text-white/20">tap to save</span>
+        <div className="flex items-center gap-2 px-5 mb-4">
+          <i className="ti ti-arrow-left text-white/30 text-sm" aria-hidden="true" />
+          <span className="text-xs text-white/35">swipe left — seen it</span>
+          <span className="text-white/15 mx-1">·</span>
+          <i className="ti ti-arrow-right text-white/30 text-sm" aria-hidden="true" />
+          <span className="text-xs text-white/35">swipe right — shortlist</span>
         </div>
       )}
 
@@ -229,28 +361,32 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
         <button onClick={restoreSeen} className="mx-5 mt-4 px-4 py-3 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3">
           <i className="ti ti-eye-off text-white/20 text-base" aria-hidden="true" />
           <span className="text-xs text-white/30">
-            You've seen <span className="text-white/50">{seenTitles.length} title{seenTitles.length !== 1 ? 's' : ''}</span> together
+            You've seen <span className="text-white/50">{seenTitles.length} title{seenTitles.length !== 1 ? 's' : ''}</span> — restore
           </span>
           <i className="ti ti-refresh text-white/20 text-xs ml-auto" aria-hidden="true" />
         </button>
       )}
 
-      {savedTitles.length > 0 && (
-        <>
-          <SectionDivider label="Saved to watch" />
-          {savedTitles.map(t => (
-            <TitleRow key={`saved-${t.id}`} title={t} onSeen={markSeen} onSave={markSaved} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} />
-          ))}
-        </>
-      )}
-
-      <div className="px-5 mt-8 mb-4">
+      <div className="px-5 mt-8 mb-2">
         <button onClick={onReset} className="w-full py-3 rounded-2xl border border-white/10 text-xs text-white/20">Start over</button>
       </div>
 
-      <p className="text-center text-[10px] text-white/15 px-5 pb-6">
+      <p className="text-center text-[10px] text-white/10 px-5 pb-6">
         This product uses the TMDB API but is not endorsed or certified by TMDB.
       </p>
+
+      {/* Floating shortlist button — appears once something is saved */}
+      {savedTitles.length > 0 && (
+        <div className="fixed bottom-20 left-0 right-0 px-5 pointer-events-none">
+          <button
+            onClick={() => setView('shortlist')}
+            className="w-full pointer-events-auto py-3.5 rounded-2xl bg-white text-[#0e0e0e] text-sm font-semibold flex items-center justify-center gap-2 shadow-lg"
+          >
+            <i className="ti ti-heart-filled text-base" aria-hidden="true" />
+            Shortlist · {savedTitles.length} title{savedTitles.length !== 1 ? 's' : ''}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
@@ -302,24 +438,16 @@ function TitleRow({ title, onSeen, onSave, onTouchStart, onTouchEnd }: RowProps)
           </span>
         </div>
       </div>
-      <div className="flex flex-col gap-1.5 flex-shrink-0">
-        <button
-          onClick={() => onSave(title.id)}
-          className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all ${
-            title.saved ? 'border-[#c8f04a]/40 bg-[#c8f04a]/10 text-[#c8f04a]' : 'border-white/10 bg-white/5 text-white/30'
-          }`}
-          aria-label="Save to watch later"
-        >
-          <i className={`ti ${title.saved ? 'ti-heart-filled' : 'ti-heart'} text-sm`} aria-hidden="true" />
-        </button>
-        <button
-          onClick={() => onSeen(title.id)}
-          className="w-8 h-8 rounded-full border border-white/10 bg-white/5 text-white/20 flex items-center justify-center"
-          aria-label="Mark as seen"
-        >
-          <i className="ti ti-eye-off text-sm" aria-hidden="true" />
-        </button>
-      </div>
+      {/* Single save button — swipe handles seen */}
+      <button
+        onClick={() => onSave(title.id)}
+        className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all flex-shrink-0 ${
+          title.saved ? 'border-white/40 bg-white/10 text-white scale-110' : 'border-white/10 bg-white/5 text-white/30'
+        } ${title.savingAnim ? 'scale-125' : ''}`}
+        aria-label="Save to shortlist"
+      >
+        <i className={`ti ${title.saved ? 'ti-heart-filled' : 'ti-heart'} text-sm`} aria-hidden="true" />
+      </button>
     </div>
   );
 }

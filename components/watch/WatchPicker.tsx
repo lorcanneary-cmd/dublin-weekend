@@ -68,7 +68,7 @@ export default function WatchPicker({ step, onDone }: Props) {
         </p>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-5 pb-36">
+      <div className="px-5">
         <div className="mt-6 mb-6">
           <label className="block text-xs text-white/40 uppercase tracking-widest mb-2">Your name</label>
           <input
@@ -112,7 +112,7 @@ export default function WatchPicker({ step, onDone }: Props) {
                 <div className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-[10px] font-semibold" style={{ backgroundColor: s.color }}>
                   {s.icon ? <i className="ti ti-brand-apple text-sm" aria-hidden="true" /> : s.label}
                 </div>
-                <span className={`text-[10px] ${services.includes(s.id) ? 'text-[#c8f04a]' : 'text-white/40'}`}>{s.name}</span>
+                <span className={`text-[10px] ${services.includes(s.id) ? 'text-[#c8f04a]' : 'text-white/70'}`}>{s.name}</span>
               </button>
             ))}
           </div>
@@ -128,8 +128,8 @@ export default function WatchPicker({ step, onDone }: Props) {
                 onClick={() => toggleGenre(g.id)}
                 className={`px-3 py-1.5 rounded-full border text-xs transition-all ${
                   genres.includes(g.id) || genres.includes(g.tvId)
-                    ? 'border-[#c8f04a] bg-[#c8f04a]/10 text-[#c8f04a]'
-                    : 'border-white/10 bg-white/5 text-white/40'
+                    ? 'border-[#f5f0e8] bg-[#f5f0e8] text-[#0e0e0e] font-medium'
+                    : 'border-white/25 bg-white/5 text-white/75'
                 }`}
               >
                 {g.label}
@@ -178,7 +178,7 @@ export default function WatchPicker({ step, onDone }: Props) {
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 px-5 pb-24 pt-4 bg-gradient-to-t from-[#0e0e0e] via-[#0e0e0e]/95 to-transparent">
+      <div className="px-5 pb-8 pt-4">
         <button
           onClick={handleDone}
           disabled={!canSubmit}

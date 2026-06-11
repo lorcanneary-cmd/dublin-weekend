@@ -22,7 +22,7 @@ export default function WatchConflict({ nameA, nameB, onResolve }: Props) {
           className="w-full py-4 rounded-2xl border border-white/10 bg-white/5 text-sm text-white/60 flex items-center justify-center gap-2"
         >
           <i className="ti ti-movie text-lg" aria-hidden="true" />
-          Movie tonight
+          Movie
         </button>
         <button
           onClick={() => onResolve('tv')}
