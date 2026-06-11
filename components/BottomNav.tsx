@@ -18,7 +18,7 @@ export default function BottomNav() {
       </Link>
       <Link
         href="/watch"
-        className={`flex-1 flex flex-col items-center gap-1 py-3 transition-colors bg-[#0e0e0e] ${isWatch ? 'text-[#c8f04a]' : 'text-white/40'}`}
+        className={`flex-1 flex flex-col items-center gap-1 py-3 transition-colors bg-[#0e0e0e] ${isWatch ? 'text-[#f5f0e8]' : 'text-white/40'}`}
       >
         <i className="ti ti-device-tv text-xl" aria-hidden="true" />
         <span className="text-[10px] font-medium">Stay in</span>

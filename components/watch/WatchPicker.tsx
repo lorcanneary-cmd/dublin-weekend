@@ -112,7 +112,7 @@ export default function WatchPicker({ step, onDone }: Props) {
                 <div className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-[10px] font-semibold" style={{ backgroundColor: s.color }}>
                   {s.icon ? <i className="ti ti-brand-apple text-sm" aria-hidden="true" /> : s.label}
                 </div>
-                <span className={`text-[10px] ${services.includes(s.id) ? 'text-[#c8f04a]' : 'text-white/70'}`}>{s.name}</span>
+                <span className={`text-[10px] ${services.includes(s.id) ? 'text-[#f5f0e8]' : 'text-white/70'}`}>{s.name}</span>
               </button>
             ))}
           </div>
@@ -169,7 +169,7 @@ export default function WatchPicker({ step, onDone }: Props) {
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-xs text-white/60">Include non-English titles</span>
-                <button onClick={() => setIncludeNonEnglish(v => !v)} className={`w-10 h-5 rounded-full transition-colors relative ${includeNonEnglish ? 'bg-[#c8f04a]' : 'bg-white/10'}`}>
+                <button onClick={() => setIncludeNonEnglish(v => !v)} className={`w-10 h-5 rounded-full transition-colors relative ${includeNonEnglish ? 'bg-[#f5f0e8]' : 'bg-white/10'}`}>
                   <span className={`absolute top-0.5 w-4 h-4 rounded-full bg-white transition-all ${includeNonEnglish ? 'left-5' : 'left-0.5'}`} />
                 </button>
               </div>

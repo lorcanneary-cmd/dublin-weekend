@@ -20,7 +20,7 @@ type TitleWithState = TMDBTitle & {
   isSolo?: boolean;
 };
 
-type ViewState = 'results' | 'shortlist' | 'congrats';
+type ViewState = 'reveal' | 'results' | 'shortlist' | 'congrats';
 
 const SERVICE_COLORS: Record<number, string> = {
   8:   '#e50914',
@@ -73,7 +73,7 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
   const [loading, setLoading] = useState(true);
   const [showCountdown, setShowCountdown] = useState(true);
   const [error, setError] = useState(false);
-  const [view, setView] = useState<ViewState>('results');
+  const [view, setView] = useState<ViewState>('reveal');
   const [chosenTitle, setChosenTitle] = useState<TitleWithState | null>(null);
   const touchStartX = useRef<Record<number, number>>({});
   const revealMessage = useRef(randomFrom(REVEAL_MESSAGES));
@@ -194,6 +194,66 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
       <div className="flex flex-col min-h-screen bg-[#0f0f0f] items-center justify-center gap-4">
         <div className="w-8 h-8 border-2 border-white/20 border-t-white/60 rounded-full animate-spin" />
         <p className="text-sm text-white/30">Almost there...</p>
+      </div>
+    );
+  }
+
+  if (view === 'reveal') {
+    const revealGenreLabels = sharedGenres
+      .map(id => GENRES.find(g => g.id === id || g.tvId === id)?.label)
+      .filter(Boolean);
+    const soloGenreLabels = soloGenres
+      .map(id => GENRES.find(g => g.id === id || g.tvId === id)?.label)
+      .filter(Boolean);
+
+    return (
+      <div className="flex flex-col min-h-screen bg-[#0e0e0e] px-6 pt-20 pb-10">
+        <div className="flex-1 flex flex-col justify-center">
+          <h1 className="text-3xl font-bold text-white leading-tight mb-2">
+            {selectionsA.name} & {selectionsB.name} have something in common.
+          </h1>
+          <p className="text-sm text-white/40 italic mb-8">
+            {revealMessage.current}
+          </p>
+
+          <div className="h-px bg-white/10 mb-6" />
+
+          {revealGenreLabels.length > 0 && (
+            <div className="mb-6">
+              <p className="text-[10px] text-white/30 uppercase tracking-widest mb-3">You both want</p>
+              <div className="flex flex-wrap gap-2">
+                {revealGenreLabels.map(label => (
+                  <div key={label} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#c8f04a]/10 border border-[#c8f04a]/30">
+                    <i className="ti ti-check text-[#c8f04a] text-xs" aria-hidden="true" />
+                    <span className="text-xs text-[#c8f04a] font-medium">{label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {soloGenreLabels.length > 0 && (
+            <div className="mb-6">
+              <p className="text-[10px] text-white/30 uppercase tracking-widest mb-3">Only one of you wants</p>
+              <div className="flex flex-wrap gap-2">
+                {soloGenreLabels.map(label => (
+                  <div key={label} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10">
+                    <span className="text-xs text-white/30">{label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="h-px bg-white/10 mb-8" />
+        </div>
+
+        <button
+          onClick={() => setView('results')}
+          className="w-full py-4 rounded-2xl bg-white text-[#0e0e0e] text-sm font-semibold"
+        >
+          show our picks
+        </button>
       </div>
     );
   }
