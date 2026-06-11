@@ -64,8 +64,11 @@ export default function WatchPicker({ step, onDone }: Props) {
     <div className="flex flex-col min-h-screen bg-[#0e0e0e]">
       <div className="px-5 pt-12 pb-3">
         <p className="text-2xl font-semibold text-white leading-tight">
-          {step === 1 ? "Pick what you're into" : 'Now your turn'}
+          {step === 1 ? "What are we watching?" : 'Now your turn'}
         </p>
+        {step === 1 && (
+          <p className="text-sm text-white/40 mt-1">Pick what you're into, pass the phone, see where you match.</p>
+        )}
       </div>
 
       <div className="px-5">
@@ -76,7 +79,7 @@ export default function WatchPicker({ step, onDone }: Props) {
             value={name}
             onChange={e => setName(e.target.value)}
             placeholder="e.g. Sarah"
-            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#c8f04a]/50 transition-colors"
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#f5f0e8]/50 transition-colors"
           />
         </div>
 
@@ -183,7 +186,7 @@ export default function WatchPicker({ step, onDone }: Props) {
           onClick={handleDone}
           disabled={!canSubmit}
           className={`w-full py-4 rounded-2xl text-sm font-medium transition-all ${
-            canSubmit ? 'bg-[#c8f04a] text-[#0e0e0e] active:scale-[0.98]' : 'bg-white/5 text-white/20 cursor-not-allowed'
+            canSubmit ? 'bg-[#f5f0e8] text-[#0e0e0e] active:scale-[0.98]' : 'bg-white/5 text-white/20 cursor-not-allowed'
           }`}
         >
           {step === 1 ? 'Done — pass to Person 2' : 'See our picks'}

@@ -223,9 +223,9 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
               <p className="text-[10px] text-white/30 uppercase tracking-widest mb-3">You both want</p>
               <div className="flex flex-wrap gap-2">
                 {revealGenreLabels.map(label => (
-                  <div key={label} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#c8f04a]/10 border border-[#c8f04a]/30">
-                    <i className="ti ti-check text-[#c8f04a] text-xs" aria-hidden="true" />
-                    <span className="text-xs text-[#c8f04a] font-medium">{label}</span>
+                  <div key={label} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#f5f0e8]/10 border border-[#f5f0e8]/30">
+                    <i className="ti ti-check text-[#f5f0e8] text-xs" aria-hidden="true" />
+                    <span className="text-xs text-[#f5f0e8] font-medium">{label}</span>
                   </div>
                 ))}
               </div>
@@ -383,12 +383,15 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
       )}
 
       {!hasSeen && (
-        <div className="flex items-center gap-2 px-5 mb-4">
-          <i className="ti ti-arrow-left text-white/30 text-sm" aria-hidden="true" />
-          <span className="text-xs text-white/35">swipe left — seen it</span>
-          <span className="text-white/15 mx-1">·</span>
-          <i className="ti ti-arrow-right text-white/30 text-sm" aria-hidden="true" />
-          <span className="text-xs text-white/35">swipe right — shortlist</span>
+        <div className="flex items-center justify-between px-5 mb-4">
+          <div className="flex items-center gap-1.5">
+            <i className="ti ti-arrow-left text-white/40 text-base" aria-hidden="true" />
+            <span className="text-sm text-white/40">swipe left — seen it</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="text-sm text-white/40">swipe right — shortlist</span>
+            <i className="ti ti-arrow-right text-white/40 text-base" aria-hidden="true" />
+          </div>
         </div>
       )}
 
@@ -502,11 +505,11 @@ function TitleRow({ title, onSeen, onSave, onTouchStart, onTouchEnd }: RowProps)
       <button
         onClick={() => onSave(title.id)}
         className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all flex-shrink-0 ${
-          title.saved ? 'border-white/40 bg-white/10 text-white scale-110' : 'border-white/10 bg-white/5 text-white/30'
+          title.saved ? 'border-white/50 bg-white/15 text-white scale-110' : 'border-white/20 bg-white/5 text-white/50'
         } ${title.savingAnim ? 'scale-125' : ''}`}
         aria-label="Save to shortlist"
       >
-        <i className={`ti ${title.saved ? 'ti-heart-filled' : 'ti-heart'} text-sm`} aria-hidden="true" />
+        <i className={`ti ti-heart${title.saved ? '-filled' : ''} text-sm`} aria-hidden="true" />
       </button>
     </div>
   );

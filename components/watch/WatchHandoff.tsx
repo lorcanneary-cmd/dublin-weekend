@@ -21,7 +21,7 @@ export default function WatchHandoff({ personAName, onReady }: Props) {
       </div>
       <button
         onClick={onReady}
-        className="w-full max-w-xs py-4 rounded-2xl bg-[#c8f04a] text-[#0e0e0e] text-sm font-medium"
+        className="w-full max-w-xs py-4 rounded-2xl bg-[#f5f0e8] text-[#0e0e0e] text-sm font-medium"
       >
         I'm ready
       </button>
