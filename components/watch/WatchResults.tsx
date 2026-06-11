@@ -207,7 +207,7 @@ export default function WatchResults({ selectionsA, selectionsB, onReset }: Prop
       .filter(Boolean);
 
     return (
-      <div className="flex flex-col min-h-screen bg-[#0e0e0e] px-6 pt-20 pb-24">
+      <div className="flex flex-col min-h-screen bg-[#0e0e0e] px-6 pt-20 pb-32">
         <div className="flex-1 flex flex-col justify-center">
           <h1 className="text-3xl font-bold text-white leading-tight mb-2">
             {selectionsA.name} & {selectionsB.name} have something in common.
